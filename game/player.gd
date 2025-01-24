@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody3D
 
 const GRAVITY = 98
@@ -57,3 +58,8 @@ func _process(delta):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	if Input.is_action_just_pressed("left_click"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+
+func start_minigame(minigame: String):
+	var support_instance = Support.spawn_support("minigame")
+	camera.add_child(support_instance)
