@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6xj5bl2d7no"]
+
+[ext_resource type="PackedScene" uid="uid://kvwnvrnsgmy1" path="res://game/player.tscn" id="1_5bbpa"]
+[ext_resource type="Texture2D" uid="uid://dc5lsnywnlr8j" path="res://texture/sol.jpg" id="2_7fgoh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gfklc"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yth1g"]
+albedo_texture = ExtResource("2_7fgoh")
+
+[sub_resource type="BoxMesh" id="BoxMesh_s7dsv"]
+material = SubResource("StandardMaterial3D_yth1g")
+size = Vector3(20, 1, 20)
+
+[node name="Main" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_5bbpa")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.48307, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_gfklc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_s7dsv")
