@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://c5cut8dvvfkym"]
+[gd_scene load_steps=2 format=3 uid="uid://c5cut8dvvfkym"]
+
+[ext_resource type="Script" path="res://game/camera.gd" id="1_bsfq7"]
 
 [node name="Camera" type="Camera3D"]
+script = ExtResource("1_bsfq7")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
