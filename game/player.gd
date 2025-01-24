@@ -1,11 +1,13 @@
 extends CharacterBody3D
 
+const GRAVITY = 98
+
 @export var mouse_sensitivity = 0.15
 @onready var head = $Head
 @onready var camera = $Head/Camera
 
 var speed = Vector3.ZERO
-var surface_accel = 1
+var surface_accel = 100
 var surface_friction = 48
 
 func _ready():
@@ -18,7 +20,7 @@ func _input(event):
 		head.rotation.x = clamp(head.rotation.x, -PI/2, PI/2)
 
 func _physics_process(delta):
-	move_and_collide(speed * delta * 70)
+	
 	
 	# Mouvement
 	var direction = Vector2.ZERO
@@ -36,7 +38,12 @@ func _physics_process(delta):
 		speed.x -= surface_accel * delta * sin(rotation.y + direction.angle_to(Vector2(0, 1)))
 		speed.z -= surface_accel * delta * cos(rotation.y + direction.angle_to(Vector2(0, 1)))
 	
+	speed.y -= GRAVITY * delta
+	
 	speed *= surface_friction * delta
+	
+	velocity = speed * delta * 70
+	move_and_slide()
 
 func _process(delta):
 	if Input.is_action_just_pressed("escape"):
