@@ -20,8 +20,6 @@ func _input(event):
 		head.rotation.x = clamp(head.rotation.x, -PI/2, PI/2)
 
 func _physics_process(delta):
-	
-	
 	# Mouvement
 	var direction = Vector2.ZERO
 	
@@ -44,6 +42,15 @@ func _physics_process(delta):
 	
 	velocity = speed * delta * 70
 	move_and_slide()
+	
+	if $Head/Front.get_collider():
+		var object = $Head/Front.get_collider()
+		
+		if object is Interactable:
+			if object.is_interactable(self):
+				if Input.is_action_just_pressed("interact"):
+					object.interact(self)
+			#else: hide_tooltip()
 
 func _process(delta):
 	if Input.is_action_just_pressed("escape"):

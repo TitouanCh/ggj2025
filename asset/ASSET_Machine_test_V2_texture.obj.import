@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bmvmt7524pw53"
+path="res://.godot/imported/ASSET_Machine_test_V2_texture.obj-c3a3bfb658b4f2aa5b054a863ecdb34c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ASSET_Machine_test_V2_texture.obj-c3a3bfb658b4f2aa5b054a863ecdb34c.mesh"]
+
+source_file="res://asset/ASSET_Machine_test_V2_texture.obj"
+dest_files=["res://.godot/imported/ASSET_Machine_test_V2_texture.obj-c3a3bfb658b4f2aa5b054a863ecdb34c.mesh", "res://.godot/imported/ASSET_Machine_test_V2_texture.obj-c3a3bfb658b4f2aa5b054a863ecdb34c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

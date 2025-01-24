@@ -1,13 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6xj5bl2d7no"]
+[gd_scene load_steps=8 format=3 uid="uid://c6xj5bl2d7no"]
 
 [ext_resource type="PackedScene" uid="uid://kvwnvrnsgmy1" path="res://game/player.tscn" id="1_5bbpa"]
-[ext_resource type="Texture2D" uid="uid://dc5lsnywnlr8j" path="res://texture/sol.jpg" id="2_7fgoh"]
+[ext_resource type="Texture2D" uid="uid://b3arhpvb1mrej" path="res://texture/TEXTURE_sol_v1.png" id="2_ohk0j"]
+[ext_resource type="PackedScene" uid="uid://dri1esacmxqng" path="res://game/machine.tscn" id="3_kahpo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gfklc"]
 size = Vector3(20, 1, 20)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yth1g"]
-albedo_texture = ExtResource("2_7fgoh")
+albedo_texture = ExtResource("2_ohk0j")
+uv1_scale = Vector3(20, 20, 20)
 
 [sub_resource type="BoxMesh" id="BoxMesh_s7dsv"]
 material = SubResource("StandardMaterial3D_yth1g")
@@ -62,3 +64,6 @@ script = SubResource("GDScript_qboy6")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.998974, 0.0452932, 0, -0.0452932, 0.998974, 0, 14.8079, -15.5807)
+
+[node name="Machine" parent="." instance=ExtResource("3_kahpo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.48021)
