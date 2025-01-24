@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://xhy053lyf37g"]
+
+[ext_resource type="ArrayMesh" uid="uid://b8i43p1fc77nh" path="res://model/mur.tres" id="1_nucyl"]
+
+[node name="Mur" type="Node3D"]
+
+[node name="AssetMurBase4x4V1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0762435, 0, -1.15056)
+mesh = ExtResource("1_nucyl")

@@ -1,0 +1,25 @@
+[gd_resource type="ArrayMesh" load_steps=3 format=3 uid="uid://b8i43p1fc77nh"]
+
+[ext_resource type="Texture2D" uid="uid://drwcy3a3eh8n1" path="res://texture/TEXTURE_murs_v1.png" id="1_n2tam"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mfiv"]
+resource_name = "MUR"
+albedo_color = Color(0.8, 0.8, 0.8, 1)
+albedo_texture = ExtResource("1_n2tam")
+metallic = 0.5
+
+[resource]
+_surfaces = [{
+"aabb": AABB(0, 0, -4, 1e-05, 6, 8),
+"attribute_data": PackedByteArray(255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 63, 0, 0, 255, 63),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_7mfiv"),
+"name": "MUR",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 255, 255, 255, 255, 255, 191, 0, 0, 255, 255, 0, 0, 255, 191, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0

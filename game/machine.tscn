@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dri1esacmxqng"]
 
-[ext_resource type="ArrayMesh" uid="uid://bmvmt7524pw53" path="res://asset/ASSET_Machine_test_V2_texture.obj" id="1_6wiy1"]
 [ext_resource type="Script" path="res://game/machine.gd" id="1_oegph"]
+[ext_resource type="ArrayMesh" uid="uid://druonn7gbgkjq" path="res://model/machine.tres" id="2_gvrle"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r6orb"]
 size = Vector3(3, 5, 3)
@@ -11,7 +11,7 @@ script = ExtResource("1_oegph")
 
 [node name="AssetMachineTestV2Texture" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.173273, 0, -0.814224)
-mesh = ExtResource("1_6wiy1")
+mesh = ExtResource("2_gvrle")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.492124, 2.69137, -1.10376)

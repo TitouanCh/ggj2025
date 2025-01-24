@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6xj5bl2d7no"]
+[gd_scene load_steps=9 format=3 uid="uid://c6xj5bl2d7no"]
 
 [ext_resource type="PackedScene" uid="uid://kvwnvrnsgmy1" path="res://game/player.tscn" id="1_5bbpa"]
 [ext_resource type="Texture2D" uid="uid://b3arhpvb1mrej" path="res://texture/TEXTURE_sol_v1.png" id="2_ohk0j"]
 [ext_resource type="PackedScene" uid="uid://dri1esacmxqng" path="res://game/machine.tscn" id="3_kahpo"]
+[ext_resource type="PackedScene" uid="uid://xhy053lyf37g" path="res://game/mur.tscn" id="4_1xggt"]
+[ext_resource type="PackedScene" uid="uid://0e7tj4bx4u42" path="res://game/hublot.tscn" id="5_yrme1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vvrrm"]
 size = Vector3(20, 1, 20)
@@ -28,8 +30,42 @@ shape = SubResource("BoxShape3D_vvrrm")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_s7dsv")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.998974, 0.0452932, 0, -0.0452932, 0.998974, 0, 14.8079, -15.5807)
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -0.999903, -0.0139272, 0, 0.0139272, -0.999903, 0, 6.66877, 0)
+mesh = SubResource("BoxMesh_s7dsv")
 
 [node name="Machine" parent="." instance=ExtResource("3_kahpo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.439903, -9.58892)
+
+[node name="Mur" parent="." instance=ExtResource("4_1xggt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3342, 0.235816, -5.25983)
+
+[node name="Mur2" parent="." instance=ExtResource("4_1xggt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3342, 0.235816, 2.62085)
+
+[node name="Mur3" parent="." instance=ExtResource("4_1xggt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3342, 0.235816, 10.5499)
+
+[node name="Mur4" parent="." instance=ExtResource("4_1xggt")]
+transform = Transform3D(-0.0135084, 0, -0.999909, 0, 1, 0, 0.999909, 0, -0.0135084, 5.3441, 0.235816, 10.2299)
+
+[node name="Mur5" parent="." instance=ExtResource("4_1xggt")]
+transform = Transform3D(-0.0135084, 0, -0.999909, 0, 1, 0, 0.999909, 0, -0.0135084, -2.60048, 0.235816, 10.2299)
+
+[node name="Mur6" parent="." instance=ExtResource("4_1xggt")]
+transform = Transform3D(-0.0135084, 0, -0.999909, 0, 1, 0, 0.999909, 0, -0.0135084, -10.2051, 0.423643, 10.2299)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.617626, 0.786472, 0, -0.786472, 0.617626, 0, 10.2394, 9.22989)
+visible = false
+light_energy = 0.5
+light_negative = true
+shadow_enabled = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.97452, 0)
+light_energy = 4.0
+omni_range = 30.0
+
+[node name="hublot" parent="." instance=ExtResource("5_yrme1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5088, 0.106406, 0)
