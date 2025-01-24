@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c5cut8dvvfkym"]
+
+[node name="Camera" type="Camera3D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

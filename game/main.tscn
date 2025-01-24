@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c6xj5bl2d7no"]
+[gd_scene load_steps=7 format=3 uid="uid://c6xj5bl2d7no"]
 
 [ext_resource type="PackedScene" uid="uid://kvwnvrnsgmy1" path="res://game/player.tscn" id="1_5bbpa"]
 [ext_resource type="Texture2D" uid="uid://b3arhpvb1mrej" path="res://texture/TEXTURE_sol_v1.png" id="2_ohk0j"]
 [ext_resource type="PackedScene" uid="uid://dri1esacmxqng" path="res://game/machine.tscn" id="3_kahpo"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_gfklc"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_vvrrm"]
 size = Vector3(20, 1, 20)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yth1g"]
@@ -15,55 +15,21 @@ uv1_scale = Vector3(20, 20, 20)
 material = SubResource("StandardMaterial3D_yth1g")
 size = Vector3(20, 1, 20)
 
-[sub_resource type="GDScript" id="GDScript_qboy6"]
-script/source = "extends CharacterBody3D
-
-
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
-
-
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir := Input.get_vector(\"ui_left\", \"ui_right\", \"ui_up\", \"ui_down\")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-
-	move_and_slide()
-"
-
 [node name="Main" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_5bbpa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.77315, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.48307, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("BoxShape3D_gfklc")
+shape = SubResource("BoxShape3D_vvrrm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_s7dsv")
-
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-script = SubResource("GDScript_qboy6")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.998974, 0.0452932, 0, -0.0452932, 0.998974, 0, 14.8079, -15.5807)
 
 [node name="Machine" parent="." instance=ExtResource("3_kahpo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.48021)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.439903, -9.58892)
