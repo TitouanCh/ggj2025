@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://doj3b77fleyk2"]
+[gd_scene load_steps=6 format=3 uid="uid://doj3b77fleyk2"]
 
 [ext_resource type="Script" path="res://game/todo.gd" id="1_g42fd"]
-[ext_resource type="FontFile" uid="uid://4gspdryjt2jp" path="res://font/Crazey Spaghetti.TTF" id="1_uuanj"]
+[ext_resource type="FontFile" uid="uid://b4wocnnb6e2g7" path="res://font/Crazey_Spaghetti.TTF" id="1_uuanj"]
+[ext_resource type="Texture2D" uid="uid://jcec70eaotv1" path="res://sprites/cahier.png" id="3_f6r27"]
 
 [sub_resource type="FontVariation" id="FontVariation_3q1ha"]
 base_font = ExtResource("1_uuanj")
@@ -29,3 +30,13 @@ script = ExtResource("1_g42fd")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = -27.0
+offset_top = -15.0
+offset_right = 317.0
+offset_bottom = 477.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_f6r27")
