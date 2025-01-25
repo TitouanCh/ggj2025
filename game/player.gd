@@ -13,12 +13,14 @@ var speed = Vector3.ZERO
 var surface_accel = 100
 var surface_friction = 48
 var in_minigame := false
+var current_minigame_name = null
 var fullscreen = false
 var fall = false
 
 func _ready():
-	$Head/Camera/FadeToBlack/RichTextLabel.text = "\n\n[wave amp=50.0 freq=5.0 connected=1][center]DAY   %s[/center][/wave]" % Task.current_day
+	$Head/Camera/FadeToBlack/RichTextLabel.text = "\n\n[wave amp=50.0 freq=5.0 connected=1][center]DAY   %s[/center][/wave]" % (Task.current_day + 1)
 	var tween = create_tween()
+	tween.tween_interval(1)
 	tween.tween_property($Head/Camera/FadeToBlack, "modulate", Color(255, 255, 255, 0), 5).set_ease(Tween.EASE_IN)
 	tween.tween_callback(func(): $Head/Camera/FadeToBlack/RichTextLabel.visible = false)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -101,6 +103,7 @@ func start_minigame(minigame: String) -> Support:
 	var tween = create_tween()
 	tween.tween_method(set_blur, 0.1, 3.0, .5).set_ease(Tween.EASE_IN_OUT)
 	$Head/Camera/Hand.interact = false
+	current_minigame_name = minigame
 	return support_instance
 
 func set_blur(value):
@@ -108,6 +111,7 @@ func set_blur(value):
 
 func fade_to_black():
 	var tween = create_tween()
+	tween.tween_interval(5)
 	tween.tween_property($Head/Camera/FadeToBlack, "modulate", Color(255, 255, 255, 1), 5).set_ease(Tween.EASE_IN)
 	tween.tween_callback(func(): faded_to_black.emit())
 
@@ -115,4 +119,5 @@ func end_minigame():
 	var tween = create_tween()
 	tween.tween_method(set_blur, 3.0, .1, .5).set_ease(Tween.EASE_IN_OUT)
 	tween.tween_callback(func(): in_minigame = false; Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED))
-	Task.complete_task("PlayMoney")
+	Task.complete_task("Play" + (current_minigame_name.to_pascal_case()))
+	current_minigame_name = null

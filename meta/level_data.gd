@@ -24,3 +24,6 @@ func spawn(main: Main):
 		instance.rotate_y(-m.rotation)
 		main.add_child(instance)
 		instance.position = to_3d_position(m.position)
+		
+		if instance is MachineSoda:
+			instance.true_name_task = Task.get_machine_true_name_task()

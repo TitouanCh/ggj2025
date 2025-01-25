@@ -3,8 +3,8 @@ extends Node
 signal update_task(task)
 
 var schedule: Array[Day] = [
-	load("res://days/day1.tres"),
-	
+	load("res://days/day3.tres"),
+	load("res://days/day2.tres"),
 ]
 
 var current_day = 0
@@ -48,3 +48,19 @@ func _on_faded_to_black():
 	main.queue_free()
 	var instance = main_scene.instantiate()
 	viewport.add_child(instance)
+
+func get_machine_true_name_task() -> String:
+	var task_that_need_machine = []
+	var all_machine_task = []
+	for task in schedule[current_day].task:
+		if task.true_name.begins_with("Play"):
+			if task.n_machines < task.amount:
+				task_that_need_machine.append(task)
+			all_machine_task.append(task)
+	
+	var task
+	if len(task_that_need_machine) > 0:
+		task = task_that_need_machine.pick_random()
+	else: task = all_machine_task.pick_random()
+	task.n_machines += 1
+	return task.true_name

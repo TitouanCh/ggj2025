@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="Day" load_steps=7 format=3 uid="uid://b47vss3a86lqv"]
 
-[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/MAPS.tres" id="1_ukclj"]
+[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/MAPS_J1.tres" id="1_ukclj"]
 [ext_resource type="Script" path="res://game/day_data.gd" id="2_8tkvk"]
 [ext_resource type="Script" path="res://game/task_data.gd" id="3_pr5on"]
 
 [sub_resource type="Resource" id="Resource_nemf7"]
 script = ExtResource("3_pr5on")
-name = "Do something"
+name = "- Clean 1 machine"
 amount = 1
-true_name = ""
+true_name = "PlayCleaning"
 
 [sub_resource type="Resource" id="Resource_74jyl"]
 script = ExtResource("3_pr5on")

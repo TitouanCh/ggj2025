@@ -6,7 +6,7 @@ var used = false
 
 func interact(player: Player):
 	print("Machine Soda")
-	player.start_minigame("money").finished.connect(close)
+	player.start_minigame(true_name_task.replace("Play", "").to_lower()).finished.connect(close)
 	Sound.play_sound_from_name("metal_door.mp3")
 	used = true
 	open()
