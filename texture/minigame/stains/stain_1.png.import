@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bin1j0b0qolgc"
-path="res://.godot/imported/minigame_background.jpg-2b03c8ecdec189ae22f8842c88adab9d.ctex"
+uid="uid://gm36p8uy4dvu"
+path="res://.godot/imported/stain_1.png-8dc3a90de202a5d02b1ccd4a2a6d2af6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/minigame_background.jpg"
-dest_files=["res://.godot/imported/minigame_background.jpg-2b03c8ecdec189ae22f8842c88adab9d.ctex"]
+source_file="res://texture/minigame/stains/stain_1.png"
+dest_files=["res://.godot/imported/stain_1.png-8dc3a90de202a5d02b1ccd4a2a6d2af6.ctex"]
 
 [params]
 

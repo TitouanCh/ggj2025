@@ -1,12 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://1ui43kt4768d"]
+[gd_scene load_steps=2 format=3 uid="uid://1ui43kt4768d"]
 
 [ext_resource type="Script" path="res://minigame/cleaning/tache.gd" id="1_hfmw4"]
-[ext_resource type="Texture2D" uid="uid://pxnjcrbd7t30" path="res://texture/tache.png" id="2_ybm1n"]
 
 [node name="Tache" type="Node2D"]
 script = ExtResource("1_hfmw4")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(46, 39)
-scale = Vector2(2.84844, 2.37358)
-texture = ExtResource("2_ybm1n")

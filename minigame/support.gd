@@ -8,16 +8,18 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	#$Minigame.isDone.connect("queue_free")
+	
 
-
-static func spawn_support(game: String) -> Support:
+static func spawn(game: String) -> Support:
 	var support = load("res://minigame/support.tscn").instantiate()
-	print("res://minigame/"+game+".tscn")
 	var minigame: PackedScene = load("res://minigame/"+game+".tscn")
 	var minigame_instance = minigame.instantiate()
 	
 	support.add_child(minigame_instance)
 	return support
+
+
 	
 	
 	

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pxnjcrbd7t30"
-path="res://.godot/imported/tache.png-6e79a424d9fac718d6556c80a671d3ba.ctex"
+uid="uid://oilwdyriwu32"
+path="res://.godot/imported/stain_3.png-dd45bf9059f59c43bbdbe9c6c4a87610.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/tache.png"
-dest_files=["res://.godot/imported/tache.png-6e79a424d9fac718d6556c80a671d3ba.ctex"]
+source_file="res://texture/minigame/stains/stain_3.png"
+dest_files=["res://.godot/imported/stain_3.png-dd45bf9059f59c43bbdbe9c6c4a87610.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3f42k2dsc5pt"
-path="res://.godot/imported/machine_cleaning.jpg-7a1349fabb76fac86187ff198e4e2106.ctex"
+uid="uid://cro11yrj0hbix"
+path="res://.godot/imported/sponge.png-1adbe3b85740738583c1a03a4287d34f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/machine_cleaning.jpg"
-dest_files=["res://.godot/imported/machine_cleaning.jpg-7a1349fabb76fac86187ff198e4e2106.ctex"]
+source_file="res://texture/minigame/sponge.png"
+dest_files=["res://.godot/imported/sponge.png-1adbe3b85740738583c1a03a4287d34f.ctex"]
 
 [params]
 
