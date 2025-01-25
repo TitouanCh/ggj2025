@@ -13,6 +13,8 @@ func _ready() -> void:
 	textures["red"] = load("res://sprites/chip/puce_R.png")
 	textures["pink"] = load("res://sprites/chip/puce_P.png")
 	texture_keys = textures.keys()  # Get keys as a list
+	#Sound.play_sound_from_name("sparkling.mp3")
+
 	spawn_Chip()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -56,8 +58,9 @@ func _input(event) -> void:
 			var clicked_node = get_closest_node(event.position)
 			if clicked_node and clicked_node != current_start and clicked_node.color==current_start.color:
 				connected_lines.append([current_start, clicked_node])
+			elif clicked_node.color!=current_start.color:
+				Sound.play_sound_from_name("electric_zap.mp3")
 			current_start = null  # Reset after connection
-			#queue_redraw()  # Redraw the lines and nodes
 
 func get_closest_node(position) -> Chip:
 	for node in get_children():
