@@ -34,6 +34,9 @@ var meta_color = {
 	"TablePoufCannette": Color.BLUE_VIOLET,
 	"Pyramide": Color.ORANGE,
 	"Desastre": Color.PALE_VIOLET_RED,
+	"Cannette1": Color.DARK_RED,
+	"Cannette2": Color.DARK_BLUE,
+	"Cannette3": Color.DARK_CYAN,
 }
 
 var current_base = 0
@@ -52,7 +55,7 @@ var classes = {
 var types = {
 	"wall": ["Normal", "Hublot", "Door", "DoorFermee", "Gris", "HublotGris", "DoorGris", "DoorFermeeGris", "Vert", "HublotVert", "DoorVert", "DoorFermeeVert", "DoorBleuVert"],
 	"fr": ["Base", "Gris", "Vert"],
-	"meta": ["PlayerPosition", "Machine", "Pouf", "Table", "TablePoufCannette", "Pyramide", "Desastre"]
+	"meta": ["PlayerPosition", "Machine", "Pouf", "Table", "TablePoufCannette", "Pyramide", "Desastre", "Cannette1", "Cannette2", "Cannette3"]
 }
 
 func get_mouse_position():

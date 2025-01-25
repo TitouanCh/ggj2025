@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://db20wm8ur62l4"]
 
 [ext_resource type="Script" path="res://game/canette.gd" id="1_b3u1s"]
-[ext_resource type="ArrayMesh" uid="uid://2bds3gfb7f8k" path="res://model/cannette_green.tres" id="2_nn4lr"]
+[ext_resource type="ArrayMesh" uid="uid://8a2ksohred0f" path="res://model/cannette_green.tres" id="2_nn4lr"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_02hkn"]
 height = 0.415
