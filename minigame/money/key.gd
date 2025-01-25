@@ -26,14 +26,18 @@ func _process(delta: float) -> void:
 		if get_local_mouse_position().length() < eps and grabbed_key == null:
 			grabbed = true
 			grabbed_key = self
+			Sound.play_sound_from_name("keys.mp3")
 	else:
-		grabbed = false
+		if grabbed:
+			grabbed = false
+			Sound.play_sound_from_name("keys.mp3", -0.1)
 		grabbed_key = null
 	if grabbed and !bye:
 		target = get_global_mouse_position()
 	
 	if position.distance_to(serrure.position) < eps and good:
 		unlock.emit()
+		Sound.play_sound_from_name("unlock.mp3", 0.1, 5.0)
 	
 	$Sprite2D.offset.y = cos(Tdelta * 10) * 5
 	position = lerp(position, target, delta * speed)

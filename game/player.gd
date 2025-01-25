@@ -1,7 +1,7 @@
 class_name Player
 extends CharacterBody3D
 
-const GRAVITY = 98
+const GRAVITY = 120
 
 @export var mouse_sensitivity = 0.15
 @onready var head = $Head
@@ -12,6 +12,7 @@ var surface_accel = 100
 var surface_friction = 48
 var in_minigame := false
 var fullscreen = false
+var fall = false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -46,6 +47,13 @@ func _physics_process(delta):
 		speed *= surface_friction * delta
 		
 		velocity = speed * delta * 70
+		if velocity.length() > 10:
+			if $AudioStreamPlayer.playing:
+				$AudioStreamPlayer.stream_paused = false
+			else: $AudioStreamPlayer.play()
+		else:
+			$AudioStreamPlayer.stream_paused = true
+
 		move_and_slide()
 		
 		$Head/Camera/Hand.interact = false
@@ -60,6 +68,10 @@ func _physics_process(delta):
 				#else: hide_tooltip()
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED_HIDDEN)
+	
+	if position.y < -1 and !fall:
+		Sound.play_sound_from_name("crie.mp3")
+		fall = true
 
 func _process(delta):
 	if Input.is_action_just_pressed("escape"):
