@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://crlk5jivio27c"]
+
+[ext_resource type="Script" path="res://minigame/money/key.gd" id="1_llc3i"]
+[ext_resource type="Texture2D" uid="uid://dg18ll3xeug1" path="res://sprites/money/clef4.png" id="2_7ye5k"]
+
+[node name="Key" type="Node2D"]
+script = ExtResource("1_llc3i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7ye5k")

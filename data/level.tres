@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=12 format=3]
+[gd_resource type="Resource" script_class="LevelData" load_steps=18 format=3]
 
 [ext_resource type="Script" path="res://meta/fr_data.gd" id="1_2a3an"]
 [ext_resource type="Script" path="res://meta/meta_data.gd" id="2_riyp7"]
@@ -18,6 +18,21 @@ type = "Base"
 [sub_resource type="Resource" id="Resource_pv2s3"]
 script = ExtResource("1_2a3an")
 position = Vector2(384, 192)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_ilqgg"]
+script = ExtResource("1_2a3an")
+position = Vector2(416, 160)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_1bf1a"]
+script = ExtResource("1_2a3an")
+position = Vector2(448, 160)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_udpee"]
+script = ExtResource("1_2a3an")
+position = Vector2(480, 160)
 type = "Base"
 
 [sub_resource type="Resource" id="Resource_fx65o"]
@@ -44,8 +59,26 @@ to_position = Vector2(416, 160)
 position = Vector2(384, 160)
 type = "Gris"
 
+[sub_resource type="Resource" id="Resource_7rvqq"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(448, 160)
+position = Vector2(416, 160)
+type = "Vert"
+
+[sub_resource type="Resource" id="Resource_qwsy4"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(480, 160)
+position = Vector2(448, 160)
+type = "Vert"
+
+[sub_resource type="Resource" id="Resource_ucxva"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(512, 160)
+position = Vector2(480, 160)
+type = "Vert"
+
 [resource]
 script = ExtResource("3_kf835")
-wall = Array[ExtResource("4_ytnly")]([SubResource("Resource_1mgre"), SubResource("Resource_fdqep")])
-fr = Array[ExtResource("1_2a3an")]([SubResource("Resource_5dd1a"), SubResource("Resource_qfg6h"), SubResource("Resource_pv2s3")])
+wall = Array[ExtResource("4_ytnly")]([SubResource("Resource_1mgre"), SubResource("Resource_fdqep"), SubResource("Resource_7rvqq"), SubResource("Resource_qwsy4"), SubResource("Resource_ucxva")])
+fr = Array[ExtResource("1_2a3an")]([SubResource("Resource_5dd1a"), SubResource("Resource_qfg6h"), SubResource("Resource_pv2s3"), SubResource("Resource_ilqgg"), SubResource("Resource_1bf1a"), SubResource("Resource_udpee")])
 meta = Array[ExtResource("2_riyp7")]([SubResource("Resource_fx65o"), SubResource("Resource_a6e6l")])

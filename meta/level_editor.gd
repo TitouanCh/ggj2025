@@ -7,7 +7,7 @@ var wall_color = {
 	"Hublot": Color.BLUE,
 	"Door": Color.AQUA,
 	"Gris": Color.GRAY,
-	"Vert": Color.BEIGE
+	"Vert": Color.DARK_GREEN
 }
 
 var meta_color = {

@@ -8,5 +8,5 @@ static var scenes = {
 	"Hublot": load("res://game/hublot.tscn"),
 	"Door": load("res://game/mur_porte.tscn"),
 	"Gris": load("res://game/mur_gris.tscn"),
-	"Vert": load("res://game/mur_vert")
+	"Vert": load("res://game/mur_vert.tscn")
 }

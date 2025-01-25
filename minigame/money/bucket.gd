@@ -10,7 +10,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	var direction := get_local_mouse_position()
-	velocity = direction * SPEED
+	if visible: velocity = direction * SPEED
 	#print(position)
 	move_and_slide()
 #
