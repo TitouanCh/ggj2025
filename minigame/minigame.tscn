@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpcmldapa273a"]
+[gd_scene load_steps=2 format=3 uid="uid://dpcmldapa273a"]
 
 [ext_resource type="Script" path="res://minigame/minigame.gd" id="1_0uruy"]
-[ext_resource type="PackedScene" uid="uid://cei8uaqgjvfwo" path="res://minigame/cleaning/cleaning.tscn" id="2_cu2sl"]
 
 [node name="minigame" type="Node2D"]
 script = ExtResource("1_0uruy")
-
-[node name="Cleaning" parent="." instance=ExtResource("2_cu2sl")]
