@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 	else:
 		if grabbed:
 			grabbed = false
-			Sound.play_sound_from_name("keys.mp3", -0.1)
+			Sound.play_sound_from_name("keys.mp3", -0.3)
 		grabbed_key = null
 	if grabbed and !bye:
 		target = get_global_mouse_position()
