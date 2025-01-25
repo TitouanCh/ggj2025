@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://lg4dq3weje5u"]
+
+[ext_resource type="ArrayMesh" uid="uid://b53cghfco1q2" path="res://model/machine2.tres" id="1_f5mf5"]
+[ext_resource type="ArrayMesh" uid="uid://bkklxbl1fc582" path="res://model/machine2_door.tres" id="2_j68v2"]
+
+[node name="Machine" type="Node3D"]
+
+[node name="AssetMachineV2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0244124, 0, 0.354434)
+mesh = ExtResource("1_f5mf5")
+
+[node name="AssetMachinePorteV1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0290442, 0, 0.316649)
+mesh = ExtResource("2_j68v2")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://nwrkapbtung2"
+path="res://.godot/imported/ASSET_pouf_v1.obj-2b6875871d46508f7f249df139a99988.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ASSET_pouf_v1.obj-2b6875871d46508f7f249df139a99988.mesh"]
+
+source_file="res://asset/props/ASSET_pouf_v1.obj"
+dest_files=["res://.godot/imported/ASSET_pouf_v1.obj-2b6875871d46508f7f249df139a99988.mesh", "res://.godot/imported/ASSET_pouf_v1.obj-2b6875871d46508f7f249df139a99988.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
