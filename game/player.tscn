@@ -14,6 +14,7 @@ shader_parameter/sigma = 0.1
 
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 2
+collision_mask = 11
 script = ExtResource("1_blixr")
 
 [node name="Head" type="Node3D" parent="."]
