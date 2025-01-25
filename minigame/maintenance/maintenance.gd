@@ -3,7 +3,9 @@ var textures = {}
 var texture_keys =[]
 var current_start : Chip = null  # The current point being connected
 var connected_lines = []
-var epsilon = 32.0
+var epsilon = 40.0
+var hand_texture = [load("res://sprites/open_hand.png"), load("res://sprites/closed_fist.png")]
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	textures["yellow"] = load("res://sprites/chip/puce_Y.png")
@@ -15,6 +17,11 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$Hand.position = get_global_mouse_position() + Vector2(0,20)
+	if Input.is_action_pressed("left_click"):
+		$Hand.texture = hand_texture[1]
+	else:
+		$Hand.texture = hand_texture[0]
 	if len(connected_lines) == 4:
 		finished.emit()
 		queue_free()
