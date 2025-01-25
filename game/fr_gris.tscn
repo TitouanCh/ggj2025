@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=3 uid="uid://dms2bhkxh6py"]
+
+[ext_resource type="Texture2D" uid="uid://dyilqvtwmei8" path="res://texture/TEXTURE_sol_gris_poly.png" id="1_hya20"]
+[ext_resource type="Texture2D" uid="uid://h8k1atuacmqx" path="res://texture/TEXTURE_plafond_v1.png" id="2_rk871"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vvrrm"]
+size = Vector3(8, 1, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r86oe"]
+albedo_texture = ExtResource("1_hya20")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_h880l"]
+_surfaces = [{
+"aabb": AABB(-4, 0, -4, 8, 1e-05, 8),
+"attribute_data": PackedByteArray(255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_r86oe"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0o6h"]
+albedo_color = Color(0.412152, 0.412152, 0.412152, 1)
+albedo_texture = ExtResource("2_rk871")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jrt0d"]
+_surfaces = [{
+"aabb": AABB(-4, 0, -4, 8, 1e-05, 8),
+"attribute_data": PackedByteArray(255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_v0o6h"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+
+[node name="roofnfloor" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.5, 4)
+shape = SubResource("BoxShape3D_vvrrm")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22543, 5.34371, 3.88811)
+shadow_enabled = true
+shadow_blur = 1.676
+omni_range = 9.0
+
+[node name="AssetDalleSol4x4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+mesh = SubResource("ArrayMesh_h880l")
+
+[node name="AssetDalleSol4x5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 4, 6, 4)
+mesh = SubResource("ArrayMesh_jrt0d")

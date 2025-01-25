@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://csf74bxw1qkxd"]
+
+[ext_resource type="PackedScene" uid="uid://cr0dt4olj00a4" path="res://game/table.tscn" id="1_hx876"]
+[ext_resource type="PackedScene" uid="uid://db20wm8ur62l4" path="res://game/canette.tscn" id="2_fh7fl"]
+[ext_resource type="PackedScene" uid="uid://dywyy2a7cjbk3" path="res://game/pouf.tscn" id="3_vdeth"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Table" parent="." instance=ExtResource("1_hx876")]
+
+[node name="Node3D" parent="Table" instance=ExtResource("2_fh7fl")]
+transform = Transform3D(-6.08251e-09, -0.139152, -0.192924, 0.237872, -1.03977e-08, 0, -8.43299e-09, -0.192924, 0.139152, -0.246765, 0.559345, 0.191945)
+
+[node name="Node3D2" parent="Table" instance=ExtResource("2_fh7fl")]
+transform = Transform3D(0.237872, 0, 0, 0, 0.237872, 0, 0, 0, 0.237872, 0.114025, 0.499514, -0.0858411)
+
+[node name="pouf" parent="Table" instance=ExtResource("3_vdeth")]
+transform = Transform3D(0.887631, 0, -0.460556, 0, 1, 0, 0.460556, 0, 0.887631, -1.91753, -0.067, -0.506293)
+
+[node name="pouf2" parent="Table" instance=ExtResource("3_vdeth")]
+transform = Transform3D(-0.641717, -1.00405e-08, -0.766941, 4.01122e-08, 1, -4.66545e-08, 0.766941, -6.07026e-08, -0.641717, 1.21886, -0.067, -1.09995)

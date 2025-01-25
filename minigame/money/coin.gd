@@ -1,5 +1,16 @@
 extends RigidBody2D
 
+static var textures = [
+	preload("res://sprites/money/p1.png"),
+	preload("res://sprites/money/p1c.png"),
+	preload("res://sprites/money/p2.png"),
+	preload("res://sprites/money/p5.png"),
+	preload("res://sprites/money/p50.png")
+]
+
+func _ready() -> void:
+	var i = randi() % len(textures)
+	$Sprite2D.texture = textures[i]
 
 func _process(delta: float) -> void:
 	if position.y > get_parent().dimensions.y:

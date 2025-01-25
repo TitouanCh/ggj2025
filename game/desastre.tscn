@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://6ckb21ok4e4s"]
+
+[ext_resource type="PackedScene" uid="uid://lg4dq3weje5u" path="res://game/machine2.tscn" id="1_xjgji"]
+[ext_resource type="PackedScene" uid="uid://cr0dt4olj00a4" path="res://game/table.tscn" id="2_vbclh"]
+[ext_resource type="PackedScene" uid="uid://dywyy2a7cjbk3" path="res://game/pouf.tscn" id="3_h55of"]
+[ext_resource type="PackedScene" uid="uid://db20wm8ur62l4" path="res://game/canette.tscn" id="4_dhi38"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Machine" parent="." instance=ExtResource("1_xjgji")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, -1, 1, 1.91069e-15, -4.37114e-08, 0, -1, -4.37114e-08, 0, 0.273907, 0)
+
+[node name="Table" parent="." instance=ExtResource("2_vbclh")]
+transform = Transform3D(0.866025, 4.20524e-08, 0.5, 0.254791, 0.860422, -0.441311, -0.430211, 0.509582, 0.745147, 0.0013368, 0.569984, -0.202664)
+
+[node name="pouf" parent="." instance=ExtResource("3_h55of")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.967745, 0, 0.472487)
+
+[node name="Node3D" parent="." instance=ExtResource("4_dhi38")]
+transform = Transform3D(0.516287, 0.0361903, -0.855651, -0.856227, 0.00084786, -0.516599, -0.0179704, 0.999345, 0.0314248, 0.0431795, 0.991667, -0.951864)
+
+[node name="Node3D2" parent="." instance=ExtResource("4_dhi38")]
+transform = Transform3D(-0.69139, -0.57753, -0.434095, -0.531739, 4.01452e-08, 0.846909, -0.489115, 0.816369, -0.307095, 0.444643, 0.980036, -0.921644)
+
+[node name="Node3D3" parent="." instance=ExtResource("4_dhi38")]
+transform = Transform3D(-0.69139, -0.57753, -0.434095, -0.531739, 4.01452e-08, 0.846909, -0.489115, 0.816369, -0.307095, -0.257973, 1.00384, -1.17574)
+
+[node name="Node3D4" parent="." instance=ExtResource("4_dhi38")]
+transform = Transform3D(0.79422, 0.557064, -0.242681, -0.292221, -4.76089e-08, -0.956351, -0.532749, 0.830469, 0.162786, -0.223698, 1.01214, -1.77882)
+
+[node name="Node3D5" parent="." instance=ExtResource("4_dhi38")]
+transform = Transform3D(-1.27119e-07, 1, 7.05548e-08, 0.807053, 6.09308e-08, 0.590479, 0.590479, 1.32003e-07, -0.807053, -0.128782, 0.992206, -2.17654)
+
+[node name="Node3D6" parent="." instance=ExtResource("4_dhi38")]
+transform = Transform3D(-0.507448, 0.366128, -0.78003, 0.838233, 6.32848e-08, -0.545312, -0.199654, -0.930565, -0.3069, 0.817734, 0.100011, -0.620402)
+
+[node name="Node3D7" parent="." instance=ExtResource("4_dhi38")]
+transform = Transform3D(-0.207574, -0.970114, 0.125667, -0.517893, 3.90998e-08, -0.855446, 0.82988, -0.24265, -0.502415, 0.991746, 0.100011, -1.15826)
+
+[node name="Node3D8" parent="." instance=ExtResource("4_dhi38")]
+transform = Transform3D(-0.245897, 0.838376, 0.486478, 0.892468, 6.73794e-08, 0.451111, 0.378201, 0.545093, -0.748223, 1.01615, 0.100011, -1.56818)

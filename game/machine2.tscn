@@ -1,11 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://lg4dq3weje5u"]
+[gd_scene load_steps=10 format=3 uid="uid://lg4dq3weje5u"]
 
 [ext_resource type="ArrayMesh" uid="uid://b53cghfco1q2" path="res://model/machine2.tres" id="1_f5mf5"]
 [ext_resource type="Script" path="res://game/machine.gd" id="1_vt4j7"]
 [ext_resource type="ArrayMesh" uid="uid://bkklxbl1fc582" path="res://model/machine2_door.tres" id="2_j68v2"]
+[ext_resource type="Texture2D" uid="uid://cpnihv5jujsol" path="res://texture/logo/logo_distributeur.png" id="4_2hms7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wcaw8"]
-size = Vector3(1, 4, 2)
+size = Vector3(1, 4, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ggn7m"]
+transparency = 1
+albedo_texture = ExtResource("4_2hms7")
+
+[sub_resource type="QuadMesh" id="QuadMesh_5wkg0"]
+material = SubResource("StandardMaterial3D_ggn7m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2jbdk"]
+albedo_color = Color(0.117647, 0.109804, 0.145098, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_h2cyy"]
+material = SubResource("StandardMaterial3D_2jbdk")
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.5
 
 [node name="Machine" type="StaticBody3D"]
 script = ExtResource("1_vt4j7")
@@ -13,10 +30,22 @@ script = ExtResource("1_vt4j7")
 [node name="AssetMachineV2" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_f5mf5")
 
-[node name="AssetMachinePorteV1" type="MeshInstance3D" parent="."]
-visible = false
-mesh = ExtResource("2_j68v2")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.06354, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.172039, 2.06354, 0)
 shape = SubResource("BoxShape3D_wcaw8")
+
+[node name="DoorJoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.581285, 1.23, 0.7059)
+
+[node name="AssetMachinePorteV1" type="MeshInstance3D" parent="DoorJoint"]
+transform = Transform3D(0.999156, 0, 0.0410735, 0, 1, 0, -0.0410735, 0, 0.999156, -0.6323, -1.23, -0.693452)
+mesh = ExtResource("2_j68v2")
+skeleton = NodePath("../..")
+
+[node name="logo" type="MeshInstance3D" parent="DoorJoint/AssetMachinePorteV1"]
+transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 0.698706, 0.846749, 0.0884166)
+mesh = SubResource("QuadMesh_5wkg0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.587781, 2.15029, 0.703785)
+mesh = SubResource("CylinderMesh_h2cyy")

@@ -47,9 +47,10 @@ visible = false
 mesh = SubResource("BoxMesh_s7dsv")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22543, 4.39957, 3.88811)
-light_energy = 1.73
-omni_range = 30.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22543, 5.34371, 3.88811)
+shadow_enabled = true
+shadow_blur = 1.676
+omni_range = 9.0
 
 [node name="AssetDalleSol4x4" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
