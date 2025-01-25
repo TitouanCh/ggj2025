@@ -5,14 +5,16 @@ var data: LevelData = LevelData.new()
 var wall_color = {
 	"Normal": Color.GREEN,
 	"Hublot": Color.BLUE,
-	"Door": Color.AQUA
+	"Door": Color.AQUA,
+	"Gris": Color.GRAY,
+	"Vert": Color.BEIGE
 }
 
 var meta_color = {
 	"PlayerPosition": Color.RED,
 	"Machine": Color.PURPLE,
 	"Pouf": Color.YELLOW_GREEN,
-	"Table": Color.YELLOW
+	"Table": Color.YELLOW,
 }
 
 var current_base = 0
@@ -28,7 +30,7 @@ var classes = {
 }
 
 var types = {
-	"wall": ["Normal", "Hublot", "Door"],
+	"wall": ["Normal", "Hublot", "Door", "Gris", "Vert"],
 	"fr": ["Base"],
 	"meta": ["PlayerPosition", "Machine", "Pouf", "Table"]
 }

@@ -1,22 +1,22 @@
-[gd_resource type="ArrayMesh" load_steps=3 format=3 uid="uid://b8i43p1fc77nh"]
+[gd_scene load_steps=4 format=3 uid="uid://ihkro8cvm5ew"]
 
-[ext_resource type="Texture2D" uid="uid://drwcy3a3eh8n1" path="res://texture/TEXTURE_murs_v1.png" id="1_n2tam"]
+[ext_resource type="Texture2D" uid="uid://v44lcqbxl26q" path="res://texture/TEXTURE_murs_verts_v1.png" id="1_1njbl"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_utjc0"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iflip"]
 resource_name = "MUR"
 cull_mode = 2
 albedo_color = Color(0.8, 0.8, 0.8, 1)
-albedo_texture = ExtResource("1_n2tam")
+albedo_texture = ExtResource("1_1njbl")
 metallic = 0.5
 
-[resource]
+[sub_resource type="ArrayMesh" id="ArrayMesh_x77xs"]
 _surfaces = [{
 "aabb": AABB(0, 0, -4, 1e-05, 6, 8),
 "attribute_data": PackedByteArray(255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 63, 0, 0, 255, 63),
 "format": 34896613399,
 "index_count": 6,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
-"material": SubResource("StandardMaterial3D_utjc0"),
+"material": SubResource("StandardMaterial3D_iflip"),
 "name": "MUR",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -24,3 +24,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 255, 255, 255, 255, 255, 191, 0, 0, 255, 255, 0, 0, 255, 191, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
 }]
 blend_shape_mode = 0
+
+[node name="Mur" type="Node3D"]
+
+[node name="AssetMurBase4x4V1" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_x77xs")

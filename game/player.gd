@@ -13,7 +13,6 @@ var surface_friction = 48
 var in_minigame := false
 
 func _ready():
-	print("yoo")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
@@ -62,7 +61,7 @@ func _physics_process(delta):
 func _process(delta):
 	if Input.is_action_just_pressed("escape"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	if Input.is_action_just_pressed("left_click"):
+	if Input.is_action_just_pressed("left_click") and !in_minigame:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
