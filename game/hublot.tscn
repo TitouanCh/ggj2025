@@ -27,4 +27,9 @@ blend_shape_mode = 0
 [node name="hublot" type="Node3D"]
 
 [node name="AssetMurHublot4x4V2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_xicle")
+
+[node name="AssetMurHublot4x4V3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_xicle")

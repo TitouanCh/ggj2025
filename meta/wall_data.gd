@@ -5,6 +5,6 @@ extends ObjectData
 
 static var scenes = {
 	"Normal": load("res://game/mur.tscn"),
-	"Hublot": load("res://game/mur.tscn"),
-	"Door": load("res://game/mur.tscn")
+	"Hublot": load("res://game/hublot.tscn"),
+	"Door": load("res://game/mur_porte.tscn")
 }

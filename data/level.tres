@@ -1,111 +1,101 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=23 format=3 uid="uid://dsy6bvcmp8xjo"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=21 format=3 uid="uid://dsy6bvcmp8xjo"]
 
-[ext_resource type="Script" path="res://meta/fr_data.gd" id="1_fsmn8"]
-[ext_resource type="Script" path="res://meta/meta_data.gd" id="2_vurxp"]
-[ext_resource type="Script" path="res://meta/level_data.gd" id="3_taqv4"]
-[ext_resource type="Script" path="res://meta/wall_data.gd" id="4_bsw3w"]
+[ext_resource type="Script" path="res://meta/fr_data.gd" id="1_2a3an"]
+[ext_resource type="Script" path="res://meta/meta_data.gd" id="2_riyp7"]
+[ext_resource type="Script" path="res://meta/level_data.gd" id="3_kf835"]
+[ext_resource type="Script" path="res://meta/wall_data.gd" id="4_ytnly"]
 
-[sub_resource type="Resource" id="Resource_mpsjr"]
-script = ExtResource("1_fsmn8")
-position = Vector2(352, 192)
+[sub_resource type="Resource" id="Resource_5dd1a"]
+script = ExtResource("1_2a3an")
+position = Vector2(352, 160)
 type = "Base"
 
-[sub_resource type="Resource" id="Resource_rtjdu"]
-script = ExtResource("1_fsmn8")
-position = Vector2(384, 192)
+[sub_resource type="Resource" id="Resource_qfg6h"]
+script = ExtResource("1_2a3an")
+position = Vector2(384, 160)
 type = "Base"
 
-[sub_resource type="Resource" id="Resource_3modo"]
-script = ExtResource("1_fsmn8")
+[sub_resource type="Resource" id="Resource_uaeeh"]
+script = ExtResource("1_2a3an")
+position = Vector2(416, 160)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_dq0bw"]
+script = ExtResource("1_2a3an")
+position = Vector2(448, 160)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_ddi4i"]
+script = ExtResource("1_2a3an")
 position = Vector2(416, 192)
 type = "Base"
 
-[sub_resource type="Resource" id="Resource_l2gkv"]
-script = ExtResource("1_fsmn8")
+[sub_resource type="Resource" id="Resource_pv2s3"]
+script = ExtResource("1_2a3an")
+position = Vector2(384, 192)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_dlwue"]
+script = ExtResource("1_2a3an")
 position = Vector2(448, 192)
 type = "Base"
 
-[sub_resource type="Resource" id="Resource_xkva5"]
-script = ExtResource("1_fsmn8")
-position = Vector2(352, 224)
-type = "Base"
-
-[sub_resource type="Resource" id="Resource_m5h11"]
-script = ExtResource("1_fsmn8")
-position = Vector2(384, 224)
-type = "Base"
-
-[sub_resource type="Resource" id="Resource_6a4q2"]
-script = ExtResource("1_fsmn8")
-position = Vector2(416, 224)
-type = "Base"
-
-[sub_resource type="Resource" id="Resource_wpkbl"]
-script = ExtResource("1_fsmn8")
-position = Vector2(448, 224)
-type = "Base"
-
-[sub_resource type="Resource" id="Resource_ks1wo"]
-script = ExtResource("2_vurxp")
-position = Vector2(403, 224)
+[sub_resource type="Resource" id="Resource_fx65o"]
+script = ExtResource("2_riyp7")
+rotation = -0.0322469
+position = Vector2(370, 182)
 type = "PlayerPosition"
 
-[sub_resource type="Resource" id="Resource_u6p08"]
-script = ExtResource("4_bsw3w")
-to_position = Vector2(192, 96)
-position = Vector2(192, 96)
-type = "Normal"
+[sub_resource type="Resource" id="Resource_78hjq"]
+script = ExtResource("2_riyp7")
+rotation = -0.0391956
+position = Vector2(430, 181)
+type = "Pouf"
 
-[sub_resource type="Resource" id="Resource_nvx6d"]
-script = ExtResource("4_bsw3w")
-to_position = Vector2(205.719, 85.2292)
-position = Vector2(174, 81)
-type = "Normal"
+[sub_resource type="Resource" id="Resource_rbxeo"]
+script = ExtResource("2_riyp7")
+rotation = 0.785398
+position = Vector2(424, 189)
+type = "Pouf"
 
-[sub_resource type="Resource" id="Resource_4qedp"]
-script = ExtResource("4_bsw3w")
-to_position = Vector2(259.956, 143.107)
-position = Vector2(229, 135)
-type = "Normal"
+[sub_resource type="Resource" id="Resource_2pgu8"]
+script = ExtResource("2_riyp7")
+rotation = 1.68145
+position = Vector2(414, 191)
+type = "Pouf"
 
-[sub_resource type="Resource" id="Resource_je7fw"]
-script = ExtResource("4_bsw3w")
-to_position = Vector2(384, 192)
-position = Vector2(352, 192)
-type = "Normal"
+[sub_resource type="Resource" id="Resource_x4qes"]
+script = ExtResource("2_riyp7")
+rotation = 2.72709
+position = Vector2(406, 187)
+type = "Pouf"
 
-[sub_resource type="Resource" id="Resource_sp6f5"]
-script = ExtResource("4_bsw3w")
-to_position = Vector2(416, 192)
-position = Vector2(384, 192)
-type = "Normal"
+[sub_resource type="Resource" id="Resource_fcor3"]
+script = ExtResource("2_riyp7")
+rotation = 3.14159
+position = Vector2(402, 177)
+type = "Pouf"
 
-[sub_resource type="Resource" id="Resource_v37x4"]
-script = ExtResource("4_bsw3w")
-to_position = Vector2(448, 192)
-position = Vector2(416, 192)
-type = "Normal"
+[sub_resource type="Resource" id="Resource_rbc3f"]
+script = ExtResource("2_riyp7")
+rotation = -2.0032
+position = Vector2(411, 171)
+type = "Pouf"
 
-[sub_resource type="Resource" id="Resource_mtsys"]
-script = ExtResource("4_bsw3w")
-to_position = Vector2(480, 192)
-position = Vector2(448, 192)
-type = "Normal"
+[sub_resource type="Resource" id="Resource_5xcyn"]
+script = ExtResource("2_riyp7")
+rotation = -1.5708
+position = Vector2(420, 166)
+type = "Pouf"
 
-[sub_resource type="Resource" id="Resource_5pmbk"]
-script = ExtResource("4_bsw3w")
-to_position = Vector2(480, 224)
-position = Vector2(480, 192)
-type = "Normal"
-
-[sub_resource type="Resource" id="Resource_oeh81"]
-script = ExtResource("4_bsw3w")
-to_position = Vector2(480, 256)
-position = Vector2(480, 224)
-type = "Normal"
+[sub_resource type="Resource" id="Resource_e5l1k"]
+script = ExtResource("2_riyp7")
+rotation = -0.68573
+position = Vector2(428, 165)
+type = "Pouf"
 
 [resource]
-script = ExtResource("3_taqv4")
-wall = Array[ExtResource("4_bsw3w")]([SubResource("Resource_u6p08"), SubResource("Resource_nvx6d"), SubResource("Resource_4qedp"), SubResource("Resource_je7fw"), SubResource("Resource_sp6f5"), SubResource("Resource_v37x4"), SubResource("Resource_mtsys"), SubResource("Resource_5pmbk"), SubResource("Resource_oeh81")])
-fr = Array[ExtResource("1_fsmn8")]([SubResource("Resource_mpsjr"), SubResource("Resource_rtjdu"), SubResource("Resource_3modo"), SubResource("Resource_l2gkv"), SubResource("Resource_xkva5"), SubResource("Resource_m5h11"), SubResource("Resource_6a4q2"), SubResource("Resource_wpkbl")])
-meta = Array[ExtResource("2_vurxp")]([SubResource("Resource_ks1wo")])
+script = ExtResource("3_kf835")
+wall = Array[ExtResource("4_ytnly")]([])
+fr = Array[ExtResource("1_2a3an")]([SubResource("Resource_5dd1a"), SubResource("Resource_qfg6h"), SubResource("Resource_uaeeh"), SubResource("Resource_dq0bw"), SubResource("Resource_ddi4i"), SubResource("Resource_pv2s3"), SubResource("Resource_dlwue")])
+meta = Array[ExtResource("2_riyp7")]([SubResource("Resource_fx65o"), SubResource("Resource_78hjq"), SubResource("Resource_rbxeo"), SubResource("Resource_2pgu8"), SubResource("Resource_x4qes"), SubResource("Resource_fcor3"), SubResource("Resource_rbc3f"), SubResource("Resource_5xcyn"), SubResource("Resource_e5l1k")])

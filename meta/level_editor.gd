@@ -8,6 +8,13 @@ var wall_color = {
 	"Door": Color.AQUA
 }
 
+var meta_color = {
+	"PlayerPosition": Color.RED,
+	"Machine": Color.PURPLE,
+	"Pouf": Color.YELLOW_GREEN,
+	"Table": Color.YELLOW
+}
+
 var current_base = 0
 var current_type = 0
 
@@ -23,7 +30,7 @@ var classes = {
 var types = {
 	"wall": ["Normal", "Hublot", "Door"],
 	"fr": ["Base"],
-	"meta": ["PlayerPosition"]
+	"meta": ["PlayerPosition", "Machine", "Pouf", "Table"]
 }
 
 func get_mouse_position():
@@ -59,12 +66,26 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("load"):
 		data = load("res://data/level.tres")
 		print("load!")
-
-	elif Input.is_action_just_released("left_click"):
+	
+	if Input.is_action_pressed("erase"):
+		for wall in data.wall:
+			if wall.position.distance_to(get_mouse_position()) < 32.0:
+				data.wall.erase(wall)
+		for fr in data.fr:
+			if fr.position.distance_to(get_mouse_position()) < 32.0:
+				data.fr.erase(fr)
+		for meta in data.meta:
+			if meta.position.distance_to(get_mouse_position()) < 32.0:
+				data.meta.erase(meta)
+	
+	if Input.is_action_pressed("left_click"):
 		match get_current_base():
 			"wall":
 				current.to_position = current.position + (get_mouse_position() - current.position).normalized() * 32
-		
+			"meta":
+				current.rotation = ((get_mouse_position() - current.position).normalized() * 32).angle()
+
+	if Input.is_action_just_released("left_click"):
 		data.get(get_current_base()).append(current)
 	
 	$Label.text = get_current_base() + " : " + get_current_type()
@@ -72,10 +93,16 @@ func _process(delta: float) -> void:
 	queue_redraw()
 
 func _draw() -> void:
-	draw_circle(get_mouse_position(), 2.0, Color.RED)
-	for wall in data.wall:
-		draw_line(wall.position, wall.to_position, wall_color[wall.type], 3)
-	for fr in data.fr:
-		draw_rect(Rect2(fr.position, Vector2.ONE * snap), Color(144, 144, 144, 0.85))
-	for meta in data.meta:
-		draw_circle(meta.position, 1.5, Color.RED)
+	if Input.is_action_pressed("erase"): draw_circle(get_mouse_position(), 32.0, Color.BLUE)
+	else: draw_circle(get_mouse_position(), 2.0, Color.RED)
+	
+	var arr = data.wall + data.fr + data.meta
+	if Input.is_action_pressed("left_click"): arr += [current]
+	for obj in arr:
+		if obj is WallData:
+			draw_line(obj.position, obj.to_position, wall_color[obj.type], 3)
+		if obj is FRData:
+			draw_rect(Rect2(obj.position, Vector2.ONE * snap), Color(144, 144, 144, 0.85))
+		if obj is MetaData:
+			draw_circle(obj.position, 2.5, meta_color[obj.type])
+			draw_line(obj.position, obj.position + (Vector2.ONE.rotated(obj.rotation - PI/4) * 8.0), meta_color[obj.type], 1)

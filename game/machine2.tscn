@@ -6,9 +6,8 @@
 [node name="Machine" type="Node3D"]
 
 [node name="AssetMachineV2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0244124, 0, 0.354434)
 mesh = ExtResource("1_f5mf5")
 
 [node name="AssetMachinePorteV1" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0290442, 0, 0.316649)
+visible = false
 mesh = ExtResource("2_j68v2")
