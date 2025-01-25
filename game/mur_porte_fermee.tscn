@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://k80xter7w4we"]
+
+[ext_resource type="ArrayMesh" uid="uid://cc85w1ffdyd22" path="res://model/door.tres" id="1_xu4r5"]
+[ext_resource type="ArrayMesh" uid="uid://bk870xxe7g4uu" path="res://model/door_door.tres" id="2_w8xho"]
+
+[node name="MurPorte" type="Node3D"]
+
+[node name="AssetMurPorte4x4V2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+mesh = ExtResource("1_xu4r5")
+
+[node name="AssetMurPorte4x4V3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, 1, 0, 1, 0, 1, 0, -1.19249e-08, 0, 0, 0)
+mesh = ExtResource("1_xu4r5")
+
+[node name="AssetPorteV2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+mesh = ExtResource("2_w8xho")

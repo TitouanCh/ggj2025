@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlp60bgve120v"]
+
+[ext_resource type="ArrayMesh" uid="uid://b8i43p1fc77nh" path="res://model/mur.tres" id="1_y6kpv"]
+
+[node name="Mur" type="Node3D"]
+
+[node name="AssetMurBase4x4V1" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+mesh = ExtResource("1_y6kpv")
+
+[node name="AssetMurBase4x4V2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 4)
+visible = false
+mesh = ExtResource("1_y6kpv")

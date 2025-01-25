@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=4 uid="uid://bfqo61jbjycsx"]
+
+[ext_resource type="Texture2D" uid="uid://bumb78ulbcvuo" path="res://texture/TEXTURE_murs_gris_v1.png" id="1_fjnbs"]
+[ext_resource type="ArrayMesh" uid="uid://bk870xxe7g4uu" path="res://model/door_door.tres" id="2_65eav"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tunw8"]
+resource_name = "MUR"
+albedo_color = Color(0.8, 0.8, 0.8, 1)
+albedo_texture = ExtResource("1_fjnbs")
+metallic = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jmstx"]
+_surfaces = [{
+"aabb": AABB(-0.20319, 0, -4, 0.375698, 6, 8),
+"attribute_data": PackedByteArray("///+////+Z+S0f7/2tobtM5/+Z/Of///KqwZrSqs//8B+RWXPNYTlwH5kZk81o6ZPNYTl7nAFZc81o6ZucCRmbnAFZeXoBOXucCRmZegjpnAxdGEwMVtggig1IQIoHCCRdrUhETacILAxdGEwMVtgmr90YRq/W2CRdrUhETacIJ0vfmSXb05lEjY1ZSr2TCWYNf+hpnYlIVVvquHar6shmi6zJOJuySVZ7vfhre8oIVI2NWUq9kwlmDX/oaZ2JSFZ7vfhre8oIVLojmIOaINh/6izpIPo7yTaLrMk4m7JJU="),
+"format": 34896613399,
+"index_count": 90,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcAAQAEAAMAAwAEAAYACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcAGAAZABoAGgAZABsAHAAdAB4AHgAdAB8AIAAhACIAIgAhACMAJAAlACYAJgAlACcAKAApACoAKgApACsALAAtAC4ALgAtAC8AMAAxADIAMgAxADMANAA1ADYANgA1ADcA"),
+"material": SubResource("StandardMaterial3D_tunw8"),
+"name": "MUR",
+"primitive": 3,
+"uv_scale": Vector4(1.99476, 1.99728, 0, 0),
+"vertex_count": 56,
+"vertex_data": PackedByteArray("c4oAAP//AABziv////8AAHOKAABJowAAc4pSytK1AABziv//AAAAAHOKAAAAAAAAc4oB3ZVYAABzigAAlVgAAP//AAAOUgAA///X3g5SAACbAQAADlIAAJsB194OUgAA///X3g5Syy1j/ijMhLjLLZsB194OUsstAAAozIS4yy1j/ijMhLjVP2P+AAA9pNU/AAAozIS41T8AAAAAPaTVP88VOtPMWfw/yus608xZ/D/PFQAAzFn8P8rrAADMWfw/NBSDwymvXCcv6oPDKa9cJ88VOtPMWVwnyus608xZXCc0FAAAG55VAy/qAAAbnlUDNBSDwymvVQMv6oPDKa9VA88VAADMWU8vmwEAAA5STy/PFTrTzFlPL5sB194OUk8vNBSDwymvySkAACjMhLjJKTQUAAAbnskpAAAAAD2kySkv6oPDKa+nK2P+KMyEuKcryus608xZpyv//9feDlKnK88VOtPMWT8pmwHX3g5SPyk0FIPDKa8/KQAAKMyEuD8pyus608xZBCz//9feDlIELMrrAADMWQQs//8AAA5SBCwv6gAAG56nJWP+AAA9pKclL+qDwymvpyVj/ijMhLinJf+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9/AcACQAHAAkABwAJAAcACQFDXsShQ17EoUNexKFDXsSh0B4n4dAeJ+HQHifh0B4n4/////////////////////5QsbdOULG3TlCxt05QsbdPKwS8+ysEvPsrBLz7KwS8+CtUR2ArVEdgK1RHYCtUR2CvRcdQr0XHUK9Fx1CvRcdQ8J0ovPCdKLzwnSi88J0ovI9HD2SPRw9kj0cPZI9HD2VUnoClVJ6ApVSegKVUnoCmlKhotpSoaLaUqGi2lKhot")
+}]
+blend_shape_mode = 0
+
+[node name="MurPorte" type="Node3D"]
+
+[node name="AssetMurPorte4x4V2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_jmstx")
+
+[node name="AssetMurPorte4x4V3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_jmstx")
+
+[node name="AssetPorteV2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099082, 0, 3.48825)
+visible = false
+mesh = ExtResource("2_65eav")

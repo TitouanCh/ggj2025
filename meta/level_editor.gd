@@ -6,8 +6,16 @@ var wall_color = {
 	"Normal": Color.GREEN,
 	"Hublot": Color.BLUE,
 	"Door": Color.AQUA,
+	"DoorFermee": Color.DARK_BLUE,
 	"Gris": Color.GRAY,
-	"Vert": Color.DARK_GREEN
+	"HublotGris": Color.DIM_GRAY,
+	"DoorGris": Color.DARK_GRAY,
+	"DoorFermeeGris": Color.LIGHT_BLUE,
+	"Vert": Color.DARK_GREEN,
+	"HublotVert": Color.LAWN_GREEN,
+	"DoorVert": Color.AQUAMARINE,
+	"DoorFermeeVert": Color.CHARTREUSE,
+	"DoorBleuVert": Color.DARK_VIOLET
 }
 
 
@@ -33,6 +41,7 @@ var current_type = 0
 
 var current = null
 var snap = 32
+var small_snap = 4
 
 var classes = {
 	"wall": WallData,
@@ -41,7 +50,7 @@ var classes = {
 }
 
 var types = {
-	"wall": ["Normal", "Hublot", "Door", "Gris", "Vert"],
+	"wall": ["Normal", "Hublot", "Door", "DoorFermee", "Gris", "HublotGris", "DoorGris", "DoorFermeeGris", "Vert", "HublotVert", "DoorVert", "DoorFermeeVert", "DoorBleuVert"],
 	"fr": ["Base", "Gris", "Vert"],
 	"meta": ["PlayerPosition", "Machine", "Pouf", "Table", "TablePoufCannette", "Pyramide", "Desastre"]
 }
@@ -49,6 +58,7 @@ var types = {
 func get_mouse_position():
 	var mouse_position = get_global_mouse_position()
 	if Input.is_action_pressed("snap"): mouse_position = mouse_position.snappedf(snap)
+	if Input.is_action_pressed("small_snap"): mouse_position = mouse_position.snappedf(small_snap)
 	return mouse_position
 
 func get_current_type():
