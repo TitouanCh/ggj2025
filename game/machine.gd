@@ -3,7 +3,7 @@ extends Interactable
 
 func interact(player: Player):
 	print("Machine Soda")
-	player.start_minigame("money").finished.connect(close)
+	player.start_minigame("maintenance").finished.connect(close)
 	Sound.play_sound_from_name("metal_door.mp3")
 	open()
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oilwdyriwu32"
-path="res://.godot/imported/stain_3.png-dd45bf9059f59c43bbdbe9c6c4a87610.ctex"
+uid="uid://csyw6dp0jvs68"
+path="res://.godot/imported/stain_2.png-a637a9102fc49d8c25a4a8e8255c36fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/minigame/stains/stain_3.png"
-dest_files=["res://.godot/imported/stain_3.png-dd45bf9059f59c43bbdbe9c6c4a87610.ctex"]
+source_file="res://sprites/stains/stain_2.png"
+dest_files=["res://.godot/imported/stain_2.png-a637a9102fc49d8c25a4a8e8255c36fa.ctex"]
 
 [params]
 

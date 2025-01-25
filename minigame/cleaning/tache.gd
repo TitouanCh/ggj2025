@@ -8,10 +8,10 @@ signal die(this)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	textures.append(load("res://texture/minigame/stains/stain_1.png"))
-	textures.append(load("res://texture/minigame/stains/stain_2.png"))
-	textures.append(load("res://texture/minigame/stains/stain_3.png"))
-	textures.append(load("res://texture/minigame/stains/stain_4.png"))
+	textures.append(load("res://sprites/stains/stain_1.png"))
+	textures.append(load("res://sprites/stains/stain_2.png"))
+	textures.append(load("res://sprites/stains/stain_3.png"))
+	textures.append(load("res://sprites/stains/stain_4.png"))
 	sprite = Sprite2D.new()
 	sprite.texture = textures.pick_random()
 	sprite.scale=Vector2(0.8,0.8)
@@ -36,10 +36,6 @@ func handle_click() -> void:
 	
 static func spawn(vec:Vector2) -> Tache:
 	var tache = load("res://minigame/cleaning/tache.tscn").instantiate()
-	
 	tache.position = vec
-	print("Spawned tache at: ")
-	print(tache.position)
-	
 	return tache
 	
