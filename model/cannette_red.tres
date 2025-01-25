@@ -1,9 +1,9 @@
-[gd_resource type="ArrayMesh" load_steps=3 format=4 uid="uid://dkmkb6vayyvis"]
+[gd_resource type="ArrayMesh" load_steps=3 format=4 uid="uid://bk5rx1w2k5xs3"]
 
-[ext_resource type="Texture2D" uid="uid://cfq2p6tn4p7q8" path="res://texture/TEXTURE_canette_buborekok.png" id="1_wlcud"]
+[ext_resource type="Texture2D" uid="uid://cqgkiwixyqu53" path="res://texture/TEXTURE_canette_T2ME_V2.png" id="1_qydn7"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wue0a"]
-albedo_texture = ExtResource("1_wlcud")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wj2o0"]
+albedo_texture = ExtResource("1_qydn7")
 
 [resource]
 _surfaces = [{
@@ -12,7 +12,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 192,
 "index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcAGAAZABoAGgAZABsAHAAdAB4AHgAdAB8AIAAhACIAIgAhACMAJAAlACYAJgAlACcAKAApACoAKgApACsALAAtAC4ALgAtAC8AMAAxADIAMgAxADMANAA1ADYANgA1ADcAOAA5ADoAOgA5ADsAPAA9AD4APgA9AD8AQABBAEIAQgBBAEMARABFAEYARgBFAEcASABJAEoASgBJAEsATABNAE4ATgBNAE8AUABRAFIAUgBRAFMAVABVAFYAVgBVAFcAWABZAFoAWgBZAFsAXABdAF4AXgBdAF8AYABhAGIAYgBhAGMAZABlAGIAYgBlAGAAZgBnAGgAaABnAGkAagBkAGsAawBkAGIAbABtAGkAaQBtAG4AbgBvAGkAaQBvAGgAYwBwAGIAYgBwAGsAZwBxAGkAaQBxAGwA"),
-"material": SubResource("StandardMaterial3D_wue0a"),
+"material": SubResource("StandardMaterial3D_wj2o0"),
 "name": "Cylindre.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),

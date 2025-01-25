@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://db20wm8ur62l4"]
 
 [ext_resource type="Script" path="res://game/canette.gd" id="1_b3u1s"]
-[ext_resource type="ArrayMesh" uid="uid://dkmkb6vayyvis" path="res://model/cannette.tres" id="1_omaot"]
+[ext_resource type="ArrayMesh" uid="uid://bk5rx1w2k5xs3" path="res://model/cannette_red.tres" id="2_x700r"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_02hkn"]
 height = 0.415
@@ -9,14 +9,15 @@ radius = 0.13
 
 [node name="Node3D" type="RigidBody3D"]
 collision_layer = 4
-collision_mask = 7
+collision_mask = 15
 contact_monitor = true
 max_contacts_reported = 1
 script = ExtResource("1_b3u1s")
 
 [node name="Canette" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-mesh = ExtResource("1_omaot")
+layers = 4
+mesh = ExtResource("2_x700r")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.207343, -0.00115347)

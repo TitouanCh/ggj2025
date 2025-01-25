@@ -1,4 +1,4 @@
-extends RigidBody3D
+extends Interactable
 
 var sounds = [
 	load("res://sounds/cannette1.mp3"),
@@ -9,6 +9,9 @@ var sounds = [
 
 var collide_bodies = []
 var sound = false
+
+func interact(player: Player) -> void:
+	queue_free()
 
 func _on_body_entered(body: Node) -> void:
 	if not(body in collide_bodies) and sound:

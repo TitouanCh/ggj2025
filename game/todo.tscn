@@ -1,15 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://doj3b77fleyk2"]
 
 [ext_resource type="Script" path="res://game/todo.gd" id="1_g42fd"]
-[ext_resource type="FontFile" uid="uid://4gspdryjt2jp" path="res://font/Crazey Spaghetti.TTF" id="1_uuanj"]
+[ext_resource type="FontFile" uid="uid://b4wocnnb6e2g7" path="res://font/Crazey_Spaghetti.TTF" id="1_v5maq"]
 
-[sub_resource type="FontVariation" id="FontVariation_3q1ha"]
-base_font = ExtResource("1_uuanj")
-spacing_top = 7
-spacing_bottom = 3
+[sub_resource type="FontVariation" id="FontVariation_butoy"]
+base_font = ExtResource("1_v5maq")
+spacing_glyph = 1
+spacing_top = 2
+spacing_bottom = 2
 
 [sub_resource type="Theme" id="Theme_o2din"]
-default_font = SubResource("FontVariation_3q1ha")
+default_font = SubResource("FontVariation_butoy")
 
 [node name="Todo" type="Control"]
 layout_mode = 3

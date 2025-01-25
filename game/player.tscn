@@ -13,7 +13,7 @@ shader_parameter/sigma = 0.1
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bmq0d"]
 
 [node name="Player" type="CharacterBody3D"]
-collision_layer = 2
+collision_mask = 11
 script = ExtResource("1_blixr")
 
 [node name="Head" type="Node3D" parent="."]
@@ -36,7 +36,8 @@ texture = ExtResource("3_28yen")
 script = ExtResource("4_fy677")
 
 [node name="Front" type="RayCast3D" parent="Head"]
-target_position = Vector3(0, 0, -2)
+target_position = Vector3(0, 0, -4)
+collision_mask = 14
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
