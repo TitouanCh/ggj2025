@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://d044c3fxt0ql6"]
+
+[ext_resource type="Script" path="res://minigame/money/money.gd" id="1_d64ej"]
+[ext_resource type="PackedScene" uid="uid://cnh4qofhnhyql" path="res://minigame/money/bucket.tscn" id="2_u4x0e"]
+[ext_resource type="PackedScene" uid="uid://dgxgdegb58ayw" path="res://minigame/money/coin.tscn" id="3_viquf"]
+[ext_resource type="Texture2D" uid="uid://dg18ll3xeug1" path="res://sprites/money/clef4.png" id="4_02h45"]
+
+[sub_resource type="SystemFont" id="SystemFont_dbevm"]
+
+[node name="Money" type="Node2D"]
+script = ExtResource("1_d64ej")
+font = SubResource("SystemFont_dbevm")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="Bucket" parent="." instance=ExtResource("2_u4x0e")]
+collision_mask = 0
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+
+[node name="Coin" parent="." instance=ExtResource("3_viquf")]
+position = Vector2(523, 16)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(453, 177)
+texture = ExtResource("4_02h45")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

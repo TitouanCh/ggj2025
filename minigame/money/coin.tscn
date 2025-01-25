@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgxgdegb58ayw"]
+
+[ext_resource type="Script" path="res://minigame/money/coin.gd" id="1_haca1"]
+[ext_resource type="Texture2D" uid="uid://uypxcyui4gf6" path="res://sprites/money/p1.png" id="2_oa5p0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ky8kj"]
+
+[node name="Coin" type="RigidBody2D"]
+z_index = 10
+script = ExtResource("1_haca1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ky8kj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_oa5p0")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
