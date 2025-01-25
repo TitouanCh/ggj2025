@@ -3,4 +3,4 @@ extends Interactable
 
 func interact(player: Player):
 	print("Machine Soda")
-	player.start_minigame("money")
+	player.start_minigame("maintenance")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csyw6dp0jvs68"
-path="res://.godot/imported/stain_2.png-facf2269b3983734acf17bec6da10859.ctex"
+uid="uid://t1co5kv4ihl4"
+path="res://.godot/imported/puce_Y.png-2dfd8a6141838b91b8fdcb9aba2a5dac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/minigame/stains/stain_2.png"
-dest_files=["res://.godot/imported/stain_2.png-facf2269b3983734acf17bec6da10859.ctex"]
+source_file="res://sprites/chip/puce_Y.png"
+dest_files=["res://.godot/imported/puce_Y.png-2dfd8a6141838b91b8fdcb9aba2a5dac.ctex"]
 
 [params]
 

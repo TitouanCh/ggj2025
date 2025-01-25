@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b88iwhynda3ue"]
+
+[ext_resource type="Script" path="res://minigame/maintenance/maintenance.gd" id="1_fyliq"]
+[ext_resource type="Texture2D" uid="uid://jm8c3eubt0et" path="res://sprites/chip/motherboard.png" id="1_svuch"]
+
+[node name="Maintenance" type="Node2D"]
+z_index = 2
+script = ExtResource("1_fyliq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_as_relative = false
+position = Vector2(320, 180)
+scale = Vector2(1.6, 1.198)
+texture = ExtResource("1_svuch")

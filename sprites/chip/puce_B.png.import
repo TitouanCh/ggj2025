@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cro11yrj0hbix"
-path="res://.godot/imported/sponge.png-1adbe3b85740738583c1a03a4287d34f.ctex"
+uid="uid://d3h3082dq61a"
+path="res://.godot/imported/puce_B.png-e0b9e3644d2d51c0e7dbc898ae3843c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/minigame/sponge.png"
-dest_files=["res://.godot/imported/sponge.png-1adbe3b85740738583c1a03a4287d34f.ctex"]
+source_file="res://sprites/chip/puce_B.png"
+dest_files=["res://.godot/imported/puce_B.png-e0b9e3644d2d51c0e7dbc898ae3843c6.ctex"]
 
 [params]
 

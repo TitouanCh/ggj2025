@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qei3gj3chi0r"
-path="res://.godot/imported/stain_4.png-1eb3f1323433b65c6de9f9e84dfbdcd8.ctex"
+uid="uid://jm8c3eubt0et"
+path="res://.godot/imported/motherboard.png-b6491b57d308639eb9d9fdff1ac801e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture/minigame/stains/stain_4.png"
-dest_files=["res://.godot/imported/stain_4.png-1eb3f1323433b65c6de9f9e84dfbdcd8.ctex"]
+source_file="res://sprites/chip/motherboard.png"
+dest_files=["res://.godot/imported/motherboard.png-b6491b57d308639eb9d9fdff1ac801e9.ctex"]
 
 [params]
 
