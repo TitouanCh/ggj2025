@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfvpkg8gquhl4"]
+
+[ext_resource type="Script" path="res://game/cross.gd" id="1_rfgim"]
+
+[node name="Cross" type="Node2D"]
+script = ExtResource("1_rfgim")

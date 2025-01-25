@@ -101,6 +101,11 @@ func _process(delta: float) -> void:
 			if meta.position.distance_to(get_mouse_position()) < 32.0:
 				data.meta.erase(meta)
 	
+	if Input.is_action_pressed("erase_only_meta"):
+		for meta in data.meta:
+			if meta.position.distance_to(get_mouse_position()) < 32.0:
+				data.meta.erase(meta)
+	
 	if Input.is_action_pressed("left_click"):
 		match get_current_base():
 			"wall":
@@ -117,6 +122,7 @@ func _process(delta: float) -> void:
 
 func _draw() -> void:
 	if Input.is_action_pressed("erase"): draw_circle(get_mouse_position(), 32.0, Color.BLUE)
+	if Input.is_action_pressed("erase_only_meta"): draw_circle(get_mouse_position(), 32.0, Color.MEDIUM_SEA_GREEN)
 	else: draw_circle(get_mouse_position(), 2.0, Color.RED)
 	
 	var arr = data.wall + data.fr + data.meta
