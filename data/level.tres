@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=21 format=3 uid="uid://cev8a63jd3mnq"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=34 format=3 uid="uid://cev8a63jd3mnq"]
 
 [ext_resource type="Script" path="res://meta/fr_data.gd" id="1_2a3an"]
 [ext_resource type="Script" path="res://meta/meta_data.gd" id="2_riyp7"]
@@ -50,6 +50,51 @@ script = ExtResource("1_2a3an")
 position = Vector2(480, 192)
 type = "Vert"
 
+[sub_resource type="Resource" id="Resource_66m0n"]
+script = ExtResource("1_2a3an")
+position = Vector2(416, 224)
+type = "Gris"
+
+[sub_resource type="Resource" id="Resource_8gf2r"]
+script = ExtResource("1_2a3an")
+position = Vector2(416, 256)
+type = "Gris"
+
+[sub_resource type="Resource" id="Resource_0m24n"]
+script = ExtResource("1_2a3an")
+position = Vector2(416, 288)
+type = "Gris"
+
+[sub_resource type="Resource" id="Resource_ibpmo"]
+script = ExtResource("1_2a3an")
+position = Vector2(448, 288)
+type = "Gris"
+
+[sub_resource type="Resource" id="Resource_u72hk"]
+script = ExtResource("1_2a3an")
+position = Vector2(448, 256)
+type = "Gris"
+
+[sub_resource type="Resource" id="Resource_heqyj"]
+script = ExtResource("1_2a3an")
+position = Vector2(448, 224)
+type = "Gris"
+
+[sub_resource type="Resource" id="Resource_d5oe7"]
+script = ExtResource("1_2a3an")
+position = Vector2(480, 224)
+type = "Gris"
+
+[sub_resource type="Resource" id="Resource_rc2we"]
+script = ExtResource("1_2a3an")
+position = Vector2(480, 256)
+type = "Gris"
+
+[sub_resource type="Resource" id="Resource_ocdck"]
+script = ExtResource("1_2a3an")
+position = Vector2(480, 288)
+type = "Gris"
+
 [sub_resource type="Resource" id="Resource_fx65o"]
 script = ExtResource("2_riyp7")
 rotation = -0.0322469
@@ -61,6 +106,30 @@ script = ExtResource("2_riyp7")
 rotation = -1.8466
 position = Vector2(406, 215)
 type = "Machine"
+
+[sub_resource type="Resource" id="Resource_l31xq"]
+script = ExtResource("2_riyp7")
+rotation = -1.9513
+position = Vector2(453, 300)
+type = "Pouf"
+
+[sub_resource type="Resource" id="Resource_8cayf"]
+script = ExtResource("2_riyp7")
+rotation = 3.14159
+position = Vector2(496, 235)
+type = "Table"
+
+[sub_resource type="Resource" id="Resource_m5jh7"]
+script = ExtResource("2_riyp7")
+rotation = 1.8438
+position = Vector2(478, 183)
+type = "TablePoufCannette"
+
+[sub_resource type="Resource" id="Resource_38yut"]
+script = ExtResource("2_riyp7")
+rotation = -2.1981
+position = Vector2(498, 300)
+type = "Pyramide"
 
 [sub_resource type="Resource" id="Resource_1mgre"]
 script = ExtResource("4_ytnly")
@@ -95,5 +164,5 @@ type = "Vert"
 [resource]
 script = ExtResource("3_kf835")
 wall = Array[ExtResource("4_ytnly")]([SubResource("Resource_1mgre"), SubResource("Resource_fdqep"), SubResource("Resource_7rvqq"), SubResource("Resource_qwsy4"), SubResource("Resource_ucxva")])
-fr = Array[ExtResource("1_2a3an")]([SubResource("Resource_5dd1a"), SubResource("Resource_qfg6h"), SubResource("Resource_pv2s3"), SubResource("Resource_ilqgg"), SubResource("Resource_1bf1a"), SubResource("Resource_udpee"), SubResource("Resource_dn2a1"), SubResource("Resource_yuegp"), SubResource("Resource_bwto0")])
-meta = Array[ExtResource("2_riyp7")]([SubResource("Resource_fx65o"), SubResource("Resource_a6e6l")])
+fr = Array[ExtResource("1_2a3an")]([SubResource("Resource_5dd1a"), SubResource("Resource_qfg6h"), SubResource("Resource_pv2s3"), SubResource("Resource_ilqgg"), SubResource("Resource_1bf1a"), SubResource("Resource_udpee"), SubResource("Resource_dn2a1"), SubResource("Resource_yuegp"), SubResource("Resource_bwto0"), SubResource("Resource_66m0n"), SubResource("Resource_8gf2r"), SubResource("Resource_0m24n"), SubResource("Resource_ibpmo"), SubResource("Resource_u72hk"), SubResource("Resource_heqyj"), SubResource("Resource_d5oe7"), SubResource("Resource_rc2we"), SubResource("Resource_ocdck")])
+meta = Array[ExtResource("2_riyp7")]([SubResource("Resource_fx65o"), SubResource("Resource_a6e6l"), SubResource("Resource_l31xq"), SubResource("Resource_8cayf"), SubResource("Resource_m5jh7"), SubResource("Resource_38yut")])
