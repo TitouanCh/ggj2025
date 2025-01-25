@@ -58,7 +58,7 @@ func _input(event) -> void:
 			var clicked_node = get_closest_node(event.position)
 			if clicked_node and clicked_node != current_start and clicked_node.color==current_start.color:
 				connected_lines.append([current_start, clicked_node])
-			elif clicked_node.color!=current_start.color:
+			elif clicked_node and clicked_node.color!=current_start.color:
 				Sound.play_sound_from_name("electric_zap.mp3")
 			current_start = null  # Reset after connection
 

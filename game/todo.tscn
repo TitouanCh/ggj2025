@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://doj3b77fleyk2"]
+
+[ext_resource type="Script" path="res://game/todo.gd" id="1_g42fd"]
+[ext_resource type="FontFile" uid="uid://4gspdryjt2jp" path="res://font/Crazey Spaghetti.TTF" id="1_uuanj"]
+
+[sub_resource type="FontVariation" id="FontVariation_3q1ha"]
+base_font = ExtResource("1_uuanj")
+spacing_top = 7
+spacing_bottom = 3
+
+[sub_resource type="Theme" id="Theme_o2din"]
+default_font = SubResource("FontVariation_3q1ha")
+
+[node name="Todo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_o2din")
+script = ExtResource("1_g42fd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
