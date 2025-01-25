@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://538krr0ucqc1"]
+
+[ext_resource type="PackedScene" uid="uid://db20wm8ur62l4" path="res://game/canette.tscn" id="1_lg6rr"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Node3D" parent="." instance=ExtResource("1_lg6rr")]
+transform = Transform3D(0.379788, -0.405142, -0.831638, 0.909635, -1.63505e-08, 0.415408, -0.168299, -0.914254, 0.368531, 0.602034, 0.134471, -0.666694)
+
+[node name="Node3D2" parent="." instance=ExtResource("1_lg6rr")]
+transform = Transform3D(-0.882513, 0.470288, -2.0557e-08, -2.22541e-15, -4.37114e-08, -1, -0.470288, -0.882513, 3.85759e-08, 0.931717, 0.0471269, 0.255605)
+
+[node name="Node3D3" parent="." instance=ExtResource("1_lg6rr")]
+transform = Transform3D(0.0826007, -0.995869, 0.0377217, 0.415408, -3.25236e-08, -0.909635, 0.905877, 0.0908064, 0.413692, 0.0176363, 0.134471, -0.314641)
+
+[node name="Node3D4" parent="." instance=ExtResource("1_lg6rr")]
+transform = Transform3D(0.110253, 0.988194, -0.106384, -0.694369, -5.98745e-08, -0.719619, -0.711122, 0.15321, 0.686172, 0.0811999, 0.134471, 0.187054)
+
+[node name="Node3D5" parent="." instance=ExtResource("1_lg6rr")]
+transform = Transform3D(-0.4126, 0.908435, 0.0671297, 0.160588, 7.01951e-09, 0.987022, 0.896645, 0.418026, -0.145883, -0.126122, 0.134471, -0.845686)
+
+[node name="Node3D6" parent="." instance=ExtResource("1_lg6rr")]
+transform = Transform3D(0.192985, 0.975527, 0.105376, -0.479243, 2.56764e-08, 0.877682, 0.856202, -0.21988, 0.467515, 0.290827, 0.134471, -0.228773)
