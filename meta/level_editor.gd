@@ -10,6 +10,14 @@ var wall_color = {
 	"Vert": Color.DARK_GREEN
 }
 
+
+var fr_color = {
+	"Base": Color(144, 144, 144, 0.85),
+	"Gris": Color(244, 0, 0, 0.85),
+	"Vert": Color(0, 244, 0, 0.85),
+}
+
+
 var meta_color = {
 	"PlayerPosition": Color.RED,
 	"Machine": Color.PURPLE,
@@ -31,7 +39,7 @@ var classes = {
 
 var types = {
 	"wall": ["Normal", "Hublot", "Door", "Gris", "Vert"],
-	"fr": ["Base"],
+	"fr": ["Base", "Gris", "Vert"],
 	"meta": ["PlayerPosition", "Machine", "Pouf", "Table"]
 }
 
@@ -104,7 +112,7 @@ func _draw() -> void:
 		if obj is WallData:
 			draw_line(obj.position, obj.to_position, wall_color[obj.type], 3)
 		if obj is FRData:
-			draw_rect(Rect2(obj.position, Vector2.ONE * snap), Color(144, 144, 144, 0.85))
+			draw_rect(Rect2(obj.position, Vector2.ONE * snap), fr_color[obj.type])
 		if obj is MetaData:
 			draw_circle(obj.position, 2.5, meta_color[obj.type])
 			draw_line(obj.position, obj.position + (Vector2.ONE.rotated(obj.rotation - PI/4) * 8.0), meta_color[obj.type], 1)

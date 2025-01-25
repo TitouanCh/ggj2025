@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0goy72dfqxwr"
-path.s3tc="res://.godot/imported/TEXTURE_sol_vaguement_verdatre.png-17a221099392ad92720d9f4f59ee9548.s3tc.ctex"
+uid="uid://bwehlkixowrfk"
+path.s3tc="res://.godot/imported/texture_porte.png-7729425c8d8221fbcf2b17563089360d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://texture/TEXTURE_sol_vaguement_verdatre.png"
-dest_files=["res://.godot/imported/TEXTURE_sol_vaguement_verdatre.png-17a221099392ad92720d9f4f59ee9548.s3tc.ctex"]
+source_file="res://texture/texture_porte.png"
+dest_files=["res://.godot/imported/texture_porte.png-7729425c8d8221fbcf2b17563089360d.s3tc.ctex"]
 
 [params]
 

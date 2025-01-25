@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0goy72dfqxwr"
-path.s3tc="res://.godot/imported/TEXTURE_sol_vaguement_verdatre.png-17a221099392ad92720d9f4f59ee9548.s3tc.ctex"
+uid="uid://cpnihv5jujsol"
+path.s3tc="res://.godot/imported/logo_distributeur.png-3fd3cbab57923fb32bb331b48f377b68.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://texture/TEXTURE_sol_vaguement_verdatre.png"
-dest_files=["res://.godot/imported/TEXTURE_sol_vaguement_verdatre.png-17a221099392ad92720d9f4f59ee9548.s3tc.ctex"]
+source_file="res://texture/logo/logo_distributeur.png"
+dest_files=["res://.godot/imported/logo_distributeur.png-3fd3cbab57923fb32bb331b48f377b68.s3tc.ctex"]
 
 [params]
 
