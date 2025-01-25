@@ -48,11 +48,13 @@ func _physics_process(delta):
 		velocity = speed * delta * 70
 		move_and_slide()
 		
+		$Head/Camera/Hand.interact = false
 		if $Head/Front.get_collider():
 			var object = $Head/Front.get_collider()
 			
 			if object is Interactable:
 				if object.is_interactable(self):
+					$Head/Camera/Hand.interact = true
 					if Input.is_action_just_pressed("interact"):
 						object.interact(self)
 				#else: hide_tooltip()
@@ -78,6 +80,7 @@ func start_minigame(minigame: String) -> Support:
 	support_instance.position = Vector2.ZERO
 	var tween = create_tween()
 	tween.tween_method(set_blur, 0.1, 3.0, .5).set_ease(Tween.EASE_IN_OUT)
+	$Head/Camera/Hand.interact = false
 	return support_instance
 
 func set_blur(value):

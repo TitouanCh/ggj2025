@@ -6,12 +6,18 @@ var key_scene = preload("res://minigame/money/key.tscn")
 var money_made = 0
 var keys = []
 var money_spawn = Vector2(dimensions.x * randf(), 0)
+var hand_texture = [load("res://sprites/open_hand.png"), load("res://sprites/closed_fist.png")]
 
 func _ready() -> void:
 	Key.restore_sprites()
 	spawn_3_keys()
 
 func _process(delta: float) -> void:
+	$Hand.position = get_global_mouse_position()
+	if Input.is_action_pressed("left_click") and !$Bucket.visible:
+		$Hand.texture = hand_texture[1]
+	else:
+		$Hand.texture = hand_texture[0]
 	queue_redraw()
 
 func _on_timer_timeout() -> void:
@@ -58,7 +64,7 @@ func spawn_coin(vec: Vector2):
 func _draw() -> void:
 	draw_string(font, Vector2(32, 32), str(money_made))
 	#draw_rect(Rect2(Vector2.ZERO, dimensions), Color.BLUE)
-	draw_circle(get_local_mouse_position(), 8.0, Color.RED)
+	#draw_circle(get_local_mouse_position(), 8.0, Color.RED)
 	if $Bucket.visible: draw_rect(Rect2(0, 0, $Timer2.time_left/$Timer2.wait_time * dimensions.x, 10), Color.RED)
 
 func _on_timer_2_timeout() -> void:
