@@ -47,12 +47,6 @@ func _physics_process(delta):
 		speed *= surface_friction * delta
 		
 		velocity = speed * delta * 70
-		if velocity.length() > 10:
-			if $AudioStreamPlayer.playing:
-				$AudioStreamPlayer.stream_paused = false
-			else: $AudioStreamPlayer.play()
-		else:
-			$AudioStreamPlayer.stream_paused = true
 
 		move_and_slide()
 		
@@ -72,6 +66,13 @@ func _physics_process(delta):
 	if position.y < -1 and !fall:
 		Sound.play_sound_from_name("crie.mp3")
 		fall = true
+	
+	if velocity.length() > 10:
+		if $AudioStreamPlayer.playing:
+			$AudioStreamPlayer.stream_paused = false
+		else: $AudioStreamPlayer.play()
+	else:
+		$AudioStreamPlayer.stream_paused = true
 
 func _process(delta):
 	if Input.is_action_just_pressed("escape"):

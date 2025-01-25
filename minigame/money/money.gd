@@ -8,6 +8,7 @@ var keys = []
 var money_spawn = Vector2(dimensions.x * randf(), 0)
 var hand_texture = [load("res://sprites/open_hand.png"), load("res://sprites/closed_fist.png")]
 
+
 func _ready() -> void:
 	Key.restore_sprites()
 	spawn_3_keys()
@@ -55,6 +56,8 @@ func money_shower():
 	$Bucket.visible = true
 	$Timer.start()
 	$Timer2.start()
+	$AudioStreamPlayer.play()
+	
 
 func spawn_coin(vec: Vector2):
 	var instance = coin_scene.instantiate()
@@ -83,3 +86,7 @@ func move_money_spawn():
 	else:
 		tween.set_trans(Tween.TRANS_LINEAR)
 	tween.tween_callback(move_money_spawn)
+
+
+func _on_audio_stream_player_finished() -> void:
+	$AudioStreamPlayer.play()

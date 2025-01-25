@@ -28,3 +28,10 @@ func create_bucket(tall, width, offset = 20) -> PackedVector2Array:
 	arr.append(Vector2(-width/2, -tall))
 	arr.append(Vector2(-width/2, 0))
 	return arr
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body is Coin:
+		get_parent().money_made += 1
+		Sound.play_sound_from_name("ching.mp3", 0.5)
+		body.queue_free()

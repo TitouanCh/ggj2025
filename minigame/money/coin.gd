@@ -1,3 +1,4 @@
+class_name  Coin
 extends RigidBody2D
 
 static var textures = [
@@ -21,7 +22,3 @@ func _process(delta: float) -> void:
 
 #func _draw() -> void:
 	#draw_circle(Vector2.ZERO, 16, Color.WHITE)
-
-func _on_timer_timeout() -> void:
-	get_parent().money_made += 1
-	queue_free()

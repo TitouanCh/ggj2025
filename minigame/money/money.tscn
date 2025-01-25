@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d044c3fxt0ql6"]
+[gd_scene load_steps=7 format=3 uid="uid://d044c3fxt0ql6"]
 
 [ext_resource type="Script" path="res://minigame/money/money.gd" id="1_d64ej"]
 [ext_resource type="PackedScene" uid="uid://cnh4qofhnhyql" path="res://minigame/money/bucket.tscn" id="2_u4x0e"]
 [ext_resource type="Texture2D" uid="uid://bvocjbncrd3p1" path="res://sprites/open_hand.png" id="4_7ivy6"]
+[ext_resource type="AudioStream" uid="uid://bnp08iu8rhsf3" path="res://sounds/payout.mp3" id="5_66d33"]
 [ext_resource type="Texture2D" uid="uid://b1tsdjfr52x6k" path="res://sprites/money/serrure.png" id="7_4vblr"]
 
 [sub_resource type="SystemFont" id="SystemFont_dbevm"]
@@ -21,7 +22,7 @@ position = Vector2(463, 775)
 collision_mask = 0
 
 [node name="Timer2" type="Timer" parent="."]
-wait_time = 15.0
+wait_time = 6.0
 
 [node name="Serrure" type="Sprite2D" parent="."]
 position = Vector2(124, 198)
@@ -33,5 +34,9 @@ position = Vector2(94, 72)
 texture = ExtResource("4_7ivy6")
 offset = Vector2(0, 24)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_66d33")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

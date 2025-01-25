@@ -1,22 +1,22 @@
-[gd_scene load_steps=7 format=4 uid="uid://0e7tj4bx4u42"]
+[gd_scene load_steps=7 format=4 uid="uid://5vopbj7vf6y5"]
 
-[ext_resource type="Texture2D" uid="uid://drwcy3a3eh8n1" path="res://texture/TEXTURE_murs_v1.png" id="1_rwrm7"]
-[ext_resource type="Texture2D" uid="uid://cgn7r27jxn7ku" path="res://texture/TEXTURE_vitre_d.png" id="2_td2v4"]
+[ext_resource type="Texture2D" uid="uid://bumb78ulbcvuo" path="res://texture/TEXTURE_murs_gris_v1.png" id="1_rre8f"]
+[ext_resource type="Texture2D" uid="uid://cgn7r27jxn7ku" path="res://texture/TEXTURE_vitre_d.png" id="2_8m3hj"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kuw1k"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ydl34"]
 resource_name = "MUR"
 albedo_color = Color(0.8, 0.8, 0.8, 1)
-albedo_texture = ExtResource("1_rwrm7")
+albedo_texture = ExtResource("1_rre8f")
 metallic = 0.5
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_xicle"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_fklcb"]
 _surfaces = [{
 "aabb": AABB(-0.178623, 0, -4, 0.357246, 5.94, 8),
 "attribute_data": PackedByteArray("RM/EC0TPmwQ1v8QLNb+bBKiMaiclkZMfsYGQHHuJ/hdU35sERM+bBFTfxAtEz8QLVN+bBFTfxAtk75sEZO/EC/V+mwT1fsQLBY+bBAWPxAu1UBEn8lSDHxpGwRyJTU4YZO+bBGTvxAt0/5sEdP/EC+ZumwTmbsQL9X6bBPV+xAuxgZAce4n+F5F9sw2ahpoNCV++KvVeFCK1UBEn8lSDH4x7Bw7icgQOuHdRHDVwABgaRsEciU1OGAVCig6vSl8ONb/ECzW/mwQlr8QLJa+bBLh3URw1cAAYTG3QJu1oVR8fzyAtH89HNCvfIC0r30c0Ja/ECyWvmwQVn8QLFZ+bBDbvRzRB/0c0Nu8gLUH/IC3WXsQL1l6bBMZOxAvGTpsE/p5HNAmvRzT+niAtCa8gLQWPmwQFj8QLFZ+bBBWfxAs27yAtK98gLTbvRzQr30c0tj6bBLY+xAvGTpsExk7EC/6eIC3yjiAt/p5HNPKORzSQubMNh7CaDXC1kBymrf4XTG3QJu1oVR8JX74q9V4UInC1kBymrf4XeapqJ/ylkx95qmon/KWTH5GbYSuRm1kikZthK5GbWSKojGonJZGTH/KOIC3nfiAt8o5HNOd+RzQUv0c0H89HNBS/IC0fzyAtuj5HNMVORzS6PiAtxU4gLQmvRzQUv0c0Ca8gLRS/IC3FTkc00F5HNMVOIC3QXiAt3G5HNNxuIC3QXkc00F4gLed+IC3cbiAt535HNNxuRzRdqJhx////P02XiWD/f0paAAD/P7FoiWChV5hxY1HmiAAA//+hVzSgsWhEsf9/g7f+//7/TZdEsV2oNKCbruaI1l7EC+ZuxAvWXpsE5m6bBA=="),
 "format": 34896613399,
 "index_count": 264,
 "index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcAGAAZABoAGgAZABsAHAAdAB4AHgAdAB8AIAAhACIAIgAhACMAJAAlACYAJgAlACcAKAApACoAKgApACsALAAtAC4ALgAtAC8AMAAxADIAMgAxADMANAA1ADYANgA1ADcAOAA5ADoAOgA5ADsAPAA9AD4APgA9AD8AQABBAEIAQgBBAEMARABFAEYARgBFAEcASABJAEoASgBJAEsATABNAE4ATgBNAE8AUABRAFIAUgBRAFMAVABVAFYAVgBVAFcAWABZAFoAWgBZAFsAXABdAF4AXgBdAF8AYABhAGIAYgBhAGMAZABlAGYAZgBlAGcAaABpAGoAagBpAGsAbABtAG4AbgBtAG8AcABxAHIAcgBxAHMAdAB1AHYAdgB1AHcAeAB5AHoAegB5AHsAfAB9AH4AfgB9AH8AgACBAIIAggCBAIMAhACFAIYAhgCFAIcAiACJAIoAigCJAIsAjACNAI4AjQCPAI4AjwCNAJAAkQCPAJAAkQCQAJIAkgCQAJMAkwCQAJQAlACVAJMAlACWAJUAlACXAJYAlwCUAJgAmQCXAJgAmgCZAJgAmwCaAJgAmwCYAI0AmwCNAIwAnACdAJ4AngCdAJ8A"),
-"material": SubResource("StandardMaterial3D_kuw1k"),
+"material": SubResource("StandardMaterial3D_ydl34"),
 "name": "MUR",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -29,7 +29,7 @@ blend_shape_mode = 0
 transparency = 1
 cull_mode = 2
 albedo_color = Color(1, 1, 1, 0.619608)
-albedo_texture = ExtResource("2_td2v4")
+albedo_texture = ExtResource("2_8m3hj")
 clearcoat_enabled = true
 clearcoat_roughness = 0.22
 
@@ -43,11 +43,11 @@ height = 0.1
 
 [node name="AssetMurHublot4x4V2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1.01, 0, 1, 0, -4.37114e-08, 0, 0, 0)
-mesh = SubResource("ArrayMesh_xicle")
+mesh = SubResource("ArrayMesh_fklcb")
 
 [node name="AssetMurHublot4x4V3" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1.01, 0, -1, 0, -4.37114e-08, 0, 0, 0)
-mesh = SubResource("ArrayMesh_xicle")
+mesh = SubResource("ArrayMesh_fklcb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3.72409, 0)

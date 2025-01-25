@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=35 format=3 uid="uid://cev8a63jd3mnq"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=66 format=3 uid="uid://cev8a63jd3mnq"]
 
 [ext_resource type="Script" path="res://meta/fr_data.gd" id="1_2a3an"]
 [ext_resource type="Script" path="res://meta/meta_data.gd" id="2_riyp7"]
@@ -95,6 +95,86 @@ script = ExtResource("1_2a3an")
 position = Vector2(480, 288)
 type = "Gris"
 
+[sub_resource type="Resource" id="Resource_abjuj"]
+script = ExtResource("1_2a3an")
+position = Vector2(352, 192)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_qrbww"]
+script = ExtResource("1_2a3an")
+position = Vector2(352, 224)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_2xx8h"]
+script = ExtResource("1_2a3an")
+position = Vector2(352, 256)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_vj8fb"]
+script = ExtResource("1_2a3an")
+position = Vector2(352, 288)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_1lfcr"]
+script = ExtResource("1_2a3an")
+position = Vector2(352, 320)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_krkgo"]
+script = ExtResource("1_2a3an")
+position = Vector2(384, 320)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_gy1rx"]
+script = ExtResource("1_2a3an")
+position = Vector2(384, 288)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_grfrx"]
+script = ExtResource("1_2a3an")
+position = Vector2(384, 256)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_opv5q"]
+script = ExtResource("1_2a3an")
+position = Vector2(384, 224)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_ke2x5"]
+script = ExtResource("1_2a3an")
+position = Vector2(416, 320)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_t803q"]
+script = ExtResource("1_2a3an")
+position = Vector2(448, 320)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_al20y"]
+script = ExtResource("1_2a3an")
+position = Vector2(480, 320)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_imv2b"]
+script = ExtResource("1_2a3an")
+position = Vector2(512, 320)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_a0h7w"]
+script = ExtResource("1_2a3an")
+position = Vector2(512, 288)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_tng4p"]
+script = ExtResource("1_2a3an")
+position = Vector2(512, 256)
+type = "Base"
+
+[sub_resource type="Resource" id="Resource_o07g7"]
+script = ExtResource("1_2a3an")
+position = Vector2(512, 224)
+type = "Base"
+
 [sub_resource type="Resource" id="Resource_fx65o"]
 script = ExtResource("2_riyp7")
 rotation = -0.0322469
@@ -167,8 +247,98 @@ to_position = Vector2(512, 160)
 position = Vector2(480, 160)
 type = "Vert"
 
+[sub_resource type="Resource" id="Resource_vu2ms"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(352, 224)
+position = Vector2(352, 192)
+type = "Normal"
+
+[sub_resource type="Resource" id="Resource_uic6r"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(352, 256)
+position = Vector2(352, 224)
+type = "Hublot"
+
+[sub_resource type="Resource" id="Resource_2cd8i"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(352, 288)
+position = Vector2(352, 256)
+type = "Door"
+
+[sub_resource type="Resource" id="Resource_njg3t"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(352, 320)
+position = Vector2(352, 288)
+type = "DoorFermee"
+
+[sub_resource type="Resource" id="Resource_mm02v"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(352, 352)
+position = Vector2(352, 320)
+type = "Gris"
+
+[sub_resource type="Resource" id="Resource_wloa7"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(384, 352)
+position = Vector2(352, 352)
+type = "Gris"
+
+[sub_resource type="Resource" id="Resource_aga4g"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(416, 352)
+position = Vector2(384, 352)
+type = "HublotGris"
+
+[sub_resource type="Resource" id="Resource_us8fc"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(448, 352)
+position = Vector2(416, 352)
+type = "DoorGris"
+
+[sub_resource type="Resource" id="Resource_7g2eg"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(480, 352)
+position = Vector2(448, 352)
+type = "DoorFermeeGris"
+
+[sub_resource type="Resource" id="Resource_c36wm"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(512, 352)
+position = Vector2(480, 352)
+type = "Vert"
+
+[sub_resource type="Resource" id="Resource_uwjcb"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(544, 352)
+position = Vector2(512, 352)
+type = "HublotVert"
+
+[sub_resource type="Resource" id="Resource_v34w8"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(544, 320)
+position = Vector2(544, 352)
+type = "DoorVert"
+
+[sub_resource type="Resource" id="Resource_ynpgw"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(544, 288)
+position = Vector2(544, 320)
+type = "DoorFermeeVert"
+
+[sub_resource type="Resource" id="Resource_33pmk"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(544, 256)
+position = Vector2(544, 288)
+type = "DoorBleuVert"
+
+[sub_resource type="Resource" id="Resource_po0db"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(544, 224)
+position = Vector2(544, 256)
+type = "Normal"
+
 [resource]
 script = ExtResource("3_kf835")
-wall = Array[ExtResource("4_ytnly")]([SubResource("Resource_1mgre"), SubResource("Resource_fdqep"), SubResource("Resource_7rvqq"), SubResource("Resource_qwsy4"), SubResource("Resource_ucxva")])
-fr = Array[ExtResource("1_2a3an")]([SubResource("Resource_5dd1a"), SubResource("Resource_qfg6h"), SubResource("Resource_pv2s3"), SubResource("Resource_ilqgg"), SubResource("Resource_1bf1a"), SubResource("Resource_udpee"), SubResource("Resource_dn2a1"), SubResource("Resource_yuegp"), SubResource("Resource_bwto0"), SubResource("Resource_66m0n"), SubResource("Resource_8gf2r"), SubResource("Resource_0m24n"), SubResource("Resource_ibpmo"), SubResource("Resource_u72hk"), SubResource("Resource_heqyj"), SubResource("Resource_d5oe7"), SubResource("Resource_rc2we"), SubResource("Resource_ocdck")])
+wall = Array[ExtResource("4_ytnly")]([SubResource("Resource_1mgre"), SubResource("Resource_fdqep"), SubResource("Resource_7rvqq"), SubResource("Resource_qwsy4"), SubResource("Resource_ucxva"), SubResource("Resource_vu2ms"), SubResource("Resource_uic6r"), SubResource("Resource_2cd8i"), SubResource("Resource_njg3t"), SubResource("Resource_mm02v"), SubResource("Resource_wloa7"), SubResource("Resource_aga4g"), SubResource("Resource_us8fc"), SubResource("Resource_7g2eg"), SubResource("Resource_c36wm"), SubResource("Resource_uwjcb"), SubResource("Resource_v34w8"), SubResource("Resource_ynpgw"), SubResource("Resource_33pmk"), SubResource("Resource_po0db")])
+fr = Array[ExtResource("1_2a3an")]([SubResource("Resource_5dd1a"), SubResource("Resource_qfg6h"), SubResource("Resource_pv2s3"), SubResource("Resource_ilqgg"), SubResource("Resource_1bf1a"), SubResource("Resource_udpee"), SubResource("Resource_dn2a1"), SubResource("Resource_yuegp"), SubResource("Resource_bwto0"), SubResource("Resource_66m0n"), SubResource("Resource_8gf2r"), SubResource("Resource_0m24n"), SubResource("Resource_ibpmo"), SubResource("Resource_u72hk"), SubResource("Resource_heqyj"), SubResource("Resource_d5oe7"), SubResource("Resource_rc2we"), SubResource("Resource_ocdck"), SubResource("Resource_abjuj"), SubResource("Resource_qrbww"), SubResource("Resource_2xx8h"), SubResource("Resource_vj8fb"), SubResource("Resource_1lfcr"), SubResource("Resource_krkgo"), SubResource("Resource_gy1rx"), SubResource("Resource_grfrx"), SubResource("Resource_opv5q"), SubResource("Resource_ke2x5"), SubResource("Resource_t803q"), SubResource("Resource_al20y"), SubResource("Resource_imv2b"), SubResource("Resource_a0h7w"), SubResource("Resource_tng4p"), SubResource("Resource_o07g7")])
 meta = Array[ExtResource("2_riyp7")]([SubResource("Resource_fx65o"), SubResource("Resource_a6e6l"), SubResource("Resource_l31xq"), SubResource("Resource_8cayf"), SubResource("Resource_m5jh7"), SubResource("Resource_38yut"), SubResource("Resource_wul8b")])
