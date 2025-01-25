@@ -16,3 +16,7 @@ mesh = ExtResource("2_gvrle")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.492124, 2.69137, -1.10376)
 shape = SubResource("BoxShape3D_r6orb")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.492124, 2.69137, -1.10376)
+shape = SubResource("BoxShape3D_r6orb")
