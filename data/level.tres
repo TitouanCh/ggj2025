@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=10 format=3 uid="uid://dsy6bvcmp8xjo"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=12 format=3]
 
 [ext_resource type="Script" path="res://meta/fr_data.gd" id="1_2a3an"]
 [ext_resource type="Script" path="res://meta/meta_data.gd" id="2_riyp7"]
@@ -32,8 +32,20 @@ rotation = -1.8466
 position = Vector2(406, 215)
 type = "Machine"
 
+[sub_resource type="Resource" id="Resource_1mgre"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(384, 160)
+position = Vector2(352, 160)
+type = "Normal"
+
+[sub_resource type="Resource" id="Resource_fdqep"]
+script = ExtResource("4_ytnly")
+to_position = Vector2(416, 160)
+position = Vector2(384, 160)
+type = "Gris"
+
 [resource]
 script = ExtResource("3_kf835")
-wall = Array[ExtResource("4_ytnly")]([])
+wall = Array[ExtResource("4_ytnly")]([SubResource("Resource_1mgre"), SubResource("Resource_fdqep")])
 fr = Array[ExtResource("1_2a3an")]([SubResource("Resource_5dd1a"), SubResource("Resource_qfg6h"), SubResource("Resource_pv2s3")])
 meta = Array[ExtResource("2_riyp7")]([SubResource("Resource_fx65o"), SubResource("Resource_a6e6l")])
