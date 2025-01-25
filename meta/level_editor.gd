@@ -41,6 +41,7 @@ var current_type = 0
 
 var current = null
 var snap = 32
+var small_snap = 4
 
 var classes = {
 	"wall": WallData,
@@ -57,6 +58,7 @@ var types = {
 func get_mouse_position():
 	var mouse_position = get_global_mouse_position()
 	if Input.is_action_pressed("snap"): mouse_position = mouse_position.snappedf(snap)
+	if Input.is_action_pressed("small_snap"): mouse_position = mouse_position.snappedf(small_snap)
 	return mouse_position
 
 func get_current_type():
