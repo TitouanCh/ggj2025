@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Day" load_steps=6 format=3 uid="uid://cqbsvlec5u4st"]
+
+[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/level.tres" id="1_xshoj"]
+[ext_resource type="Script" path="res://game/day_data.gd" id="2_rrydq"]
+[ext_resource type="Script" path="res://game/task_data.gd" id="3_hw5ut"]
+
+[sub_resource type="Resource" id="Resource_74jyl"]
+script = ExtResource("3_hw5ut")
+name = "- Collect $$$"
+amount = 2
+true_name = "PlayMoney"
+
+[sub_resource type="Resource" id="Resource_2kg7i"]
+script = ExtResource("3_hw5ut")
+name = "- Pick up can"
+amount = 5
+true_name = "PickupCans"
+
+[resource]
+script = ExtResource("2_rrydq")
+task = Array[ExtResource("3_hw5ut")]([SubResource("Resource_74jyl"), SubResource("Resource_2kg7i")])
+map = ExtResource("1_xshoj")
