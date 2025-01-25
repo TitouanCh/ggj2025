@@ -36,10 +36,9 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [node name="roofnfloor" type="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.513084, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.5, 4)
 shape = SubResource("BoxShape3D_vvrrm")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
@@ -53,7 +52,7 @@ light_energy = 1.73
 omni_range = 30.0
 
 [node name="AssetDalleSol4x4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.5, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
 mesh = ExtResource("2_l7fra")
 
 [node name="AssetDalleSol4x5" type="MeshInstance3D" parent="."]

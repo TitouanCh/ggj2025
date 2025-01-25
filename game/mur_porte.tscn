@@ -6,9 +6,14 @@
 [node name="MurPorte" type="Node3D"]
 
 [node name="AssetMurPorte4x4V2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.261785, 0, 3.66153)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+mesh = ExtResource("1_vspe6")
+
+[node name="AssetMurPorte4x4V3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, 1, 0, 1, 0, 1, 0, -1.19249e-08, 0, 0, 0)
 mesh = ExtResource("1_vspe6")
 
 [node name="AssetPorteV2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099082, 0, 3.48825)
+visible = false
 mesh = ExtResource("2_dj2ct")

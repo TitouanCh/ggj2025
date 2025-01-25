@@ -21,5 +21,6 @@ func spawn(main: Main):
 		instance.position = to_3d_position(f.position)
 	for m in meta:
 		var instance = MetaData.scenes[m.type].instantiate()
+		instance.rotate_y(-m.rotation)
 		main.add_child(instance)
 		instance.position = to_3d_position(m.position)
