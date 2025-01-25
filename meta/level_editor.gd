@@ -25,6 +25,7 @@ var meta_color = {
 	"Table": Color.YELLOW,
 	"TablePoufCannette": Color.BLUE_VIOLET,
 	"Pyramide": Color.ORANGE,
+	"Desastre": Color.PALE_VIOLET_RED,
 }
 
 var current_base = 0
@@ -42,7 +43,7 @@ var classes = {
 var types = {
 	"wall": ["Normal", "Hublot", "Door", "Gris", "Vert"],
 	"fr": ["Base", "Gris", "Vert"],
-	"meta": ["PlayerPosition", "Machine", "Pouf", "Table", "TablePoufCannette", "Pyramide"]
+	"meta": ["PlayerPosition", "Machine", "Pouf", "Table", "TablePoufCannette", "Pyramide", "Desastre"]
 }
 
 func get_mouse_position():

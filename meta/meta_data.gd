@@ -9,5 +9,6 @@ static var scenes = {
 	"Pouf": load("res://game/pouf.tscn"),
 	"Table": load("res://game/table.tscn"),
 	"TablePoufCannette": load("res://game/table_poufs_canettes.tscn"),
-	"Pyramide": load("res://game/pyramide.tscn")
+	"Pyramide": load("res://game/pyramide.tscn"),
+	"Desastre": load("res://game/desastre.tscn")
 }
