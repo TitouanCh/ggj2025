@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://fh2888h2wknd"]
+
+[ext_resource type="PackedScene" uid="uid://db20wm8ur62l4" path="res://game/canette.tscn" id="1_6bdv0"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Node3D" parent="." instance=ExtResource("1_6bdv0")]
+transform = Transform3D(0.350227, 0.537771, -0.766906, 0.909635, -3.78745e-09, 0.415408, 0.223394, -0.843091, -0.489175, -0.0221372, 0.134471, -0.319494)
+
+[node name="Node3D2" parent="." instance=ExtResource("1_6bdv0")]
+transform = Transform3D(-0.955113, 0.296242, -1.29492e-08, -7.69554e-16, -4.37114e-08, -1, -0.296242, -0.955113, 4.17493e-08, -0.50383, 0.137303, -0.570943)
+
+[node name="Node3D3" parent="." instance=ExtResource("1_6bdv0")]
+transform = Transform3D(0.623937, -0.727677, 0.284937, 0.415408, -3.97614e-08, -0.909635, 0.661921, 0.68592, 0.302283, 0.0218904, 0.134471, -0.897517)
+
+[node name="Node3D4" parent="." instance=ExtResource("1_6bdv0")]
+transform = Transform3D(0.614126, -0.521249, -0.592578, -0.694369, -7.60002e-08, -0.719619, 0.3751, 0.853405, -0.361939, 0.0686996, 0.340204, -0.73161)
+
+[node name="Node3D5" parent="." instance=ExtResource("1_6bdv0")]
+transform = Transform3D(-0.465958, 0.847437, -0.254428, -0.479243, 3.83647e-08, 0.877682, 0.74378, 0.530896, 0.406129, -0.394159, 0.134471, -0.296846)
+
+[node name="Node3D6" parent="." instance=ExtResource("1_6bdv0")]
+transform = Transform3D(0.961386, -0.27463, -0.0177713, 0.018482, 8.07871e-10, 0.999829, -0.274584, -0.961549, 0.00507571, 0.389668, 0.134471, 0.0433488)
