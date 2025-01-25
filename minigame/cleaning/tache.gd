@@ -7,6 +7,7 @@ var is_clicked : bool = false
 var epsilon : float = 30.0
 var textures = []
 var sprite
+signal die(this)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,13 +26,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("left_click"):
 		if is_mouse_over():
-			print("Mouse over")
 			handle_click()
 
 func is_mouse_over() -> bool:
 	var cursor_position = get_global_mouse_position()
 	var sprite_rect = Rect2(position, sprite.texture.get_size())
-	print(sprite_rect.has_point(cursor_position))
 	return sprite_rect.has_point(cursor_position)
 		
 		
@@ -39,6 +38,8 @@ func is_mouse_over() -> bool:
 func handle_click() -> void:
 	is_clicked = true
 	queue_free()
+	die.emit(self)
+
 	
 static func spawn() -> Tache:
 	var tache = load("res://minigame/cleaning/tache.tscn").instantiate()
@@ -48,6 +49,7 @@ static func spawn() -> Tache:
 	print("Spawned tache at: ")
 	print(tache.x)
 	print(tache.y)
+	
 	
 	return tache
 	

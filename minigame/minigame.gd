@@ -1,7 +1,6 @@
 class_name Minigame
 extends Node2D
-signal isDead
-signal isDone
+signal end(this)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,13 +11,3 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-
-	
-		
-func dead() -> void:
-	isDead.emit()
-	queue_free()
-	
-func finish() -> void:
-	isDone.emit()
-	queue_free()
