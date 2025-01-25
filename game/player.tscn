@@ -1,6 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://kvwnvrnsgmy1"]
+[gd_scene load_steps=5 format=3 uid="uid://kvwnvrnsgmy1"]
 
 [ext_resource type="Script" path="res://game/player.gd" id="1_blixr"]
+[ext_resource type="Shader" path="res://shader/blur.gdshader" id="2_2ho54"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fcvvq"]
+shader = ExtResource("2_2ho54")
+shader_parameter/sigma = 0.1
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bmq0d"]
 
@@ -12,6 +17,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
 
 [node name="Camera" type="Camera3D" parent="Head"]
 fov = 80.0
+
+[node name="Blur" type="ColorRect" parent="Head/Camera"]
+material = SubResource("ShaderMaterial_fcvvq")
+offset_right = 960.0
+offset_bottom = 540.0
 
 [node name="Front" type="RayCast3D" parent="Head"]
 target_position = Vector3(0, 0, -2)

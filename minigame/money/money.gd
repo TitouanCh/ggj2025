@@ -48,6 +48,7 @@ func _on_unlock():
 func money_shower():
 	$Bucket.visible = true
 	$Timer.start()
+	$Timer2.start()
 
 func spawn_coin(vec: Vector2):
 	var instance = coin_scene.instantiate()
@@ -56,8 +57,9 @@ func spawn_coin(vec: Vector2):
 
 func _draw() -> void:
 	draw_string(font, Vector2(32, 32), str(money_made))
-	draw_rect(Rect2(Vector2.ZERO, dimensions), Color.BLUE)
+	#draw_rect(Rect2(Vector2.ZERO, dimensions), Color.BLUE)
 	draw_circle(get_local_mouse_position(), 8.0, Color.RED)
+	if $Bucket.visible: draw_rect(Rect2(0, 0, $Timer2.time_left/$Timer2.wait_time * dimensions.x, 10), Color.RED)
 
 func _on_timer_2_timeout() -> void:
 	finished.emit()

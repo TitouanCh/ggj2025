@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://db20wm8ur62l4"]
+
+[ext_resource type="ArrayMesh" uid="uid://dkmkb6vayyvis" path="res://model/cannette.tres" id="1_omaot"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Canette" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("1_omaot")

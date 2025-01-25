@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ctuje24p7i06b"
+path="res://.godot/imported/Canette_T2ME.obj-b59178295948d464ff5577237303bb40.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Canette_T2ME.obj-b59178295948d464ff5577237303bb40.mesh"]
+
+source_file="res://asset/props/cannette/Canette_T2ME.obj"
+dest_files=["res://.godot/imported/Canette_T2ME.obj-b59178295948d464ff5577237303bb40.mesh", "res://.godot/imported/Canette_T2ME.obj-b59178295948d464ff5577237303bb40.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

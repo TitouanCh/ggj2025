@@ -11,6 +11,7 @@ var speed = Vector3.ZERO
 var surface_accel = 100
 var surface_friction = 48
 var in_minigame := false
+var fullscreen = false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -63,11 +64,26 @@ func _process(delta):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	if Input.is_action_just_pressed("left_click") and !in_minigame:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if Input.is_action_just_pressed("fullscreen"):
+		fullscreen = !fullscreen 
+		if fullscreen: DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		else: DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED) 
 
 
-func start_minigame(minigame: String):
+func start_minigame(minigame: String) -> Support:
 	var support_instance = Support.spawn_support(minigame)
 	camera.add_child(support_instance)
 	in_minigame = true
-	support_instance.finished.connect(func(): in_minigame = false)
+	support_instance.finished.connect(end_minigame)
 	support_instance.position = Vector2.ZERO
+	var tween = create_tween()
+	tween.tween_method(set_blur, 0.1, 3.0, .5).set_ease(Tween.EASE_IN_OUT)
+	return support_instance
+
+func set_blur(value):
+	$Head/Camera/Blur.material.set_shader_parameter("sigma", value)
+
+func end_minigame():
+	var tween = create_tween()
+	tween.tween_method(set_blur, 3.0, .1, .5).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_callback(func(): in_minigame = false; Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED))

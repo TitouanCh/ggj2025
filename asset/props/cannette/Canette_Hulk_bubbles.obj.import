@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c2lps3257rnvd"
+path="res://.godot/imported/Canette_Hulk_bubbles.obj-e778f31fcd78cb2cc3fb454f1b031d72.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Canette_Hulk_bubbles.obj-e778f31fcd78cb2cc3fb454f1b031d72.mesh"]
+
+source_file="res://asset/props/cannette/Canette_Hulk_bubbles.obj"
+dest_files=["res://.godot/imported/Canette_Hulk_bubbles.obj-e778f31fcd78cb2cc3fb454f1b031d72.mesh", "res://.godot/imported/Canette_Hulk_bubbles.obj-e778f31fcd78cb2cc3fb454f1b031d72.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
