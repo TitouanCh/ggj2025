@@ -1,6 +1,8 @@
 class_name Player
 extends CharacterBody3D
 
+signal faded_to_black
+
 const GRAVITY = 120
 
 @export var mouse_sensitivity = 0.15
@@ -15,7 +17,12 @@ var fullscreen = false
 var fall = false
 
 func _ready():
+	$Head/Camera/FadeToBlack/RichTextLabel.text = "\n\n[wave amp=50.0 freq=5.0 connected=1][center]DAY   %s[/center][/wave]" % Task.current_day
+	var tween = create_tween()
+	tween.tween_property($Head/Camera/FadeToBlack, "modulate", Color(255, 255, 255, 0), 5).set_ease(Tween.EASE_IN)
+	tween.tween_callback(func(): $Head/Camera/FadeToBlack/RichTextLabel.visible = false)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Task.set_player(self)
 
 func _input(event):
 	if !in_minigame:
@@ -99,7 +106,13 @@ func start_minigame(minigame: String) -> Support:
 func set_blur(value):
 	$Head/Camera/Blur.material.set_shader_parameter("sigma", value)
 
+func fade_to_black():
+	var tween = create_tween()
+	tween.tween_property($Head/Camera/FadeToBlack, "modulate", Color(255, 255, 255, 1), 5).set_ease(Tween.EASE_IN)
+	tween.tween_callback(func(): faded_to_black.emit())
+
 func end_minigame():
 	var tween = create_tween()
 	tween.tween_method(set_blur, 3.0, .1, .5).set_ease(Tween.EASE_IN_OUT)
 	tween.tween_callback(func(): in_minigame = false; Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED))
+	Task.complete_task("PlayMoney")

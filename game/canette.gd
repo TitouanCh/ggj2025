@@ -11,7 +11,11 @@ var collide_bodies = []
 var sound = false
 
 func interact(player: Player) -> void:
+	Task.complete_task("PickupCans")
 	queue_free()
+
+func is_interactable(player):
+	return Task.is_task_left("PickupCans")
 
 func _on_body_entered(body: Node) -> void:
 	if not(body in collide_bodies) and sound:
