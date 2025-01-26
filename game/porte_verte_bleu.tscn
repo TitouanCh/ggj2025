@@ -74,11 +74,11 @@ size = Vector3(3, 4, 0.5)
 [node name="MurPorte" type="StaticBody3D"]
 
 [node name="AssetMurPorte4x4V2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -0.1)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_nllup")
 
 [node name="AssetMurPorte4x4V3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, 0, 0.084, 0.1)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_yeaev")
 
 [node name="Porte" type="MeshInstance3D" parent="."]

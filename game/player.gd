@@ -16,13 +16,15 @@ var in_minigame := false
 var current_minigame_name = null
 var fullscreen = false
 var fall = false
+var in_intro = false
 var distance_covered = 0.0
 
 func _ready():
 	if !Task.schedule[Task.current_day].letter:
 		set_day()
 	else:
-		$Head/Camera/Letter.finished.connect(func(): set_day())
+		$Head/Camera/Letter.finished.connect(func(): set_day(); in_intro = false)
+		in_intro = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	Task.set_player(self)
 
@@ -45,7 +47,7 @@ func _input(event):
 
 func _physics_process(delta):
 	$Head/Camera/Cursor.visible = !in_minigame
-	if !in_minigame:
+	if !in_minigame and !in_intro:
 		# Mouvement
 		var direction = Vector2.ZERO
 		
@@ -69,7 +71,7 @@ func _physics_process(delta):
 		velocity = speed * delta * 70
 		
 		distance_covered += velocity.length()
-		if distance_covered > 400.0 and !$Head/Camera/Bulle.go:
+		if distance_covered > 5400.0 and !$Head/Camera/Bulle.go:
 			$Head/Camera/Bulle.come_over()
 			$Head/Camera/Bulle.go = true
 
