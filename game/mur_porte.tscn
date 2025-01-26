@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://cv08ofslpbqut"]
+[gd_scene load_steps=4 format=3 uid="uid://cv08ofslpbqut"]
 
 [ext_resource type="ArrayMesh" uid="uid://cc85w1ffdyd22" path="res://model/door.tres" id="1_vspe6"]
 [ext_resource type="ArrayMesh" uid="uid://bk870xxe7g4uu" path="res://model/door_door.tres" id="2_dj2ct"]
 
-[node name="MurPorte" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_bof7b"]
+size = Vector3(3, 4, 0.5)
+
+[node name="MurPorte" type="StaticBody3D"]
 
 [node name="AssetMurPorte4x4V2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
@@ -17,3 +20,11 @@ mesh = ExtResource("1_vspe6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099082, 0, 3.48825)
 visible = false
 mesh = ExtResource("2_dj2ct")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.44227, 1.86446, 0)
+shape = SubResource("BoxShape3D_bof7b")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.694, 1.86446, 0)
+shape = SubResource("BoxShape3D_bof7b")

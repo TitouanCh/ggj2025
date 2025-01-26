@@ -18,15 +18,22 @@ var fullscreen = false
 var fall = false
 
 func _ready():
+	if !Task.schedule[Task.current_day].letter:
+		set_day()
+	else:
+		$Head/Camera/Letter.finished.connect(func(): set_day())
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Task.set_player(self)
+
+func set_day():
+	var text_tween = create_tween()
+	text_tween.tween_property($Head/Camera/FadeToBlack/RichTextLabel, "modulate", Color(255, 255, 255, 1), 1).set_ease(Tween.EASE_IN)
 	$Head/Camera/FadeToBlack/RichTextLabel.text = "\n\n[wave amp=50.0 freq=5.0 connected=1][center]DAY   %s[/center][/wave]" % (Task.current_day + 1)
 	var tween = create_tween()
 	tween.tween_callback(func(): Sound.play_sound_from_stream(Task.schedule[Task.current_day].jingle, 0, -1))
 	tween.tween_interval(1)
 	tween.tween_property($Head/Camera/FadeToBlack, "modulate", Color(255, 255, 255, 0), 5).set_ease(Tween.EASE_IN)
 	tween.tween_callback(func(): $Head/Camera/FadeToBlack/RichTextLabel.visible = false)
-	
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	Task.set_player(self)
 
 func _input(event):
 	if !in_minigame:

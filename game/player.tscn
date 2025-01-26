@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://kvwnvrnsgmy1"]
+[gd_scene load_steps=11 format=3 uid="uid://kvwnvrnsgmy1"]
 
 [ext_resource type="Script" path="res://game/player.gd" id="1_blixr"]
 [ext_resource type="Shader" path="res://shader/blur.gdshader" id="2_2ho54"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://game/hand.gd" id="4_fy677"]
 [ext_resource type="Script" path="res://game/day_text.gd" id="4_p2t8f"]
 [ext_resource type="AudioStream" uid="uid://barj1fj8ssd7y" path="res://sounds/pas.wav" id="5_7wf4g"]
+[ext_resource type="PackedScene" uid="uid://dmosd253cjq63" path="res://game/letter.tscn" id="7_b6xm7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fcvvq"]
 shader = ExtResource("2_2ho54")
@@ -30,12 +31,19 @@ material = SubResource("ShaderMaterial_fcvvq")
 offset_right = 960.0
 offset_bottom = 540.0
 
+[node name="Cursor" type="ColorRect" parent="Head/Camera"]
+offset_left = 360.0
+offset_top = 200.0
+offset_right = 362.0
+offset_bottom = 202.0
+
 [node name="FadeToBlack" type="ColorRect" parent="Head/Camera"]
 offset_right = 960.0
 offset_bottom = 540.0
 color = Color(0, 0, 0, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Head/Camera/FadeToBlack"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = -56.0
 offset_top = -390.0
@@ -57,11 +65,7 @@ offset_bottom = 528.0
 texture = ExtResource("3_28yen")
 script = ExtResource("4_fy677")
 
-[node name="Cursor" type="ColorRect" parent="Head/Camera"]
-offset_left = 360.0
-offset_top = 200.0
-offset_right = 362.0
-offset_bottom = 202.0
+[node name="Letter" parent="Head/Camera" instance=ExtResource("7_b6xm7")]
 
 [node name="Front" type="RayCast3D" parent="Head"]
 target_position = Vector3(0, 0, -4)

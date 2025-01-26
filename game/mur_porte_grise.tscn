@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=4 uid="uid://bfqo61jbjycsx"]
+[gd_scene load_steps=6 format=4 uid="uid://bfqo61jbjycsx"]
 
 [ext_resource type="Texture2D" uid="uid://bumb78ulbcvuo" path="res://texture/TEXTURE_murs_gris_v1.png" id="1_fjnbs"]
 [ext_resource type="ArrayMesh" uid="uid://bk870xxe7g4uu" path="res://model/door_door.tres" id="2_65eav"]
@@ -25,7 +25,10 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[node name="MurPorte" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_fjpbr"]
+size = Vector3(3, 4, 0.5)
+
+[node name="MurPorte" type="StaticBody3D"]
 
 [node name="AssetMurPorte4x4V2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
@@ -39,3 +42,11 @@ mesh = SubResource("ArrayMesh_jmstx")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099082, 0, 3.48825)
 visible = false
 mesh = ExtResource("2_65eav")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.44227, 1.86446, 0)
+shape = SubResource("BoxShape3D_fjpbr")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.694, 1.86446, 0)
+shape = SubResource("BoxShape3D_fjpbr")

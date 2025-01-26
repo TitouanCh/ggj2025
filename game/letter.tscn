@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmosd253cjq63"]
+
+[ext_resource type="Texture2D" uid="uid://bw1ks0w2s7sb8" path="res://sprites/envopen.png" id="1_qru63"]
+[ext_resource type="Script" path="res://game/letter.gd" id="1_t5elk"]
+[ext_resource type="Texture2D" uid="uid://ds0i40qqd2hey" path="res://sprites/envopenfront.png" id="2_50v04"]
+[ext_resource type="Texture2D" uid="uid://dsqipk2dy7n43" path="res://sprites/paper.png" id="3_l0nmp"]
+[ext_resource type="Theme" uid="uid://c72wynqgomp8o" path="res://asset/theme.tres" id="4_0miou"]
+[ext_resource type="Texture2D" uid="uid://cl2n5l47kdrvo" path="res://sprites/envfermee.png" id="4_y3bob"]
+
+[node name="Letter" type="Control"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 322.0
+offset_top = 483.0
+offset_right = 322.0
+offset_bottom = 483.0
+script = ExtResource("1_t5elk")
+
+[node name="Front" type="TextureRect" parent="."]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = -280.0
+offset_top = -471.0
+offset_right = 29.0
+offset_bottom = -71.0
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("2_50v04")
+
+[node name="Back" type="TextureRect" parent="Front"]
+visible = false
+z_index = -1
+layout_mode = 0
+offset_right = 309.0
+offset_bottom = 400.0
+texture = ExtResource("1_qru63")
+
+[node name="Closed" type="TextureRect" parent="Front"]
+visible = false
+layout_mode = 0
+offset_left = 0.555556
+offset_top = 144.444
+offset_right = 308.556
+offset_bottom = 398.444
+texture = ExtResource("4_y3bob")
+
+[node name="Paper" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -269.0
+offset_top = 115.0
+offset_right = 331.0
+offset_bottom = 850.0
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_l0nmp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Paper"]
+layout_mode = 0
+offset_left = 81.1111
+offset_top = 25.5556
+offset_right = 531.111
+offset_bottom = 425.556
+theme = ExtResource("4_0miou")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 6
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5.0 connected=1]
+Dear Bob,
+
+I hope you're well! Thanks again for taking in, instead of Mister P who is sick, and taking care of our dear soda machines.
+
+You will find all the information you need and don’t worry about our students… They are not very clean but they are nice![/wave]
+"
