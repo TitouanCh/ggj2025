@@ -1,7 +1,7 @@
 extends Interactable
 var model = [
 	load("res://model/poster_eau.tres"),
-	load("res://model/poster_eau_2.tres"),
+	load("res://model/poster_eau2.tres"),
 	load("res://model/poster_sport.tres"),
 	load("res://model/poster.tres")
 ]
