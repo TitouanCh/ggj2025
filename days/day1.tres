@@ -14,7 +14,7 @@ true_name = "PlayMoney"
 [sub_resource type="Resource" id="Resource_2kg7i"]
 script = ExtResource("3_hw5ut")
 name = "- Pick up can"
-amount = 5
+amount = 1
 true_name = "PickupCans"
 
 [resource]
@@ -22,5 +22,5 @@ script = ExtResource("2_rrydq")
 task = Array[ExtResource("3_hw5ut")]([SubResource("Resource_74jyl"), SubResource("Resource_2kg7i")])
 map = ExtResource("2_fydk5")
 jingle = ExtResource("1_hhy0v")
-letter = false
+letter = true
 dialog = "Sparkling bubbles, lights of my life, the fire in my loins. My sin, my soul. This is why I decided to become a soft drinks supplier. I don't understand what Madame Apoil's concerns are, when I arrive at MAPS the place is clean. And, I don't even see any students… the dream. Nevertheless, I need to focus on my tasks."

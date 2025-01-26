@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Day" load_steps=7 format=3 uid="uid://dpdopocbkuy8j"]
 
-[ext_resource type="AudioStream" uid="uid://b66lgupqpt6cc" path="res://sounds/jingle_slowed_slowed.mp3" id="1_exuch"]
-[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/MAPS_J2.tres" id="2_o5egc"]
+[ext_resource type="AudioStream" uid="uid://dlvqwvs624wqx" path="res://sounds/electric_zap.mp3" id="1_txjyi"]
+[ext_resource type="Resource" uid="uid://cv4k2v70bumnp" path="res://data/MAPS_J5.tres" id="2_g738b"]
 [ext_resource type="Script" path="res://game/day_data.gd" id="3_8n87c"]
 [ext_resource type="Script" path="res://game/task_data.gd" id="4_nrs4b"]
 
@@ -20,7 +20,7 @@ true_name = "PlayKiss"
 [resource]
 script = ExtResource("3_8n87c")
 task = Array[ExtResource("4_nrs4b")]([SubResource("Resource_nemf7"), SubResource("Resource_1nqln")])
-map = ExtResource("2_o5egc")
-jingle = ExtResource("1_exuch")
+map = ExtResource("2_g738b")
+jingle = ExtResource("1_txjyi")
 letter = false
-dialog = "Sparkling bubbles, lights of my life, the fire in my loins. My sin, my soul. This is why I decided to become a soft drinks supplier. I don't understand what Madame Apoil's concerns are, when I arrive at MAPS the place is clean. And, I don't even see any students… the dream. Nevertheless, I need to focus on my tasks."
+dialog = "Today, I was so hesitant to come back. I'm of a certain age and I don't understand what's going on at MAPS. For 5 days straight, I visited the premises without meeting a single student. But where are they? Are they in the void? Will I be joining them? Concentrating on my tasks at hand seems almost impossible."
