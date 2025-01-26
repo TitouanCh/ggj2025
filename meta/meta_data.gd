@@ -16,4 +16,5 @@ static var scenes = {
 	"Cannette3": load("res://game/canettes_sol_3.tscn"),
 	"Pillier_vert": load("res://game/pillier_vert.tscn"),
 	"Pillier_gris": load("res://game/pillier_gris.tscn"),
-	"Pillier_violet": load("res://game/pillier_violet.tscn")}
+	"Pillier_violet": load("res://game/pillier_violet.tscn"),
+	"Plante":load("res://game/plante.tscn")}

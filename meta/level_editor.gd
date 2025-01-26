@@ -43,7 +43,8 @@ var meta_color = {
 	"Cannette3": Color.DARK_CYAN,
 	"Pillier_violet": Color.LIGHT_STEEL_BLUE,
 	"Pillier_vert": Color.TEAL,
-	"Pillier_gris": Color.SIENNA
+	"Pillier_gris": Color.SIENNA,
+	"Plante": Color.CHARTREUSE
 }
 
 var current_base = 0
