@@ -1,0 +1,10 @@
+[gd_resource type="QuadMesh" load_steps=3 format=3 uid="uid://bmgop2o63w1s"]
+
+[ext_resource type="Texture2D" uid="uid://gue8dagiwggu" path="res://texture/logo/yellow.png" id="1_el02q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_guncj"]
+transparency = 1
+albedo_texture = ExtResource("1_el02q")
+
+[resource]
+material = SubResource("StandardMaterial3D_guncj")

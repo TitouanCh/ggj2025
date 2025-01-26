@@ -1,8 +1,11 @@
-[gd_resource type="ArrayMesh" load_steps=2 format=4 uid="uid://b53cghfco1q2"]
+[gd_resource type="ArrayMesh" load_steps=3 format=4 uid="uid://c1pwl7tdp73rm"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_swhhi"]
+[ext_resource type="Texture2D" uid="uid://6ts08yq2028c" path="res://texture/machine_couleurs/machine_base_violet.png" id="1_bickm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ppc4p"]
 resource_name = "machine"
 albedo_color = Color(0.8, 0.8, 0.8, 1)
+albedo_texture = ExtResource("1_bickm")
 metallic = 0.5
 
 [resource]
@@ -12,7 +15,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 228,
 "index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcAGAAZABoAGgAZABsAHAAdAB4AHgAdAB8AIAAhACIAIgAhACMAJAAlACYAJgAlACcAKAApACoAKgApACsALAAtAC4ALgAtAC8AMAAxADIAMgAxADMANAA1ADYANgA1ADcAOAA5ADoAOgA5ADsAPAA9AD4APgA9AD8AQABBAEIAQgBBAEMARABFAEYARgBFAEcASABJAEoASgBJAEsATABNAE4ATgBNAE8AUABRAFIAUgBRAFMAVABVAFYAVgBVAFcAWABZAFoAWgBZAFsACQBcAAsACwBcAF0AXgBfAGAAYABfAGEAYgBjAGQAZABjAGUAZgBnAGgAaABnAGkAagBrAGwAbABrAG0AbgBvAHAAcABvAHEAcgBzAHQAdABzAHUAdgB3AHgAeAB3AHkAegB7AHwAfAB7AH0AfgB/AIAAgAB/AIEAggCDAIQAhACDAIUAhgCHAIgAiACHAIkAigCLAIwAjACLAI0AjgCPAJAAkACPAJEAkgCTAJQAlACTAJUA"),
-"material": SubResource("StandardMaterial3D_swhhi"),
+"material": SubResource("StandardMaterial3D_ppc4p"),
 "name": "machine",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
