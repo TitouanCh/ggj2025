@@ -36,6 +36,7 @@ func _input(event):
 			head.rotation.x = clamp(head.rotation.x, -PI/2, PI/2)
 
 func _physics_process(delta):
+	$Head/Camera/Cursor.visible = !in_minigame
 	if !in_minigame:
 		# Mouvement
 		var direction = Vector2.ZERO

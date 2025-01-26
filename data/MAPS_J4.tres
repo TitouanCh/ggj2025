@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=301 format=3]
+[gd_resource type="Resource" script_class="LevelData" load_steps=301 format=3 uid="uid://d3k67uit73qa6"]
 
 [ext_resource type="Script" path="res://meta/fr_data.gd" id="1_0fo5r"]
 [ext_resource type="Script" path="res://meta/meta_data.gd" id="2_0fbs4"]
