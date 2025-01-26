@@ -15,7 +15,8 @@ var wall_color = {
 	"HublotVert": Color.LAWN_GREEN,
 	"DoorVert": Color.AQUAMARINE,
 	"DoorFermeeVert": Color.CHARTREUSE,
-	"DoorBleuVert": Color.DARK_VIOLET
+	"DoorBleuVert": Color.DARK_VIOLET,
+	"MurRideau": Color.HOT_PINK,
 }
 
 
@@ -53,7 +54,7 @@ var classes = {
 }
 
 var types = {
-	"wall": ["Normal", "Hublot", "Door", "DoorFermee", "Gris", "HublotGris", "DoorGris", "DoorFermeeGris", "Vert", "HublotVert", "DoorVert", "DoorFermeeVert", "DoorBleuVert"],
+	"wall": ["Normal", "Hublot", "Door", "DoorFermee", "Gris", "HublotGris", "DoorGris", "DoorFermeeGris", "Vert", "HublotVert", "DoorVert", "DoorFermeeVert", "DoorBleuVert", "MurRideau"],
 	"fr": ["Base", "Gris", "Vert"],
 	"meta": ["PlayerPosition", "Machine", "Pouf", "Table", "TablePoufCannette", "Pyramide", "Desastre", "Cannette1", "Cannette2", "Cannette3"]
 }

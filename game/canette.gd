@@ -18,6 +18,10 @@ var sound = false
 
 func interact(player: Player) -> void:
 	Task.complete_task("PickupCans")
+	if randf() < 0.9:
+		Sound.play_sound_from_name("swoosh.mp3")
+	else:
+		Sound.play_sound_from_name("drinkfull.mp3")
 	queue_free()
 
 func is_interactable(player):
