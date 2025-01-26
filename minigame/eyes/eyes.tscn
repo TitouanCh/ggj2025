@@ -1,15 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://b8spjg80tyvjl"]
 
 [ext_resource type="Script" path="res://minigame/eyes/eyes.gd" id="1_22f58"]
-[ext_resource type="Texture2D" uid="uid://baxt1wneqewef" path="res://sprites/weird_eyes/eyes_open.PNG" id="2_qb4ax"]
+[ext_resource type="Texture2D" uid="uid://b8t2pxt6o4xve" path="res://sprites/weird/SPRITE_oeilouvert.png" id="2_3i1vk"]
 
 [node name="Eyes" type="Node2D"]
 script = ExtResource("1_22f58")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(145.249, 148.182)
 scale = Vector2(0.146, 0.146)
-texture = ExtResource("2_qb4ax")
+texture = ExtResource("2_3i1vk")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 6.66

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Day" load_steps=8 format=3 uid="uid://b47vss3a86lqv"]
 
 [ext_resource type="AudioStream" uid="uid://clfty1f2uehoy" path="res://sounds/jingle_slowed.mp3" id="1_gskew"]
-[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/MAPS_J1.tres" id="1_ukclj"]
+[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/MAPS_J2.tres" id="1_ukclj"]
 [ext_resource type="Script" path="res://game/day_data.gd" id="2_8tkvk"]
 [ext_resource type="Script" path="res://game/task_data.gd" id="3_pr5on"]
 
@@ -14,13 +14,13 @@ true_name = "PlayCleaning"
 [sub_resource type="Resource" id="Resource_74jyl"]
 script = ExtResource("3_pr5on")
 name = "- Collect $$$"
-amount = 3
+amount = 2
 true_name = "PlayMoney"
 
 [sub_resource type="Resource" id="Resource_2kg7i"]
 script = ExtResource("3_pr5on")
 name = "- Pick up can"
-amount = 3
+amount = 5
 true_name = "PickupCans"
 
 [resource]
@@ -29,4 +29,4 @@ task = Array[ExtResource("3_pr5on")]([SubResource("Resource_nemf7"), SubResource
 map = ExtResource("1_ukclj")
 jingle = ExtResource("1_gskew")
 letter = false
-dialog = "Sparkling bubbles, lights of my life, the fire in my loins. My sin, my soul. This is why I decided to become a soft drinks supplier. I don't understand what Madame Apoil's concerns are, when I arrive at MAPS the place is clean. And, I don't even see any students… the dream. Nevertheless, I need to focus on my tasks."
+dialog = "What a glorious morning! After a long night's rest, I am happy to return to my soft drinks. I really enjoyed yesterday with no students in sight. But still, where are they? No, I don’t have to worry about them. Let's see my tasks for the day."

@@ -1,32 +1,20 @@
-[gd_resource type="Resource" script_class="Day" load_steps=8 format=3 uid="uid://cguwxsy7lrrk3"]
+[gd_resource type="Resource" script_class="Day" load_steps=6 format=3 uid="uid://cguwxsy7lrrk3"]
 
-[ext_resource type="AudioStream" uid="uid://b66lgupqpt6cc" path="res://sounds/jingle_slowed_slowed.mp3" id="1_1fi7i"]
-[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/MAPS_J2.tres" id="2_qcou2"]
+[ext_resource type="AudioStream" uid="uid://bgjnl3buct3hi" path="res://sounds/requiem1.mp3" id="1_y6sua"]
+[ext_resource type="Resource" uid="uid://rl6kaknsri71" path="res://data/MAPS_J6.tres" id="2_qb3ur"]
 [ext_resource type="Script" path="res://game/day_data.gd" id="3_oo0k1"]
 [ext_resource type="Script" path="res://game/task_data.gd" id="4_jf1ir"]
 
 [sub_resource type="Resource" id="Resource_nemf7"]
 script = ExtResource("4_jf1ir")
-name = "- Repare 1 Machine"
+name = "- ???"
 amount = 1
 true_name = "PlayMaintenance"
 
-[sub_resource type="Resource" id="Resource_74jyl"]
-script = ExtResource("4_jf1ir")
-name = "- Clean 2 Machines"
-amount = 2
-true_name = "PlayCleaning"
-
-[sub_resource type="Resource" id="Resource_2kg7i"]
-script = ExtResource("4_jf1ir")
-name = "- Pick up can"
-amount = 5
-true_name = "PickupCans"
-
 [resource]
 script = ExtResource("3_oo0k1")
-task = Array[ExtResource("4_jf1ir")]([SubResource("Resource_nemf7"), SubResource("Resource_74jyl"), SubResource("Resource_2kg7i")])
-map = ExtResource("2_qcou2")
-jingle = ExtResource("1_1fi7i")
+task = Array[ExtResource("4_jf1ir")]([SubResource("Resource_nemf7")])
+map = ExtResource("2_qb3ur")
+jingle = ExtResource("1_y6sua")
 letter = false
-dialog = "Sparkling bubbles, lights of my life, the fire in my loins. My sin, my soul. This is why I decided to become a soft drinks supplier. I don't understand what Madame Apoil's concerns are, when I arrive at MAPS the place is clean. And, I don't even see any students… the dream. Nevertheless, I need to focus on my tasks."
+dialog = "They finally came and got me. Today, I resign from my life subscription."
