@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7x7ltdrw72ln"]
+
+[ext_resource type="Texture2D" uid="uid://cxc4rims20uev" path="res://sprites/Bulle.png" id="1_kcwej"]
+[ext_resource type="Script" path="res://game/bulle.gd" id="1_tsb3x"]
+[ext_resource type="FontFile" uid="uid://lcqpfwwi3au1" path="res://font/sunflower.otf" id="2_i5era"]
+
+[node name="Bulle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 800.0
+offset_right = -160.0
+offset_bottom = -540.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tsb3x")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 350.0
+offset_bottom = 495.0
+texture = ExtResource("1_kcwej")
+flip_h = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 91.0
+offset_right = 267.0
+offset_bottom = 391.0
+theme_override_fonts/normal_font = ExtResource("2_i5era")
+bbcode_enabled = true
+text = "[wave amp=16.0 freq=5.0 connected=1]Today, I was so hesitant to come back. In order to maintain a soft drink vending machine I must maintain a form of transparency. But I see in this injunction a form of violence. I'm of a certain age and I don't understand what's going on at MAPS. For 5 days straight, I visited the premises without meeting a single student. But where are they? Are they in the void? Will I be joining them? 
+"
