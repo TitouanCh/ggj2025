@@ -1,7 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://cws0071ei8dcb"]
+[gd_scene load_steps=15 format=4 uid="uid://cws0071ei8dcb"]
 
 [ext_resource type="Texture2D" uid="uid://v44lcqbxl26q" path="res://texture/TEXTURE_murs_verts_v1.png" id="1_rrjme"]
 [ext_resource type="Texture2D" uid="uid://b5tph7rtmpm1o" path="res://texture/TEXTURE_porte_v1.png" id="2_g1pxg"]
+[ext_resource type="ArrayMesh" uid="uid://ba733oovp4rmo" path="res://model/cadre.tres" id="3_rbmc8"]
+[ext_resource type="ArrayMesh" uid="uid://ci2cdud4olbiv" path="res://model/mur_porte.tres" id="4_d66sm"]
+[ext_resource type="Texture2D" uid="uid://drwcy3a3eh8n1" path="res://texture/TEXTURE_murs_v1.png" id="5_4en4j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qd6ph"]
 resource_name = "MUR"
@@ -71,14 +74,35 @@ blend_shape_mode = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_02td1"]
 size = Vector3(3, 4, 0.5)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4cd6"]
+albedo_texture = ExtResource("5_4en4j")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mpv02"]
+_surfaces = [{
+"aabb": AABB(0, 0, -4, 1e-05, 6, 8),
+"attribute_data": PackedByteArray("///+////+Z+S0f7/2tobtM5/+Z/Of///KqwZrSqs//8="),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcAAQAEAAMAAwAEAAYA"),
+"material": SubResource("StandardMaterial3D_y4cd6"),
+"name": "MUR",
+"primitive": 3,
+"uv_scale": Vector4(1.99476, 1.99728, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAABJowAAAABSytK1AAAAAP//AAAAAAAAAAAAAAAAAAAB3ZVYAAAAAAAAlVgAAP+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9/")
+}]
+blend_shape_mode = 0
+
 [node name="MurPorte" type="StaticBody3D"]
 
 [node name="AssetMurPorte4x4V2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+visible = false
 mesh = SubResource("ArrayMesh_nllup")
 
 [node name="AssetMurPorte4x4V3" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, 0, 0, 0)
+visible = false
 mesh = SubResource("ArrayMesh_yeaev")
 
 [node name="Porte" type="MeshInstance3D" parent="."]
@@ -93,3 +117,15 @@ shape = SubResource("BoxShape3D_02td1")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.694, 1.86446, 0)
 shape = SubResource("BoxShape3D_02td1")
+
+[node name="AssetMurCadreporte" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+mesh = ExtResource("3_rbmc8")
+
+[node name="AssetMurPorteSanscadre" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, -1, 0, 4.37114e-08, 0, 0, 0)
+mesh = ExtResource("4_d66sm")
+
+[node name="AssetMurPorteSanscadre2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -3.82137e-15, -1, -8.74228e-08, 1, 0, 1, 8.74228e-08, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_mpv02")

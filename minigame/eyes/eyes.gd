@@ -23,3 +23,12 @@ func _process(delta: float) -> void:
 	sprite.position.y = dimensions.y/2 + cos(Tdelta * 4.0) * 40
 	sprite.position.x = dimensions.x/2 + sin(Tdelta * 4.0) * 40
 	Tdelta += delta
+	
+	queue_redraw()
+
+func _draw() -> void:
+	draw_rect(Rect2(0, 0, $Timer.time_left/$Timer.wait_time * dimensions.x, 10), Color.RED)
+
+
+func _on_timer_timeout() -> void:
+	finished.emit()

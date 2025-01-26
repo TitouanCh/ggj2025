@@ -1,19 +1,25 @@
-[gd_resource type="Resource" script_class="Day" load_steps=6 format=3 uid="uid://dpdopocbkuy8j"]
+[gd_resource type="Resource" script_class="Day" load_steps=7 format=3 uid="uid://dpdopocbkuy8j"]
 
 [ext_resource type="AudioStream" uid="uid://b66lgupqpt6cc" path="res://sounds/jingle_slowed_slowed.mp3" id="1_exuch"]
-[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/level.tres" id="2_o5egc"]
+[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/MAPS_J2.tres" id="2_o5egc"]
 [ext_resource type="Script" path="res://game/day_data.gd" id="3_8n87c"]
 [ext_resource type="Script" path="res://game/task_data.gd" id="4_nrs4b"]
 
 [sub_resource type="Resource" id="Resource_nemf7"]
 script = ExtResource("4_nrs4b")
 name = "- Eyes"
-amount = 2
+amount = 3
 true_name = "PlayEyes"
+
+[sub_resource type="Resource" id="Resource_1nqln"]
+script = ExtResource("4_nrs4b")
+name = "- Kiss"
+amount = 3
+true_name = "PlayKiss"
 
 [resource]
 script = ExtResource("3_8n87c")
-task = Array[ExtResource("4_nrs4b")]([SubResource("Resource_nemf7")])
+task = Array[ExtResource("4_nrs4b")]([SubResource("Resource_nemf7"), SubResource("Resource_1nqln")])
 map = ExtResource("2_o5egc")
 jingle = ExtResource("1_exuch")
 letter = false

@@ -1,0 +1,22 @@
+[gd_resource type="ArrayMesh" load_steps=3 format=4 uid="uid://ci2cdud4olbiv"]
+
+[ext_resource type="Texture2D" uid="uid://v44lcqbxl26q" path="res://texture/TEXTURE_murs_verts_v1.png" id="1_mg7y3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nou01"]
+albedo_texture = ExtResource("1_mg7y3")
+
+[resource]
+_surfaces = [{
+"aabb": AABB(0, 0, -4, 1e-05, 6, 8),
+"attribute_data": PackedByteArray("///+////+Z+S0f7/2tobtM5/+Z/Of///KqwZrSqs//8="),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcAAQAEAAMAAwAEAAYA"),
+"material": SubResource("StandardMaterial3D_nou01"),
+"name": "MUR",
+"primitive": 3,
+"uv_scale": Vector4(1.99476, 1.99728, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAABJowAAAABSytK1AAAAAP//AAAAAAAAAAAAAAAAAAAB3ZVYAAAAAAAAlVgAAP+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9/")
+}]
+blend_shape_mode = 0

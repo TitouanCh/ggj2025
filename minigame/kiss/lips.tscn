@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh1pvarysbr1j"]
+
+[ext_resource type="Script" path="res://minigame/kiss/lips.gd" id="1_u4l2u"]
+[ext_resource type="Texture2D" uid="uid://cylb1rtr2hire" path="res://sprites/lips.jpg" id="2_5hdlu"]
+
+[node name="Lips" type="Node2D"]
+script = ExtResource("1_u4l2u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_5hdlu")
