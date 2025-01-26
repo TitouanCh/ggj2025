@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dywyy2a7cjbk3"]
+[gd_scene load_steps=3 format=3 uid="uid://dywyy2a7cjbk3"]
 
 [ext_resource type="ArrayMesh" uid="uid://tkqpmeagqyfp" path="res://model/pouf.tres" id="1_0pw3s"]
 
-[node name="pouf" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_o18fy"]
+size = Vector3(1.61096, 1.63098, 1.50098)
+
+[node name="pouf" type="StaticBody3D"]
 
 [node name="AssetPoufV1" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_0pw3s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00946045, 0.739807, -0.0105903)
+shape = SubResource("BoxShape3D_o18fy")
