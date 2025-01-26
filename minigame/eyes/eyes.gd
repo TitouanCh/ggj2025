@@ -1,7 +1,7 @@
 extends Minigame
 
-var closed = load("res://sprites/weird_eyes/closed_eyes.jpg")
-var open = load("res://sprites/weird_eyes/eyes_open.PNG")
+var closed = load("res://sprites/weird/SPRITE_oeilferme.png")
+var open = load("res://sprites/weird/SPRITE_oeilouvert.png")
 @onready var sprite = $Sprite2D
 @onready var base_sprite_scale = 0.5
 var Tdelta = 0.0

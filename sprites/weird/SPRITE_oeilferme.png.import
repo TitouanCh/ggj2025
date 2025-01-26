@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cylb1rtr2hire"
-path="res://.godot/imported/lips.jpg-d7893d67de7c37bac5f127f1cc8a89b3.ctex"
+uid="uid://j5k0pyb7nkos"
+path="res://.godot/imported/SPRITE_oeilferme.png-97a8115d727e6c726129f42be5dc3fac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/lips.jpg"
-dest_files=["res://.godot/imported/lips.jpg-d7893d67de7c37bac5f127f1cc8a89b3.ctex"]
+source_file="res://sprites/weird/SPRITE_oeilferme.png"
+dest_files=["res://.godot/imported/SPRITE_oeilferme.png-97a8115d727e6c726129f42be5dc3fac.ctex"]
 
 [params]
 
