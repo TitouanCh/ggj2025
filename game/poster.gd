@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends Interactable
 
 var model = [
 	load("res://model/poster_eau.tres"),
@@ -6,6 +6,11 @@ var model = [
 	load("res://model/poster_sport.tres"),
 	load("res://model/poster.tres")
 ]
+
+func interact(player: Player) -> void:
+	Sound.play_sound_from_name("ripping.mp3")
+	queue_free()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$MeshInstance3D.mesh = model.pick_random()
