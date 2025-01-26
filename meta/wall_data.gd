@@ -18,5 +18,8 @@ static var scenes = {
 	"DoorVert": load("res://game/mur_porte_verte.tscn"),
 	"DoorFermeeVert": load("res://game/mur_porte_verte_fermee.tscn"),
 	"DoorBleuVert": load("res://game/porte_verte_bleu.tscn"),
-	"MurRideau": load("res://game/mur_rideau.tscn")
+	"MurRideau": load("res://game/mur_rideau.tscn"),
+	"PosterGris":load("res://game/mur_gris_poster.tscn"),
+	"PosterVert":load("res://game/mur_vert_poster.tscn"),
+	"PosterViolet":load("res://game/mur_poster.tscn")
 }
