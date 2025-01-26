@@ -27,7 +27,6 @@ Task="*res://game/task.gd"
 window/size/viewport_width=960
 window/size/viewport_height=540
 window/stretch/mode="viewport"
-window/stretch/scale_mode="integer"
 
 [gui]
 
