@@ -1,46 +1,46 @@
-[gd_scene load_steps=8 format=3 uid="uid://lg4dq3weje5u"]
+[gd_scene load_steps=8 format=3 uid="uid://kgbal1alhgee"]
 
-[ext_resource type="Script" path="res://game/machine.gd" id="1_vt4j7"]
-[ext_resource type="ArrayMesh" uid="uid://dtqnkv5y72tk8" path="res://model/machine/machine_base_red.tres" id="2_qdfvp"]
-[ext_resource type="ArrayMesh" uid="uid://bhwk8j3m1x410" path="res://model/machine/machine_door_purple.tres" id="3_yanph"]
-[ext_resource type="QuadMesh" uid="uid://b16msq8ria0uu" path="res://model/machine/machine_logo_purple.tres" id="4_2h5tx"]
+[ext_resource type="Script" path="res://game/machine_broken.gd" id="1_aaahk"]
+[ext_resource type="ArrayMesh" uid="uid://dtqnkv5y72tk8" path="res://model/machine/machine_base_red.tres" id="2_qsijf"]
+[ext_resource type="ArrayMesh" uid="uid://bhwk8j3m1x410" path="res://model/machine/machine_door_purple.tres" id="3_gtima"]
+[ext_resource type="QuadMesh" uid="uid://b16msq8ria0uu" path="res://model/machine/machine_logo_purple.tres" id="4_qdsxy"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wcaw8"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_fy1vy"]
 size = Vector3(1, 4, 1.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n40yf"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ki33"]
 albedo_color = Color(0.117647, 0.109804, 0.145098, 1)
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_h2cyy"]
-material = SubResource("StandardMaterial3D_n40yf")
+[sub_resource type="CylinderMesh" id="CylinderMesh_5kwi8"]
+material = SubResource("StandardMaterial3D_3ki33")
 top_radius = 0.05
 bottom_radius = 0.05
 height = 0.5
 
-[node name="Machine" type="StaticBody3D"]
+[node name="MachineBroken" type="StaticBody3D"]
 collision_layer = 5
 collision_mask = 15
-script = ExtResource("1_vt4j7")
+script = ExtResource("1_aaahk")
 
 [node name="AssetMachineV2" type="MeshInstance3D" parent="."]
-mesh = ExtResource("2_qdfvp")
+mesh = ExtResource("2_qsijf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.172039, 2.06354, 0)
-shape = SubResource("BoxShape3D_wcaw8")
+shape = SubResource("BoxShape3D_fy1vy")
 
 [node name="DoorJoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.581285, 1.23, 0.7059)
 
 [node name="AssetMachinePorteV1" type="MeshInstance3D" parent="DoorJoint"]
 transform = Transform3D(0.999156, 0, 0.0410735, 0, 1, 0, -0.0410735, 0, 0.999156, -0.6323, -1.23, -0.693452)
-mesh = ExtResource("3_yanph")
+mesh = ExtResource("3_gtima")
 skeleton = NodePath("../..")
 
 [node name="logo" type="MeshInstance3D" parent="DoorJoint/AssetMachinePorteV1"]
 transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 0.698706, 0.846749, 0.0884166)
-mesh = ExtResource("4_2h5tx")
+mesh = ExtResource("4_qdsxy")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.587781, 2.15029, 0.703785)
-mesh = SubResource("CylinderMesh_h2cyy")
+mesh = SubResource("CylinderMesh_5kwi8")
