@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpnihv5jujsol"
-path.s3tc="res://.godot/imported/logo_distributeur.png-3fd3cbab57923fb32bb331b48f377b68.s3tc.ctex"
+path.s3tc="res://.godot/imported/red.png-b95be0438b0afc9b7ffe48ce08bdef22.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://texture/logo/logo_distributeur.png"
-dest_files=["res://.godot/imported/logo_distributeur.png-3fd3cbab57923fb32bb331b48f377b68.s3tc.ctex"]
+source_file="res://texture/logo/red.png"
+dest_files=["res://.godot/imported/red.png-b95be0438b0afc9b7ffe48ce08bdef22.s3tc.ctex"]
 
 [params]
 
