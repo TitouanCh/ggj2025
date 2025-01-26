@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://t5dobexd4npl"]
+
+[ext_resource type="Texture2D" uid="uid://bumb78ulbcvuo" path="res://texture/TEXTURE_murs_gris_v1.png" id="1_li3eh"]
+[ext_resource type="PackedScene" uid="uid://ccn51qjbivgug" path="res://game/poster.tscn" id="2_o5x6a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kfmev"]
+resource_name = "MUR"
+cull_mode = 2
+albedo_color = Color(0.8, 0.8, 0.8, 1)
+albedo_texture = ExtResource("1_li3eh")
+metallic = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_b3kbj"]
+_surfaces = [{
+"aabb": AABB(0, 0, -4, 1e-05, 6, 8),
+"attribute_data": PackedByteArray(255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 63, 0, 0, 255, 63),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_kfmev"),
+"name": "MUR",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 255, 255, 255, 255, 255, 191, 0, 0, 255, 255, 0, 0, 255, 191, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+
+[node name="MurGrisPoster" type="Node3D"]
+
+[node name="AssetMurBase4x4V1" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_b3kbj")
+
+[node name="Poster" parent="." instance=ExtResource("2_o5x6a")]
+
+[node name="Poster2" parent="." instance=ExtResource("2_o5x6a")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -0.1)

@@ -26,6 +26,7 @@ func _process(delta: float) -> void:
 	
 
 func _on_tache_die(tache):
+	Sound.play_sound_from_name('sponge.mp3',0.5)
 	a.erase(tache)
 
 func _draw() -> void:

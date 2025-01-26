@@ -1,0 +1,10 @@
+[gd_resource type="QuadMesh" load_steps=3 format=3 uid="uid://bqvwo7ms77hro"]
+
+[ext_resource type="Texture2D" uid="uid://doqmn28hnw0rh" path="res://texture/Affiche_eau.png" id="1_pjk56"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6blp1"]
+albedo_texture = ExtResource("1_pjk56")
+
+[resource]
+material = SubResource("StandardMaterial3D_6blp1")
+size = Vector2(2.4, 3)
