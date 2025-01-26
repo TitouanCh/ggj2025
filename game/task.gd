@@ -3,7 +3,7 @@ extends Node
 signal update_task(task)
 
 var schedule: Array[Day] = [
-	#load("res://days/day5.tres"), # Test
+	#load("res://days/days1.tres"), # Test
 	load("res://days/day1.tres"),
 	load("res://days/day2.tres"),
 	null,

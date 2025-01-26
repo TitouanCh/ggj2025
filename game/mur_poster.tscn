@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://xlr8c8it1ccd"]
+[gd_scene load_steps=5 format=3 uid="uid://xlr8c8it1ccd"]
 
 [ext_resource type="ArrayMesh" uid="uid://b8i43p1fc77nh" path="res://model/mur.tres" id="1_1bbdj"]
 [ext_resource type="Script" path="res://game/mur_poster.gd" id="1_qg7hh"]
 [ext_resource type="PackedScene" uid="uid://ccn51qjbivgug" path="res://game/poster.tscn" id="3_235gm"]
 
-[node name="Murposter" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_lnqj0"]
+size = Vector3(8, 8, 0.1)
+
+[node name="Murposter" type="StaticBody3D"]
 script = ExtResource("1_qg7hh")
 
 [node name="AssetMurBase4x4V1" type="MeshInstance3D" parent="."]
@@ -15,3 +18,7 @@ mesh = ExtResource("1_1bbdj")
 
 [node name="Poster2" parent="." instance=ExtResource("3_235gm")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -0.1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+shape = SubResource("BoxShape3D_lnqj0")

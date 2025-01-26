@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2v4kkeu2waah"]
+[gd_scene load_steps=6 format=3 uid="uid://b2v4kkeu2waah"]
 
-[ext_resource type="Texture2D" uid="uid://v44lcqbxl26q" path="res://texture/TEXTURE_murs_verts_v1.png" id="1_sykfr"]
+[ext_resource type="Texture2D" uid="uid://dwo8pmo3injvs" path="res://texture/TEXTURE_murs_verts_v1.png" id="1_sykfr"]
 [ext_resource type="PackedScene" uid="uid://ccn51qjbivgug" path="res://game/poster.tscn" id="2_hce0p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iflip"]
@@ -26,7 +26,10 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[node name="MurVertPoster" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_8uhkw"]
+size = Vector3(8, 8, 0.1)
+
+[node name="MurVertPoster" type="StaticBody3D"]
 
 [node name="AssetMurBase4x4V1" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
@@ -36,3 +39,7 @@ mesh = SubResource("ArrayMesh_mgtmc")
 
 [node name="Poster2" parent="." instance=ExtResource("2_hce0p")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -0.1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+shape = SubResource("BoxShape3D_8uhkw")
