@@ -1,11 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://bh1pvarysbr1j"]
+[gd_scene load_steps=7 format=3 uid="uid://bh1pvarysbr1j"]
 
 [ext_resource type="Script" path="res://minigame/kiss/lips.gd" id="1_u4l2u"]
-[ext_resource type="Texture2D" uid="uid://dtxpxdp7vwtmx" path="res://sprites/weird/SPRITE_levres.png" id="2_u1qdw"]
+[ext_resource type="Texture2D" uid="uid://c0i003kufdxa1" path="res://sprites/SPRITE_levres_v2.png" id="2_hkjmq"]
+[ext_resource type="Texture2D" uid="uid://bdjfv8nswv4j7" path="res://sprites/kiss.png" id="3_70ri4"]
+
+[sub_resource type="Curve" id="Curve_oan81"]
+_data = [Vector2(0, 0.23788), 0.0, 0.0, 0, 0, Vector2(0.953891, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_jm7xt"]
+curve = SubResource("Curve_oan81")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jwoqq"]
+particle_flag_disable_z = true
+angle_min = -720.0
+angle_max = 720.0
+direction = Vector3(0, -1, 0)
+spread = 180.0
+initial_velocity_min = 20.0
+initial_velocity_max = 40.0
+gravity = Vector3(0, 98, 0)
+scale_min = 0.2
+scale_max = 0.2
+scale_curve = SubResource("CurveTexture_jm7xt")
 
 [node name="Lips" type="Node2D"]
 script = ExtResource("1_u4l2u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.54902)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_u1qdw")
+texture = ExtResource("2_hkjmq")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 3
+process_material = SubResource("ParticleProcessMaterial_jwoqq")
+texture = ExtResource("3_70ri4")
+one_shot = true
+explosiveness = 1.0

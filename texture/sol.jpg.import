@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dc5lsnywnlr8j"
 path.s3tc="res://.godot/imported/sol.jpg-0c2eb9894512d5148c3f8ef458806d68.s3tc.ctex"
+path.etc2="res://.godot/imported/sol.jpg-0c2eb9894512d5148c3f8ef458806d68.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://texture/sol.jpg"
-dest_files=["res://.godot/imported/sol.jpg-0c2eb9894512d5148c3f8ef458806d68.s3tc.ctex"]
+dest_files=["res://.godot/imported/sol.jpg-0c2eb9894512d5148c3f8ef458806d68.s3tc.ctex", "res://.godot/imported/sol.jpg-0c2eb9894512d5148c3f8ef458806d68.etc2.ctex"]
 
 [params]
 

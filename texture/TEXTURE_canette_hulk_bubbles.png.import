@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://chkn35wtpq1e5"
 path.s3tc="res://.godot/imported/TEXTURE_canette_hulk_bubbles.png-6cb9f56f5ee9411ccf0456f86073e9c7.s3tc.ctex"
+path.etc2="res://.godot/imported/TEXTURE_canette_hulk_bubbles.png-6cb9f56f5ee9411ccf0456f86073e9c7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://texture/TEXTURE_canette_hulk_bubbles.png"
-dest_files=["res://.godot/imported/TEXTURE_canette_hulk_bubbles.png-6cb9f56f5ee9411ccf0456f86073e9c7.s3tc.ctex"]
+dest_files=["res://.godot/imported/TEXTURE_canette_hulk_bubbles.png-6cb9f56f5ee9411ccf0456f86073e9c7.s3tc.ctex", "res://.godot/imported/TEXTURE_canette_hulk_bubbles.png-6cb9f56f5ee9411ccf0456f86073e9c7.etc2.ctex"]
 
 [params]
 

@@ -30,7 +30,7 @@ func show_text():
 	blah_tween.tween_callback(play_random_blah)
 	
 	tween.tween_callback(func(): blah_tween.kill())
-	tween.tween_interval(5)
+	tween.tween_interval(7)
 	tween.tween_callback(bye)
 
 func play_random_blah():

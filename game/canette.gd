@@ -34,7 +34,7 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node) -> void:
 	if not(body in collide_bodies) and sound:
-		Sound.play_sound_from_stream(sounds[randi() % len(sounds)])
+		Sound.play_sound_from_stream(sounds[randi() % len(sounds)], 0.3, -5.0)
 		collide_bodies.append(body)
 
 func _on_timer_timeout() -> void:

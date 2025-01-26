@@ -3,7 +3,7 @@ extends Node
 signal update_task(task)
 
 var schedule: Array[Day] = [
-	load("res://days/day5.tres"), # Test
+	#load("res://days/day5.tres"), # Test
 	load("res://days/day1.tres"),
 	load("res://days/day2.tres"),
 	null,
@@ -51,6 +51,8 @@ func finished_all_tasks():
 func _on_faded_to_black():
 	current_day += 1
 	if current_day == 2: current_day += 1
+	if current_day >= len(schedule):
+		current_day = 0
 	main.queue_free()
 	var instance = main_scene.instantiate()
 	viewport.add_child(instance)
@@ -64,9 +66,14 @@ func get_machine_true_name_task() -> String:
 				task_that_need_machine.append(task)
 			all_machine_task.append(task)
 	
+	if len(task_that_need_machine) + len(all_machine_task) == 0: return "PlayNone"
+	
 	var task
 	if len(task_that_need_machine) > 0:
 		task = task_that_need_machine.pick_random()
 	else: task = all_machine_task.pick_random()
-	task.n_machines += 1
-	return task.true_name
+	if task:
+		task.n_machines += 1
+		return task.true_name
+	else:
+		return "PlayNone"

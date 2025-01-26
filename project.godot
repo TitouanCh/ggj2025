@@ -13,7 +13,9 @@ config_version=5
 config/name="ggj2025"
 run/main_scene="res://game/flask.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://sprites/weird_eyes/eyes_open.PNG"
+config/icon="res://icon.png"
 
 [autoload]
 
@@ -137,4 +139,5 @@ erase_only_meta={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(1, 1, 1, 1)

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3m3pj8wrj4ij"
 path.s3tc="res://.godot/imported/TEXTURE_pouf_v2.png-5c681440d22e5693a98b78b67f648c6b.s3tc.ctex"
+path.etc2="res://.godot/imported/TEXTURE_pouf_v2.png-5c681440d22e5693a98b78b67f648c6b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://texture/TEXTURE_pouf_v2.png"
-dest_files=["res://.godot/imported/TEXTURE_pouf_v2.png-5c681440d22e5693a98b78b67f648c6b.s3tc.ctex"]
+dest_files=["res://.godot/imported/TEXTURE_pouf_v2.png-5c681440d22e5693a98b78b67f648c6b.s3tc.ctex", "res://.godot/imported/TEXTURE_pouf_v2.png-5c681440d22e5693a98b78b67f648c6b.etc2.ctex"]
 
 [params]
 

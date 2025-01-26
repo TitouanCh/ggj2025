@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqgkiwixyqu53"
 path.s3tc="res://.godot/imported/TEXTURE_canette_T2ME_V2.png-95db7072307c35f52a7d6aea30bd1d1a.s3tc.ctex"
+path.etc2="res://.godot/imported/TEXTURE_canette_T2ME_V2.png-95db7072307c35f52a7d6aea30bd1d1a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://texture/TEXTURE_canette_T2ME_V2.png"
-dest_files=["res://.godot/imported/TEXTURE_canette_T2ME_V2.png-95db7072307c35f52a7d6aea30bd1d1a.s3tc.ctex"]
+dest_files=["res://.godot/imported/TEXTURE_canette_T2ME_V2.png-95db7072307c35f52a7d6aea30bd1d1a.s3tc.ctex", "res://.godot/imported/TEXTURE_canette_T2ME_V2.png-95db7072307c35f52a7d6aea30bd1d1a.etc2.ctex"]
 
 [params]
 
