@@ -9,9 +9,10 @@ var isRipped = false
 var ripped = load("res://model/poster_ripped.tres")
 
 func is_interactable(player):
-	return not isRipped
+	return Task.is_task_left("RipPoster") and not isRipped
 
 func interact(player: Player) -> void:
+	Task.complete_task("RipPoster")
 	Sound.play_sound_from_name("ripping.mp3")
 	$MeshInstance3D.mesh = ripped
 	isRipped = true
