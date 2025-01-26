@@ -5,7 +5,10 @@ signal update_task(task)
 var schedule: Array[Day] = [
 	load("res://days/day1.tres"),
 	load("res://days/day2.tres"),
-	load("res://days/day3.tres"),
+	null,
+	load("res://days/day4.tres"),
+	load("res://days/day5.tres"),
+	load("res://days/day6.tres")
 ]
 
 var current_day = 0
@@ -46,6 +49,7 @@ func finished_all_tasks():
 
 func _on_faded_to_black():
 	current_day += 1
+	if current_day == 2: current_day += 1
 	main.queue_free()
 	var instance = main_scene.instantiate()
 	viewport.add_child(instance)
