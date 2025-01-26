@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://6ckb21ok4e4s"]
 
-[ext_resource type="PackedScene" uid="uid://lg4dq3weje5u" path="res://game/machine2.tscn" id="1_xjgji"]
+[ext_resource type="PackedScene" uid="uid://kgbal1alhgee" path="res://game/machine_broken.tscn" id="1_jyjnp"]
 [ext_resource type="PackedScene" uid="uid://cr0dt4olj00a4" path="res://game/table.tscn" id="2_vbclh"]
 [ext_resource type="PackedScene" uid="uid://dywyy2a7cjbk3" path="res://game/pouf.tscn" id="3_h55of"]
 [ext_resource type="PackedScene" uid="uid://db20wm8ur62l4" path="res://game/canette.tscn" id="4_dhi38"]
 
 [node name="Node3D" type="Node3D"]
 
-[node name="Machine" parent="." instance=ExtResource("1_xjgji")]
-transform = Transform3D(-4.37114e-08, 4.37114e-08, -1, 1, 1.91069e-15, -4.37114e-08, 0, -1, -4.37114e-08, 0, 0.273907, 0)
+[node name="MachineBroken" parent="." instance=ExtResource("1_jyjnp")]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 0, 0.274, 0)
 
 [node name="Table" parent="." instance=ExtResource("2_vbclh")]
 transform = Transform3D(0.866025, 4.20524e-08, 0.5, 0.254791, 0.860422, -0.441311, -0.430211, 0.509582, 0.745147, 0.0013368, 0.569984, -0.202664)
