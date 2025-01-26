@@ -1,0 +1,25 @@
+extends Minigame
+
+var closed = load("res://sprites/weird_eyes/closed_eyes.jpg")
+var open = load("res://sprites/weird_eyes/eyes_open.PNG")
+@onready var sprite = $Sprite2D
+@onready var base_sprite_scale = 0.5
+var Tdelta = 0.0
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	sprite.position = dimensions/2
+	
+	var clin = create_tween().set_loops()
+	
+	clin.tween_callback(func(): $Sprite2D.texture = closed; sprite.scale = Vector2.ONE * 1.2 * base_sprite_scale; Sound.play_sound_from_name("eye.mp3", 1.0))
+	clin.tween_interval(0.3)
+	clin.tween_callback(func(): $Sprite2D.texture = open; sprite.scale = Vector2.ONE * 1.2 * base_sprite_scale)
+	clin.tween_interval(1.1)
+	
+
+func _process(delta: float) -> void:
+	sprite.scale = lerp(sprite.scale, Vector2.ONE * base_sprite_scale, delta * 10)
+	sprite.position.y = dimensions.y/2 + cos(Tdelta * 4.0) * 40
+	sprite.position.x = dimensions.x/2 + sin(Tdelta * 4.0) * 40
+	Tdelta += delta
