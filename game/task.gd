@@ -4,9 +4,9 @@ signal update_task(task)
 
 var schedule: Array[Day] = [
 	#load("res://days/days1.tres"), # Test
-	load("res://days/day1.tres"),
-	load("res://days/day2.tres"),
-	null,
+	#load("res://days/day1.tres"),
+	#load("res://days/day2.tres"),
+	#null,
 	load("res://days/day4.tres"),
 	load("res://days/day5.tres"),
 	load("res://days/day6.tres")
@@ -50,7 +50,7 @@ func finished_all_tasks():
 
 func _on_faded_to_black():
 	current_day += 1
-	if current_day == 2: current_day += 1
+	#if current_day == 2: current_day += 1
 	if current_day >= len(schedule):
 		current_day = 0
 	main.queue_free()

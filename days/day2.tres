@@ -2,7 +2,7 @@
 
 [ext_resource type="AudioStream" uid="uid://clfty1f2uehoy" path="res://sounds/jingle_slowed.mp3" id="1_gskew"]
 [ext_resource type="Script" path="res://game/day_data.gd" id="2_8tkvk"]
-[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/MAPS_J2.tres" id="2_i52nq"]
+[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/MAPS_J1.tres" id="2_i52nq"]
 [ext_resource type="Script" path="res://game/task_data.gd" id="3_pr5on"]
 
 [sub_resource type="Resource" id="Resource_nemf7"]

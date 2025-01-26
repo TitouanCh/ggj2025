@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="Day" load_steps=8 format=3 uid="uid://dpdopocbkuy8j"]
+[gd_resource type="Resource" script_class="Day" load_steps=7 format=3 uid="uid://dpdopocbkuy8j"]
 
-[ext_resource type="AudioStream" uid="uid://dlvqwvs624wqx" path="res://sounds/electric_zap.mp3" id="1_txjyi"]
+[ext_resource type="AudioStream" uid="uid://b66lgupqpt6cc" path="res://sounds/jingle_slowed_slowed.mp3" id="1_3cqbt"]
 [ext_resource type="Resource" uid="uid://cv4k2v70bumnp" path="res://data/MAPS_J5.tres" id="2_g738b"]
 [ext_resource type="Script" path="res://game/day_data.gd" id="3_8n87c"]
 [ext_resource type="Script" path="res://game/task_data.gd" id="4_nrs4b"]
@@ -8,25 +8,19 @@
 [sub_resource type="Resource" id="Resource_nemf7"]
 script = ExtResource("4_nrs4b")
 name = "- Eyes"
-amount = 3
+amount = 1
 true_name = "PlayEyes"
 
 [sub_resource type="Resource" id="Resource_1nqln"]
 script = ExtResource("4_nrs4b")
 name = "- Kiss"
-amount = 3
+amount = 1
 true_name = "PlayKiss"
-
-[sub_resource type="Resource" id="Resource_itj1a"]
-script = ExtResource("4_nrs4b")
-name = "- Pick up can"
-amount = 15
-true_name = "PickupCans"
 
 [resource]
 script = ExtResource("3_8n87c")
-task = Array[ExtResource("4_nrs4b")]([SubResource("Resource_nemf7"), SubResource("Resource_1nqln"), SubResource("Resource_itj1a")])
+task = Array[ExtResource("4_nrs4b")]([SubResource("Resource_nemf7"), SubResource("Resource_1nqln")])
 map = ExtResource("2_g738b")
-jingle = ExtResource("1_txjyi")
+jingle = ExtResource("1_3cqbt")
 letter = false
 dialog = "Today, I was so hesitant to come back. I'm of a certain age and I don't understand what's going on at MAPS. For 5 days straight, I visited the premises without meeting a single student. But where are they? Are they in the void? Will I be joining them? Concentrating on my tasks at hand seems almost impossible."

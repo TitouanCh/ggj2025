@@ -1,26 +1,26 @@
 [gd_resource type="Resource" script_class="Day" load_steps=9 format=3 uid="uid://d00oy3r7e3lpn"]
 
-[ext_resource type="AudioStream" uid="uid://b66lgupqpt6cc" path="res://sounds/jingle_slowed_slowed.mp3" id="1_uqb38"]
+[ext_resource type="AudioStream" uid="uid://bo3238vgru67w" path="res://sounds/jingle.mp3" id="1_w2gxl"]
 [ext_resource type="Resource" uid="uid://273oi1pchs85" path="res://data/MAPS_J4.tres" id="2_l8wur"]
 [ext_resource type="Script" path="res://game/day_data.gd" id="2_u7d00"]
 [ext_resource type="Script" path="res://game/task_data.gd" id="3_irjpy"]
 
-[sub_resource type="Resource" id="Resource_nemf7"]
+[sub_resource type="Resource" id="Resource_0d761"]
 script = ExtResource("3_irjpy")
-name = "- Repare"
+name = "- Collect $$$"
 amount = 1
-true_name = "PlayMaintenance"
+true_name = "PlayMoney"
 
 [sub_resource type="Resource" id="Resource_74jyl"]
 script = ExtResource("3_irjpy")
 name = "- Clean"
-amount = 2
+amount = 1
 true_name = "PlayCleaning"
 
 [sub_resource type="Resource" id="Resource_csgqk"]
 script = ExtResource("3_irjpy")
 name = "- Rip posters"
-amount = 3
+amount = 2
 true_name = "RipPoster"
 
 [sub_resource type="Resource" id="Resource_2kg7i"]
@@ -31,8 +31,8 @@ true_name = "PickupCans"
 
 [resource]
 script = ExtResource("2_u7d00")
-task = Array[ExtResource("3_irjpy")]([SubResource("Resource_nemf7"), SubResource("Resource_74jyl"), SubResource("Resource_csgqk"), SubResource("Resource_2kg7i")])
+task = Array[ExtResource("3_irjpy")]([SubResource("Resource_0d761"), SubResource("Resource_74jyl"), SubResource("Resource_csgqk"), SubResource("Resource_2kg7i")])
 map = ExtResource("2_l8wur")
-jingle = ExtResource("1_uqb38")
-letter = false
+jingle = ExtResource("1_w2gxl")
+letter = true
 dialog = "A machine died today. Or yesterday maybe. I don't know anymore, strange things are happening here. I can’t even remember yesterday. And I still haven’t encountered a single student. Did I hear a noise? No, I am just hearing voices, I should concentrate on my tasks for the day."
