@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://kvwnvrnsgmy1"]
+[gd_scene load_steps=12 format=3 uid="uid://kvwnvrnsgmy1"]
 
 [ext_resource type="Script" path="res://game/player.gd" id="1_blixr"]
 [ext_resource type="Shader" path="res://shader/blur.gdshader" id="2_2ho54"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://game/day_text.gd" id="4_p2t8f"]
 [ext_resource type="AudioStream" uid="uid://barj1fj8ssd7y" path="res://sounds/pas.wav" id="5_7wf4g"]
 [ext_resource type="PackedScene" uid="uid://dmosd253cjq63" path="res://game/letter.tscn" id="7_b6xm7"]
+[ext_resource type="PackedScene" uid="uid://c7x7ltdrw72ln" path="res://game/bulle.tscn" id="8_tkayj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fcvvq"]
 shader = ExtResource("2_2ho54")
@@ -25,6 +26,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
 
 [node name="Camera" type="Camera3D" parent="Head"]
 fov = 80.0
+
+[node name="Bulle" parent="Head/Camera" instance=ExtResource("8_tkayj")]
 
 [node name="Blur" type="ColorRect" parent="Head/Camera"]
 material = SubResource("ShaderMaterial_fcvvq")

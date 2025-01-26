@@ -16,6 +16,7 @@ var in_minigame := false
 var current_minigame_name = null
 var fullscreen = false
 var fall = false
+var distance_covered = 0.0
 
 func _ready():
 	if !Task.schedule[Task.current_day].letter:
@@ -66,6 +67,11 @@ func _physics_process(delta):
 		speed *= surface_friction * delta
 		
 		velocity = speed * delta * 70
+		
+		distance_covered += velocity.length()
+		if distance_covered > 400.0 and !$Head/Camera/Bulle.go:
+			$Head/Camera/Bulle.come_over()
+			$Head/Camera/Bulle.go = true
 
 		if velocity.length() > 10:
 			if $AudioStreamPlayer.playing:
