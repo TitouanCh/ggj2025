@@ -10,7 +10,7 @@ func _process(delta: float) -> void:
 		instance.position = get_local_mouse_position()
 		instance.rotation = randf() * 2 * PI
 		
-		Sound.play_sound_from_name("ching.mp3", 0.5)
+		Sound.play_sound_from_name("kiss.mp3", 0.5)
 		var a = $Timer.time_left 
 		$Timer.stop()
 		$Timer.wait_time = max(a - 1, 0.01)
