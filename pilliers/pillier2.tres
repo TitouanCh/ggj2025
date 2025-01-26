@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MetaData" load_steps=2 format=3 uid="uid://bmeq71whgc5g6"]
+
+[ext_resource type="Script" path="res://meta/meta_data.gd" id="1_l5psf"]
+
+[resource]
+script = ExtResource("1_l5psf")
+rotation = 0.0
+position = Vector2(542, 317)
+type = "Pillier_violet"
