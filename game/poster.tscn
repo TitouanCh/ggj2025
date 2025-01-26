@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccn51qjbivgug"]
+
+[ext_resource type="Texture2D" uid="uid://doqmn28hnw0rh" path="res://texture/Affiche_eau.png" id="1_gwlm2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hoa87"]
+size = Vector3(2.4, 3, 0.603418)
+
+[sub_resource type="QuadMesh" id="QuadMesh_oickj"]
+size = Vector2(2.4, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_84mip"]
+albedo_texture = ExtResource("1_gwlm2")
+
+[node name="Poster" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0160522, 3.13879, 0.31879)
+shape = SubResource("BoxShape3D_hoa87")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0128116, 3.13555, 0.0344118)
+layers = 8
+mesh = SubResource("QuadMesh_oickj")
+surface_material_override/0 = SubResource("StandardMaterial3D_84mip")
