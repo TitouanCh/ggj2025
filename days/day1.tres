@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Day" load_steps=7 format=3 uid="uid://cqbsvlec5u4st"]
 
 [ext_resource type="AudioStream" uid="uid://bo3238vgru67w" path="res://sounds/jingle.mp3" id="1_hhy0v"]
-[ext_resource type="Resource" uid="uid://gkw1n50bxt56" path="res://data/MAPS_J1.tres" id="2_fydk5"]
+[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/MAPS_J1.tres" id="2_fydk5"]
 [ext_resource type="Script" path="res://game/day_data.gd" id="2_rrydq"]
 [ext_resource type="Script" path="res://game/task_data.gd" id="3_hw5ut"]
 
