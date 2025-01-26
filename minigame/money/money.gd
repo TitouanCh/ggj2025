@@ -7,7 +7,7 @@ var money_made = 0
 var keys = []
 var money_spawn = Vector2(dimensions.x * randf(), 0)
 var hand_texture = [load("res://sprites/open_hand.png"), load("res://sprites/closed_fist.png")]
-
+@onready var max_wait_time = $Timer2.wait_time
 
 func _ready() -> void:
 	Key.restore_sprites()
@@ -68,7 +68,7 @@ func _draw() -> void:
 	draw_string(font, Vector2(32, 32), str(money_made))
 	#draw_rect(Rect2(Vector2.ZERO, dimensions), Color.BLUE)
 	#draw_circle(get_local_mouse_position(), 8.0, Color.RED)
-	if $Bucket.visible: draw_rect(Rect2(0, 0, $Timer2.time_left/$Timer2.wait_time * dimensions.x, 10), Color.RED)
+	if $Bucket.visible: draw_rect(Rect2(0, 0, $Timer2.time_left/max_wait_time * dimensions.x, 10), Color.RED)
 
 func _on_timer_2_timeout() -> void:
 	finished.emit()

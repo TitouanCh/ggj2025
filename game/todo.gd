@@ -39,6 +39,7 @@ func cross_task(task):
 			cross.position = Vector2(2, 16) + increment * i
 			cross.target = cross.position
 			var tween = create_tween()
+			Sound.play_sound_from_name("pen.mp3", 0.1, 10.0)
 			tween.tween_property(cross, "target", Vector2(154, 16) + increment * i, 2)
 			if task.amount > 1:
 				child.text = task.name + "  " + str(task.n) + "/" + str(task.amount)
@@ -54,7 +55,7 @@ func _on_task_update(task: TaskData):
 
 func _process(delta: float) -> void:
 	var target = base_position
-	if get_parent().get_node("Player").in_minigame:
+	if get_parent().get_node("Player").in_minigame or get_parent().get_node("Player").fall:
 		target = mini_position
 	position = lerp(position, target, speed * delta)
 	queue_redraw()

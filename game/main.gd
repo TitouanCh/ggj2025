@@ -9,6 +9,5 @@ func _ready() -> void:
 	if level_data:
 		level_data.spawn(self)
 		todo_list = preload("res://game/todo.tscn").instantiate()
-		print(todo_list)
 		add_child(todo_list)  
 		todo_list.visible = true  

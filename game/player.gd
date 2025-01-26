@@ -20,9 +20,11 @@ var fall = false
 func _ready():
 	$Head/Camera/FadeToBlack/RichTextLabel.text = "\n\n[wave amp=50.0 freq=5.0 connected=1][center]DAY   %s[/center][/wave]" % (Task.current_day + 1)
 	var tween = create_tween()
+	tween.tween_callback(func(): Sound.play_sound_from_stream(Task.schedule[Task.current_day].jingle, 0, -1))
 	tween.tween_interval(1)
 	tween.tween_property($Head/Camera/FadeToBlack, "modulate", Color(255, 255, 255, 0), 5).set_ease(Tween.EASE_IN)
 	tween.tween_callback(func(): $Head/Camera/FadeToBlack/RichTextLabel.visible = false)
+	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	Task.set_player(self)
 
@@ -57,6 +59,14 @@ func _physics_process(delta):
 		
 		velocity = speed * delta * 70
 
+		if velocity.length() > 10:
+			if $AudioStreamPlayer.playing:
+				$AudioStreamPlayer.stream_paused = false
+			else:
+				$AudioStreamPlayer.play()
+		else:
+			$AudioStreamPlayer.stream_paused = true
+
 		move_and_slide()
 		
 		$Head/Camera/Hand.interact = false
@@ -71,17 +81,14 @@ func _physics_process(delta):
 				#else: hide_tooltip()
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED_HIDDEN)
+		$AudioStreamPlayer.stream_paused = true
 	
 	if position.y < -1 and !fall:
-		Sound.play_sound_from_name("crie.mp3")
+		var tween = create_tween()
+		Sound.play_sound_from_name("requiem2.mp3")
+		tween.tween_interval(1)
+		tween.tween_callback(func(): Sound.play_sound_from_name("crie.mp3"))
 		fall = true
-	
-	if velocity.length() > 10:
-		if $AudioStreamPlayer.playing:
-			$AudioStreamPlayer.stream_paused = false
-		else: $AudioStreamPlayer.play()
-	else:
-		$AudioStreamPlayer.stream_paused = true
 
 func _process(delta):
 	if Input.is_action_just_pressed("escape"):

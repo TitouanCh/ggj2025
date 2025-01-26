@@ -3,8 +3,9 @@ extends Node
 signal update_task(task)
 
 var schedule: Array[Day] = [
-	load("res://days/day3.tres"),
+	load("res://days/day1.tres"),
 	load("res://days/day2.tres"),
+	load("res://days/day3.tres"),
 ]
 
 var current_day = 0

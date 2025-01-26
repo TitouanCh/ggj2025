@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Day" load_steps=6 format=3 uid="uid://cqbsvlec5u4st"]
+[gd_resource type="Resource" script_class="Day" load_steps=7 format=3 uid="uid://cqbsvlec5u4st"]
 
-[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/level.tres" id="1_snt8h"]
+[ext_resource type="AudioStream" uid="uid://bo3238vgru67w" path="res://sounds/jingle.mp3" id="1_hhy0v"]
+[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/level.tres" id="1_spyfm"]
 [ext_resource type="Script" path="res://game/day_data.gd" id="2_rrydq"]
 [ext_resource type="Script" path="res://game/task_data.gd" id="3_hw5ut"]
 
@@ -19,4 +20,5 @@ true_name = "PickupCans"
 [resource]
 script = ExtResource("2_rrydq")
 task = Array[ExtResource("3_hw5ut")]([SubResource("Resource_74jyl"), SubResource("Resource_2kg7i")])
-map = ExtResource("1_snt8h")
+map = ExtResource("1_spyfm")
+jingle = ExtResource("1_hhy0v")
