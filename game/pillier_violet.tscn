@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=4 uid="uid://dfgsdk8itxoj6"]
+
+[ext_resource type="Texture2D" uid="uid://drwcy3a3eh8n1" path="res://texture/TEXTURE_murs_v1.png" id="1_jb7ld"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wx4sh"]
+size = Vector3(1, 5.98767, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ugey4"]
+resource_name = "MUR.001"
+albedo_color = Color(0.8, 0.8, 0.8, 1)
+albedo_texture = ExtResource("1_jb7ld")
+metallic = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_uj4cj"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 6, 1),
+"attribute_data": PackedByteArray("waP/P8Gj//8Dgf8/A4H//3M3/z9zN///7BL/P+wS///7W/8/+1v//3M3/z9zN///A4H/PwOB///7W/8/+1v//w=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8A"),
+"material": SubResource("StandardMaterial3D_ugey4"),
+"name": "MUR",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAD//////78AAAAA////vwAA//8AAP+/AAAAAAAA/78AAP//AAD//wAAAAAAAP///////wAA/////wAAAAD///////8AAP+///8AAAAA/7//////////v///AAD///+/////////AID//wAA//8AgAAA/////wCAAAAAAP//AID/f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+
+[node name="PillierViolet" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.00555, 0)
+shape = SubResource("BoxShape3D_wx4sh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_uj4cj")
