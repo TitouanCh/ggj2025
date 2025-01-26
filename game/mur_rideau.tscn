@@ -1,22 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://2d0itp21ocmi"]
+[gd_scene load_steps=5 format=3 uid="uid://d037efc032f46"]
 
-[ext_resource type="Texture2D" uid="uid://bumb78ulbcvuo" path="res://texture/TEXTURE_murs_gris_v1.png" id="1_u53cw"]
+[ext_resource type="Texture2D" uid="uid://puuii7fs8gsi" path="res://texture/TEXTURE_murs_rideaux_poly.png" id="1_ogxmm"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kfmev"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8lyal"]
 resource_name = "MUR"
 cull_mode = 2
 albedo_color = Color(0.8, 0.8, 0.8, 1)
-albedo_texture = ExtResource("1_u53cw")
+albedo_texture = ExtResource("1_ogxmm")
 metallic = 0.5
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_fyobj"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_tfhbu"]
 _surfaces = [{
 "aabb": AABB(0, 0, -4, 1e-05, 6, 8),
 "attribute_data": PackedByteArray(255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 63, 0, 0, 255, 63),
 "format": 34896613399,
 "index_count": 6,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
-"material": SubResource("StandardMaterial3D_kfmev"),
+"material": SubResource("StandardMaterial3D_8lyal"),
 "name": "MUR",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -32,7 +32,7 @@ size = Vector3(8, 8, 0.1)
 
 [node name="AssetMurBase4x4V1" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
-mesh = SubResource("ArrayMesh_fyobj")
+mesh = SubResource("ArrayMesh_tfhbu")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)

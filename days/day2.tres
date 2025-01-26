@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Day" load_steps=8 format=3 uid="uid://b47vss3a86lqv"]
+
+[ext_resource type="AudioStream" uid="uid://clfty1f2uehoy" path="res://sounds/jingle_slowed.mp3" id="1_gskew"]
+[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/level.tres" id="1_ukclj"]
+[ext_resource type="Script" path="res://game/day_data.gd" id="2_8tkvk"]
+[ext_resource type="Script" path="res://game/task_data.gd" id="3_pr5on"]
+
+[sub_resource type="Resource" id="Resource_nemf7"]
+script = ExtResource("3_pr5on")
+name = "- Clean 1 machine"
+amount = 1
+true_name = "PlayCleaning"
+
+[sub_resource type="Resource" id="Resource_74jyl"]
+script = ExtResource("3_pr5on")
+name = "- Collect $$$"
+amount = 3
+true_name = "PlayMoney"
+
+[sub_resource type="Resource" id="Resource_2kg7i"]
+script = ExtResource("3_pr5on")
+name = "- Pick up can"
+amount = 3
+true_name = "PickupCans"
+
+[resource]
+script = ExtResource("2_8tkvk")
+task = Array[ExtResource("3_pr5on")]([SubResource("Resource_nemf7"), SubResource("Resource_74jyl"), SubResource("Resource_2kg7i")])
+map = ExtResource("1_ukclj")
+jingle = ExtResource("1_gskew")

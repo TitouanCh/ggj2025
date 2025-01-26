@@ -1,6 +1,8 @@
 class_name Player
 extends CharacterBody3D
 
+signal faded_to_black
+
 const GRAVITY = 120
 
 @export var mouse_sensitivity = 0.15
@@ -11,11 +13,20 @@ var speed = Vector3.ZERO
 var surface_accel = 100
 var surface_friction = 48
 var in_minigame := false
+var current_minigame_name = null
 var fullscreen = false
 var fall = false
 
 func _ready():
+	$Head/Camera/FadeToBlack/RichTextLabel.text = "\n\n[wave amp=50.0 freq=5.0 connected=1][center]DAY   %s[/center][/wave]" % (Task.current_day + 1)
+	var tween = create_tween()
+	tween.tween_callback(func(): Sound.play_sound_from_stream(Task.schedule[Task.current_day].jingle, 0, -1))
+	tween.tween_interval(1)
+	tween.tween_property($Head/Camera/FadeToBlack, "modulate", Color(255, 255, 255, 0), 5).set_ease(Tween.EASE_IN)
+	tween.tween_callback(func(): $Head/Camera/FadeToBlack/RichTextLabel.visible = false)
+	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Task.set_player(self)
 
 func _input(event):
 	if !in_minigame:
@@ -48,6 +59,14 @@ func _physics_process(delta):
 		
 		velocity = speed * delta * 70
 
+		if velocity.length() > 10:
+			if $AudioStreamPlayer.playing:
+				$AudioStreamPlayer.stream_paused = false
+			else:
+				$AudioStreamPlayer.play()
+		else:
+			$AudioStreamPlayer.stream_paused = true
+
 		move_and_slide()
 		
 		$Head/Camera/Hand.interact = false
@@ -62,17 +81,14 @@ func _physics_process(delta):
 				#else: hide_tooltip()
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED_HIDDEN)
+		$AudioStreamPlayer.stream_paused = true
 	
 	if position.y < -1 and !fall:
-		Sound.play_sound_from_name("crie.mp3")
+		var tween = create_tween()
+		Sound.play_sound_from_name("requiem2.mp3")
+		tween.tween_interval(1)
+		tween.tween_callback(func(): Sound.play_sound_from_name("crie.mp3"))
 		fall = true
-	
-	if velocity.length() > 10:
-		if $AudioStreamPlayer.playing:
-			$AudioStreamPlayer.stream_paused = false
-		else: $AudioStreamPlayer.play()
-	else:
-		$AudioStreamPlayer.stream_paused = true
 
 func _process(delta):
 	if Input.is_action_just_pressed("escape"):
@@ -94,12 +110,21 @@ func start_minigame(minigame: String) -> Support:
 	var tween = create_tween()
 	tween.tween_method(set_blur, 0.1, 3.0, .5).set_ease(Tween.EASE_IN_OUT)
 	$Head/Camera/Hand.interact = false
+	current_minigame_name = minigame
 	return support_instance
 
 func set_blur(value):
 	$Head/Camera/Blur.material.set_shader_parameter("sigma", value)
 
+func fade_to_black():
+	var tween = create_tween()
+	tween.tween_interval(5)
+	tween.tween_property($Head/Camera/FadeToBlack, "modulate", Color(255, 255, 255, 1), 5).set_ease(Tween.EASE_IN)
+	tween.tween_callback(func(): faded_to_black.emit())
+
 func end_minigame():
 	var tween = create_tween()
 	tween.tween_method(set_blur, 3.0, .1, .5).set_ease(Tween.EASE_IN_OUT)
 	tween.tween_callback(func(): in_minigame = false; Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED))
+	Task.complete_task("Play" + (current_minigame_name.to_pascal_case()))
+	current_minigame_name = null

@@ -34,4 +34,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Coin:
 		get_parent().money_made += 1
 		Sound.play_sound_from_name("ching.mp3", 0.5)
+		var a = get_parent().get_node("Timer2").time_left 
+		get_parent().get_node("Timer2").stop()
+		get_parent().get_node("Timer2").wait_time = a - 0.1
+		get_parent().get_node("Timer2").start()
 		body.queue_free()

@@ -5,3 +5,4 @@ extends Resource
 @export var amount = 1
 @export var true_name = ""
 var n = 0
+var n_machines = 0

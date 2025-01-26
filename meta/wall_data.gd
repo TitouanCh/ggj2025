@@ -17,5 +17,6 @@ static var scenes = {
 	"HublotVert": load("res://game/hublot_vert.tscn"),
 	"DoorVert": load("res://game/mur_porte_verte.tscn"),
 	"DoorFermeeVert": load("res://game/mur_porte_verte_fermee.tscn"),
-	"DoorBleuVert": load("res://game/porte_verte_bleu.tscn")
+	"DoorBleuVert": load("res://game/porte_verte_bleu.tscn"),
+	"MurRideau": load("res://game/mur_rideau.tscn")
 }

@@ -1,12 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6xj5bl2d7no"]
+[gd_scene load_steps=3 format=3 uid="uid://c6xj5bl2d7no"]
 
 [ext_resource type="Script" path="res://game/main.gd" id="1_nryr8"]
-[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/level.tres" id="2_6xaw1"]
-[ext_resource type="PackedScene" uid="uid://dri1esacmxqng" path="res://game/machine.tscn" id="3_kahpo"]
+[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/MAPS_J1.tres" id="2_6xaw1"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_nryr8")
 level_data = ExtResource("2_6xaw1")
-
-[node name="Machine" parent="." instance=ExtResource("3_kahpo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.439903, -9.58892)

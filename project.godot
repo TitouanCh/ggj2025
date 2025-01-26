@@ -29,7 +29,7 @@ window/stretch/scale_mode="integer"
 
 [gui]
 
-theme/default_theme_scale=0.6
+theme/default_theme_scale=0.8
 
 [input]
 

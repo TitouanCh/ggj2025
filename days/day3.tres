@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Day" load_steps=8 format=3 uid="uid://d00oy3r7e3lpn"]
+
+[ext_resource type="Resource" uid="uid://cev8a63jd3mnq" path="res://data/level.tres" id="1_46y7t"]
+[ext_resource type="AudioStream" uid="uid://b66lgupqpt6cc" path="res://sounds/jingle_slowed_slowed.mp3" id="1_uqb38"]
+[ext_resource type="Script" path="res://game/day_data.gd" id="2_u7d00"]
+[ext_resource type="Script" path="res://game/task_data.gd" id="3_irjpy"]
+
+[sub_resource type="Resource" id="Resource_nemf7"]
+script = ExtResource("3_irjpy")
+name = "- Repare 1 Machine"
+amount = 1
+true_name = "PlayMaintenance"
+
+[sub_resource type="Resource" id="Resource_74jyl"]
+script = ExtResource("3_irjpy")
+name = "- Clean 2 Machines"
+amount = 2
+true_name = "PlayCleaning"
+
+[sub_resource type="Resource" id="Resource_2kg7i"]
+script = ExtResource("3_irjpy")
+name = "- Pick up can"
+amount = 5
+true_name = "PickupCans"
+
+[resource]
+script = ExtResource("2_u7d00")
+task = Array[ExtResource("3_irjpy")]([SubResource("Resource_nemf7"), SubResource("Resource_74jyl"), SubResource("Resource_2kg7i")])
+map = ExtResource("1_46y7t")
+jingle = ExtResource("1_uqb38")
