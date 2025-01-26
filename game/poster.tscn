@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ccn51qjbivgug"]
 
 [ext_resource type="Script" path="res://game/poster.gd" id="1_c5bda"]
-[ext_resource type="QuadMesh" uid="uid://gpvpluaqo78g" path="res://model/poster.tres" id="2_jb3qk"]
+[ext_resource type="QuadMesh" uid="uid://bwx3p67bgg6tm" path="res://model/poster_ripped.tres" id="2_6qoj8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hoa87"]
 size = Vector3(2.4, 3, 0.603418)
@@ -18,4 +18,4 @@ shape = SubResource("BoxShape3D_hoa87")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.11813, 0.102423)
 layers = 4
-mesh = ExtResource("2_jb3qk")
+mesh = ExtResource("2_6qoj8")

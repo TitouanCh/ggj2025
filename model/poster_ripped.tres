@@ -1,0 +1,11 @@
+[gd_resource type="QuadMesh" load_steps=3 format=3 uid="uid://bwx3p67bgg6tm"]
+
+[ext_resource type="Texture2D" uid="uid://337ajypqf7lw" path="res://texture/fond_arrache.png" id="1_866ep"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jfhat"]
+transparency = 1
+albedo_texture = ExtResource("1_866ep")
+
+[resource]
+material = SubResource("StandardMaterial3D_jfhat")
+size = Vector2(2.4, 3)
