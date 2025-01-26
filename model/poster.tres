@@ -1,0 +1,10 @@
+[gd_resource type="QuadMesh" load_steps=3 format=3 uid="uid://gpvpluaqo78g"]
+
+[ext_resource type="Texture2D" uid="uid://byftuiwwafc3v" path="res://texture/SODASUCRESODADANGER256.png" id="1_dr8bj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryvso"]
+albedo_texture = ExtResource("1_dr8bj")
+
+[resource]
+material = SubResource("StandardMaterial3D_ryvso")
+size = Vector2(2.4, 3)

@@ -1,0 +1,10 @@
+[gd_resource type="QuadMesh" load_steps=3 format=3 uid="uid://edbkhsniufs7"]
+
+[ext_resource type="Texture2D" uid="uid://djue2pfh6w3jc" path="res://texture/affiche_sport.png" id="1_g2g1g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n8ppa"]
+albedo_texture = ExtResource("1_g2g1g")
+
+[resource]
+material = SubResource("StandardMaterial3D_n8ppa")
+size = Vector2(2.4, 3)

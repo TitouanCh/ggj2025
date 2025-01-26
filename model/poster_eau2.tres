@@ -1,0 +1,11 @@
+[gd_resource type="QuadMesh" load_steps=3 format=3 uid="uid://bycpsm7gwk84o"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_31mcc"]
+load_path = "res://.godot/imported/affiche_eau_2.png-d09e20392e6e22b5b309221d21963c0b.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bioh4"]
+albedo_texture = SubResource("CompressedTexture2D_31mcc")
+
+[resource]
+material = SubResource("StandardMaterial3D_bioh4")
+size = Vector2(2.4, 3)
