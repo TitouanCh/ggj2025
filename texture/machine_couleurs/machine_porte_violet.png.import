@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0gwj4iqycvum"
 path.s3tc="res://.godot/imported/machine_porte_violet.png-b983d70b06ba91f15d45e727df7c5a51.s3tc.ctex"
+path.etc2="res://.godot/imported/machine_porte_violet.png-b983d70b06ba91f15d45e727df7c5a51.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://texture/machine_couleurs/machine_porte_violet.png"
-dest_files=["res://.godot/imported/machine_porte_violet.png-b983d70b06ba91f15d45e727df7c5a51.s3tc.ctex"]
+dest_files=["res://.godot/imported/machine_porte_violet.png-b983d70b06ba91f15d45e727df7c5a51.s3tc.ctex", "res://.godot/imported/machine_porte_violet.png-b983d70b06ba91f15d45e727df7c5a51.etc2.ctex"]
 
 [params]
 

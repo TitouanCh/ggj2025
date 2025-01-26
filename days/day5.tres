@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Day" load_steps=7 format=3 uid="uid://dpdopocbkuy8j"]
+[gd_resource type="Resource" script_class="Day" load_steps=8 format=3 uid="uid://dpdopocbkuy8j"]
 
 [ext_resource type="AudioStream" uid="uid://dlvqwvs624wqx" path="res://sounds/electric_zap.mp3" id="1_txjyi"]
 [ext_resource type="Resource" uid="uid://cv4k2v70bumnp" path="res://data/MAPS_J5.tres" id="2_g738b"]
@@ -17,9 +17,15 @@ name = "- Kiss"
 amount = 3
 true_name = "PlayKiss"
 
+[sub_resource type="Resource" id="Resource_itj1a"]
+script = ExtResource("4_nrs4b")
+name = "- Pick up can"
+amount = 15
+true_name = "PickupCans"
+
 [resource]
 script = ExtResource("3_8n87c")
-task = Array[ExtResource("4_nrs4b")]([SubResource("Resource_nemf7"), SubResource("Resource_1nqln")])
+task = Array[ExtResource("4_nrs4b")]([SubResource("Resource_nemf7"), SubResource("Resource_1nqln"), SubResource("Resource_itj1a")])
 map = ExtResource("2_g738b")
 jingle = ExtResource("1_txjyi")
 letter = false

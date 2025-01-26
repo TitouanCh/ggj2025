@@ -94,6 +94,9 @@ func _physics_process(delta):
 					$Head/Camera/Hand.interact = true
 					if Input.is_action_just_pressed("interact"):
 						object.interact(self)
+				elif object is MachineSoda:
+					if Input.is_action_just_pressed("interact"):
+						start_minigame("none")
 				#else: hide_tooltip()
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED_HIDDEN)
@@ -104,6 +107,7 @@ func _physics_process(delta):
 		Sound.play_sound_from_name("requiem2.mp3")
 		tween.tween_interval(1)
 		tween.tween_callback(func(): Sound.play_sound_from_name("crie.mp3"))
+		Task.complete_task("Fall")
 		fall = true
 
 func _process(delta):
@@ -134,7 +138,7 @@ func set_blur(value):
 
 func fade_to_black():
 	var tween = create_tween()
-	tween.tween_interval(5)
+	tween.tween_interval(1)
 	tween.tween_property($Head/Camera/FadeToBlack, "modulate", Color(255, 255, 255, 1), 5).set_ease(Tween.EASE_IN)
 	tween.tween_callback(func(): faded_to_black.emit())
 

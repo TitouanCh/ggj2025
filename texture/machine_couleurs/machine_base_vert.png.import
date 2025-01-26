@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhx1l2lq4i4hr"
 path.s3tc="res://.godot/imported/machine_base_vert.png-6895dc47c5b0cdf6e473156717ff0aff.s3tc.ctex"
+path.etc2="res://.godot/imported/machine_base_vert.png-6895dc47c5b0cdf6e473156717ff0aff.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://texture/machine_couleurs/machine_base_vert.png"
-dest_files=["res://.godot/imported/machine_base_vert.png-6895dc47c5b0cdf6e473156717ff0aff.s3tc.ctex"]
+dest_files=["res://.godot/imported/machine_base_vert.png-6895dc47c5b0cdf6e473156717ff0aff.s3tc.ctex", "res://.godot/imported/machine_base_vert.png-6895dc47c5b0cdf6e473156717ff0aff.etc2.ctex"]
 
 [params]
 

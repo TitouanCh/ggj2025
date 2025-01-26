@@ -3,6 +3,9 @@ extends Minigame
 var lip_scene = preload("res://minigame/kiss/lips.tscn")
 @onready var max_wait_time = $Timer.wait_time
 
+func _ready() -> void:
+	Sound.play_sound_from_name("girl.mp3", 0.2, 2.0)
+
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("left_click"):
 		var instance = lip_scene.instantiate()

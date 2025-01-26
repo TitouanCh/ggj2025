@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkhmi45xn3b86"
 path.s3tc="res://.godot/imported/TEXTURE_canette_bulles_cola_V1.png-a2e7defe948f49801d5203cbea3b9634.s3tc.ctex"
+path.etc2="res://.godot/imported/TEXTURE_canette_bulles_cola_V1.png-a2e7defe948f49801d5203cbea3b9634.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://texture/TEXTURE_canette_bulles_cola_V1.png"
-dest_files=["res://.godot/imported/TEXTURE_canette_bulles_cola_V1.png-a2e7defe948f49801d5203cbea3b9634.s3tc.ctex"]
+dest_files=["res://.godot/imported/TEXTURE_canette_bulles_cola_V1.png-a2e7defe948f49801d5203cbea3b9634.s3tc.ctex", "res://.godot/imported/TEXTURE_canette_bulles_cola_V1.png-a2e7defe948f49801d5203cbea3b9634.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgfbw67tsmngk"
 path.s3tc="res://.godot/imported/TEXTURE_machine_PORTE.png-abab96e8e142b1ce0261cbbd8db15576.s3tc.ctex"
+path.etc2="res://.godot/imported/TEXTURE_machine_PORTE.png-abab96e8e142b1ce0261cbbd8db15576.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://texture/TEXTURE_machine_PORTE.png"
-dest_files=["res://.godot/imported/TEXTURE_machine_PORTE.png-abab96e8e142b1ce0261cbbd8db15576.s3tc.ctex"]
+dest_files=["res://.godot/imported/TEXTURE_machine_PORTE.png-abab96e8e142b1ce0261cbbd8db15576.s3tc.ctex", "res://.godot/imported/TEXTURE_machine_PORTE.png-abab96e8e142b1ce0261cbbd8db15576.etc2.ctex"]
 
 [params]
 

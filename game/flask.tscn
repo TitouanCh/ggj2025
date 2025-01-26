@@ -5,7 +5,6 @@
 
 [sub_resource type="Environment" id="Environment_uabt2"]
 background_mode = 1
-background_color = Color(0.212305, 0.212305, 0.212305, 1)
 ambient_light_color = Color(0.215902, 0.215902, 0.215902, 1)
 ambient_light_energy = 0.01
 ssr_enabled = true

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://crcctooahg0k7"
 path.s3tc="res://.godot/imported/TEXTURE_vitre_a.png-74e81abd4e46df92469000fcb87a742b.s3tc.ctex"
+path.etc2="res://.godot/imported/TEXTURE_vitre_a.png-74e81abd4e46df92469000fcb87a742b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://texture/TEXTURE_vitre_a.png"
-dest_files=["res://.godot/imported/TEXTURE_vitre_a.png-74e81abd4e46df92469000fcb87a742b.s3tc.ctex"]
+dest_files=["res://.godot/imported/TEXTURE_vitre_a.png-74e81abd4e46df92469000fcb87a742b.s3tc.ctex", "res://.godot/imported/TEXTURE_vitre_a.png-74e81abd4e46df92469000fcb87a742b.etc2.ctex"]
 
 [params]
 

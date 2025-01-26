@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://cws0071ei8dcb"]
 
-[ext_resource type="Texture2D" uid="uid://v44lcqbxl26q" path="res://texture/TEXTURE_murs_verts_v1.png" id="1_rrjme"]
+[ext_resource type="Texture2D" uid="uid://dwo8pmo3injvs" path="res://texture/TEXTURE_murs_verts_v1.png" id="1_rrjme"]
 [ext_resource type="Texture2D" uid="uid://b5tph7rtmpm1o" path="res://texture/TEXTURE_porte_v1.png" id="2_g1pxg"]
 [ext_resource type="ArrayMesh" uid="uid://ba733oovp4rmo" path="res://model/cadre.tres" id="3_rbmc8"]
 [ext_resource type="ArrayMesh" uid="uid://ci2cdud4olbiv" path="res://model/mur_porte.tres" id="4_d66sm"]
